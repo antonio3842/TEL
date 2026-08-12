@@ -3,7 +3,7 @@ private _radio = tolower (call TFAR_fnc_activeSwRadio);
 
 if (isnil {_radio}) exitwith {FALSE};
 
-["Déconnexion"] call MRPV2_fnc_MRP_Tel_Divers_Connexion_TFAR;
+["Déconnexion"] spawn MRPV2_fnc_MRP_Tel_Divers_Connexion_TFAR;
 
 private _radio = tolower (call TFAR_fnc_activeSwRadio);
 
