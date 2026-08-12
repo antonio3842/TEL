@@ -1,0 +1,62 @@
+#include "\ALF_Client\script_macros.hpp"
+/*
+	File: fn_vehicleShopBuyCopSP.sqf
+	Author: ALF - Adam
+*/
+
+if((time - life_action_delay) < 0.5) exitWith {["INFO", "Vous appuyez trop vite.", "warning"] spawn ALF_fnc_doMsg;};
+life_action_delay = time;
+
+private _exit = false;
+private _className = lbData[2302,(lbCurSel 2302)];
+private _classNameLife = _className;
+private _licenses = ["STRING", [CONFIG_LIFE_VEHICLES, _classNameLife, "licenses"]] call ALFTools_Client_Config_fnc_getConfig;
+private _purchasePrice = ["NUMBER", [CONFIG_LIFE_VEHICLES, _classNameLife, "achat"]] call ALFTools_Client_Config_fnc_getConfig;
+
+if !(_licenses isEqualTo "") then {
+	private _varnameConfig = ["STRING", ["Licenses", _licenses, "variable"]] call ALFTools_Client_Config_fnc_getConfig;
+	private _licenceConfigVal = missionNamespace getVariable [format["license_%1",_varnameConfig], false];
+	if !(_licenceConfigVal) then {_exit = true;};
+};
+if(_exit) exitWith {["INFO", "Vous n'avez pas la licence requise.", "warning"] spawn ALF_fnc_doMsg; closeDialog 0;};
+if(_purchasePrice < 0) exitWith {closeDialog 0;};
+
+private _spawnPoints = life_veh_shop select 1;
+private _spawnPoint = "";
+
+
+if (((getMarkerPos _spawnPoints) nearEntities [["Car","Ship","Air"],5]) isEqualTo []) then {_spawnPoint = _spawnPoints};
+
+if(_spawnPoint isEqualTo "") exitWith {["INFO", "Un véhicule gène le point de sortie.", "warning"] spawn ALF_fnc_doMsg; closeDialog 0;};
+
+
+private _value = missionNamespace getVariable ["CNPM",0];
+if(_value < _purchasePrice) exitWith {["INFO","Il n'y a pas assez dans les caisses.","warning"] spawn ALF_fnc_doMsg; _exit = true;};
+
+
+_value = _value - _purchasePrice;
+missionNamespace setVariable ["CNPM",_value,true];
+[getPlayerUID player,name player,_purchasePrice] remoteExec ["ALF_Server_fnc_retirerCNPM",2];
+
+diag_log "5";
+
+if(_exit) exitWith {};
+
+closeDialog 0;
+
+["INFO", format["Merci d'avoir acheté chez nous. Détail de votre commande: %1 pour %2€",getText(configFile >> "CfgVehicles" >> _className >> "displayName"),[_purchasePrice] call ALF_fnc_numberText], "success"] spawn ALF_fnc_doMsg;
+
+private _vehicle = _className createVehicle [0,0,1000];
+_vehicle allowDamage false;
+
+private _type_veh = switch(true) do {
+	case (_vehicle isKindOf "Car"): {"Car"};
+	case (_vehicle isKindOf "Air"): {"Air"};
+	case (_vehicle isKindOf "Ship"): {"Ship"};
+};
+
+deleteVehicle _vehicle;
+
+[_className,_type_veh,player] remoteExecCall ["ALF_Server_fnc_insertVehiclePenit",2];
+
+true;

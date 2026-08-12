@@ -1,0 +1,67 @@
+
+extDB3: https://bitbucket.org/torndeco/extdb3/wiki/Home
+extDB3: Version: 1.033
+extDB3: Windows Version
+Message: All development for extDB3 is done on a Linux Dedicated Server
+Message: If you would like to Donate to extDB3 Development
+Message: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=2SUEFTGABTAM2
+Message: Also leave a message if there is any particular feature you would like to see added.
+Message: Thanks for all the people that have donated.
+Message: Torndeco: 18/05/15
+
+Message: This version was modified and include some improvement
+Message: The lib was recompiled using new version of TBBMalloc, Boost and MariaDB connector
+Message: The worker threads limitation was removed
+Message: Steez: 30/10/2020
+
+
+extDB3: Found extdb3-conf.ini
+extDB3: Detected 16 Cores, Setting up 6 Worker Threads
+extDB3: Detected 16 Cores, Setting up 16 Worker Threads
+extDB3: ...
+extDB3: ...
+extDB3: ...
+extDB3: ...
+extDB3: ...
+extDB3: ...
+extDB3: ...
+extDB3: ...
+extDB3: ...
+extDB3: ...
+extDB3: ...
+extDB3: ...
+extDB3: ...
+extDB3: ...
+extDB3: ...
+extDB3: ...
+
+
+[15:52:10:197909 +02:00] [Thread 20312] extDB3: SQL: Initialized: Add Quotes around TEXT Datatypes mode: 2
+[15:52:10:197954 +02:00] [Thread 20312] extDB3: SQL: Initialized: NULL = ""
+[15:52:10:197982 +02:00] [Thread 20312] extDB3: Locked
+[15:52:13:205617 +02:00] [Thread 21268] extDB3: SQL: Error MariaDBQueryException: Table 'armalife.atm_dispo' doesn't exist
+[15:52:13:205644 +02:00] [Thread 21268] extDB3: SQL: Error MariaDBQueryException: Input: SELECT pos_x, pos_y, cash_available FROM atm_dispo
+[15:52:14:933534 +02:00] [Thread 21268] extDB3: SQL: Error MariaDBQueryException: Table 'armalife.atm_dispo' doesn't exist
+[15:52:14:933566 +02:00] [Thread 21268] extDB3: SQL: Error MariaDBQueryException: Input: INSERT INTO atm_dispo (pos_x, pos_y, cash_available) VALUES (5011, 6754, 200000) ON DUPLICATE KEY UPDATE cash_available=200000
+[15:52:14:945148 +02:00] [Thread 19280] extDB3: SQL: Error MariaDBQueryException: Table 'armalife.atm_dispo' doesn't exist
+[15:52:14:945162 +02:00] [Thread 20232] extDB3: SQL: Error MariaDBQueryException: Table 'armalife.atm_dispo' doesn't exist
+[15:52:14:945161 +02:00] [Thread 21360] extDB3: SQL: Error MariaDBQueryException: Table 'armalife.atm_dispo' doesn't exist
+[15:52:14:945182 +02:00] [Thread 21508] extDB3: SQL: Error MariaDBQueryException: Table 'armalife.atm_dispo' doesn't exist
+[15:52:14:945232 +02:00] [Thread 19048] extDB3: SQL: Error MariaDBQueryException: Table 'armalife.atm_dispo' doesn't exist
+[15:52:14:945191 +02:00] [Thread 16168] extDB3: SQL: Error MariaDBQueryException: Table 'armalife.atm_dispo' doesn't exist
+[15:52:14:945202 +02:00] [Thread 21588] extDB3: SQL: Error MariaDBQueryException: Table 'armalife.atm_dispo' doesn't exist
+[15:52:14:945209 +02:00] [Thread 20232] extDB3: SQL: Error MariaDBQueryException: Input: INSERT INTO atm_dispo (pos_x, pos_y, cash_available) VALUES (7482, 7257, 200000) ON DUPLICATE KEY UPDATE cash_available=200000
+[15:52:14:945209 +02:00] [Thread 12040] extDB3: SQL: Error MariaDBQueryException: Table 'armalife.atm_dispo' doesn't exist
+[15:52:14:945311 +02:00] [Thread 12040] extDB3: SQL: Error MariaDBQueryException: Input: INSERT INTO atm_dispo (pos_x, pos_y, cash_available) VALUES (7484, 7259, 200000) ON DUPLICATE KEY UPDATE cash_available=200000
+[15:52:14:945324 +02:00] [Thread 15176] extDB3: SQL: Error MariaDBQueryException: Table 'armalife.atm_dispo' doesn't exist
+[15:52:14:945341 +02:00] [Thread 15176] extDB3: SQL: Error MariaDBQueryException: Input: INSERT INTO atm_dispo (pos_x, pos_y, cash_available) VALUES (1137, 7229, 200000) ON DUPLICATE KEY UPDATE cash_available=200000
+[15:52:14:945219 +02:00] [Thread 14948] extDB3: SQL: Error MariaDBQueryException: Table 'armalife.atm_dispo' doesn't exist
+[15:52:14:945229 +02:00] [Thread 15468] extDB3: SQL: Error MariaDBQueryException: Table 'armalife.atm_dispo' doesn't exist
+[15:52:14:945537 +02:00] [Thread 14948] extDB3: SQL: Error MariaDBQueryException: Input: INSERT INTO atm_dispo (pos_x, pos_y, cash_available) VALUES (3677, 2223, 200000) ON DUPLICATE KEY UPDATE cash_available=200000
+[15:52:14:945545 +02:00] [Thread 15468] extDB3: SQL: Error MariaDBQueryException: Input: INSERT INTO atm_dispo (pos_x, pos_y, cash_available) VALUES (8339, 1634, 200000) ON DUPLICATE KEY UPDATE cash_available=200000
+[15:52:14:945281 +02:00] [Thread 21588] extDB3: SQL: Error MariaDBQueryException: Input: INSERT INTO atm_dispo (pos_x, pos_y, cash_available) VALUES (3830, 9240, 200000) ON DUPLICATE KEY UPDATE cash_available=200000
+[15:52:14:945187 +02:00] [Thread 19280] extDB3: SQL: Error MariaDBQueryException: Input: INSERT INTO atm_dispo (pos_x, pos_y, cash_available) VALUES (4062, 4528, 200000) ON DUPLICATE KEY UPDATE cash_available=200000
+[15:52:14:945242 +02:00] [Thread 21508] extDB3: SQL: Error MariaDBQueryException: Input: INSERT INTO atm_dispo (pos_x, pos_y, cash_available) VALUES (7485, 7261, 200000) ON DUPLICATE KEY UPDATE cash_available=200000
+[15:52:14:945225 +02:00] [Thread 21360] extDB3: SQL: Error MariaDBQueryException: Input: INSERT INTO atm_dispo (pos_x, pos_y, cash_available) VALUES (6311, 7374, 200000) ON DUPLICATE KEY UPDATE cash_available=200000
+[15:52:14:945255 +02:00] [Thread 19048] extDB3: SQL: Error MariaDBQueryException: Input: INSERT INTO atm_dispo (pos_x, pos_y, cash_available) VALUES (1891, 9925, 200000) ON DUPLICATE KEY UPDATE cash_available=200000
+[15:52:14:945266 +02:00] [Thread 16168] extDB3: SQL: Error MariaDBQueryException: Input: INSERT INTO atm_dispo (pos_x, pos_y, cash_available) VALUES (7630, 4645, 20000) ON DUPLICATE KEY UPDATE cash_available=20000

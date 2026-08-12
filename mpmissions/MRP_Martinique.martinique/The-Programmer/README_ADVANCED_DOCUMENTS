@@ -1,0 +1,19 @@
+/*
+Si vous utilisez l'Iphone X ou l'Iphone XI, passez cette étape.
+
+Si vous n'avez pas l'Iphone :
+
+Dans le fichier « player_inv.hpp », dans le dossier « dialogs » de votre mission, ajoutez un bouton et remplacez le « onButtonClick » de celui-ci par :
+
+onButtonClick = "createDialog ""Advanced_Documents_Documents_List"";";
+
+
+Dans le fichier « config_master.cpp » dans « The-Programmer/Advanced_Documents » à la racine de votre mission, vous pouvez créer vos différents types de documents.
+
+
+
+
+
+
+
+*/

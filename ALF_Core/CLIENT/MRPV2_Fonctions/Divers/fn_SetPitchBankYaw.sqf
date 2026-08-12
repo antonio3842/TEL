@@ -1,0 +1,39 @@
+private ["_object","_rotations","_aroundX","_aroundY","_aroundZ","_dirX","_dirY","_dirZ","_upX","_upY","_upZ","_dir","_up","_dirXTemp","_upXTemp"];
+private _object = _this select 0;
+private _rotations = _this select 1;
+private _aroundX = _rotations select 0;
+private _aroundY = _rotations select 1;
+private _aroundZ = (360 - (_rotations select 2)) - 360;
+private _dirX = 0;
+private _dirY = 1;
+private _dirZ = 0;
+private _upX = 0;
+private _upY = 0;
+private _upZ = 1;
+if (_aroundX != 0) then
+{
+	_dirY = cos _aroundX;
+	_dirZ = sin _aroundX;
+	_upY = -sin _aroundX;
+	_upZ = cos _aroundX;
+};
+if (_aroundY != 0) then
+{
+	_dirX = _dirZ * sin _aroundY;
+	_dirZ = _dirZ * cos _aroundY;
+	_upX = _upZ * sin _aroundY;
+	_upZ = _upZ * cos _aroundY;
+};
+if (_aroundZ != 0) then
+{
+	_dirXTemp = _dirX;
+	_dirX = (_dirXTemp* cos _aroundZ) - (_dirY * sin _aroundZ);
+	_dirY = (_dirY * cos _aroundZ) + (_dirXTemp * sin _aroundZ);
+	_upXTemp = _upX;
+	_upX = (_upXTemp * cos _aroundZ) - (_upY * sin _aroundZ);
+	_upY = (_upY * cos _aroundZ) + (_upXTemp * sin _aroundZ);
+};
+private _dir = [_dirX,_dirY,_dirZ];
+private _up = [_upX,_upY,_upZ];
+_object setVectorDirAndUp [_dir,_up];
+TRUE

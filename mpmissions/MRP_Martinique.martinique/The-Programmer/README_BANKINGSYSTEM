@@ -1,0 +1,181 @@
+/*
+
+ Dans le fichier « fn_atmMenu.sqf » dans le dossier « core\shops » de votre mission, remplacez l’intégralité du fichier par :
+
+[0] spawn the_programmer_bank_system_fnc_atm_main;
+
+
+
+
+(OPTIONNEL)
+
+Si vous souhaitez rajouter le choix du moyen du paiement pour l'achat de vêtements : 
+
+Rendez vous dans le fichier « fn_buyClothes.sqf » dans le dossier « core/shops » et trouvez ces lignes :
+
+if (_price > CASH) exitWith {titleText[localize "STR_Shop_NotEnoughClothes","PLAIN"];};
+CASH = CASH - _price;
+[0] call SOCK_fnc_updatePartial;
+Remplacez les par : 
+
+_handle = [_price,1] spawn the_programmer_bank_system_fnc_paymentType;
+waitUntil {scriptDone _handle};
+if (no_money) exitWith {};
+
+
+Ensuite, rendez vous à la racine de votre mission puis dans le dossier dialog, ouvrez le fichier "clothing.hpp" et trouvez cette ligne :
+
+onButtonClick = "[] call ALF_fnc_buyClothes;";
+Et remplacez là par la ligne suivante :
+
+onButtonClick = "[] spawn ALF_fnc_buyClothes;";
+
+
+
+
+
+(OPTIONNEL)
+
+Si vous souhaitez rajouter le choix du moyen du paiement pour l'achat de véhicules :
+Rendez vous dans le fichier « fn_vehicleShopBuy » dans le dossier « core/shops » et supprimez cette ligne :
+
+if (CASH < _purchasePrice) exitWith {hint format [localize "STR_Shop_Veh_NotEnough",[_purchasePrice - CASH] call ALF_fnc_numberText];closeDialog 0;};
+
+
+Puis remplacez ces lignes : 
+
+CASH = CASH - _purchasePrice;
+[0] call SOCK_fnc_updatePartial;
+Par celles ci :
+
+_handle = [_purchasePrice] spawn the_programmer_bank_system_fnc_paymentType;
+waitUntil {scriptDone _handle};
+if (no_money) exitWith {};
+
+
+
+
+
+
+
+(OPTIONNEL)
+
+Si vous souhaitez rajouter le choix du moyen du paiement pour l'achat d'armes : 
+
+Si vous n'avez pas installé Territory Conquest : Rendez vous dans le fichier « fn_weaponShopBuySell » dans le dossier « core/shops » et supprimez ces lignes (elles y sont 2 fois, il faut le faire 2 fois) :
+
+        if (_price > CASH) exitWith {hint localize "STR_NOTF_NotEnoughMoney"}; 
+       hint parseText format [localize "STR_Shop_Weapon_BoughtItem",_itemInfo select 1,[_price] call ALF_fnc_numberText];
+       CASH = CASH - _price;
+
+
+Si vous avez installé Territory Conquest : Rendez vous dans le fichier « fn_weaponShopBuySell » dans le dossier « core/shops » et supprimez ces lignes :
+
+        _newPrice = [(- _price)] call territorySystem_fnc_taxes;
+if (_newPrice > CASH) exitWith {
+ hint localize "STR_NOTF_NotEnoughMoney";
+ player setVariable ["total_montant",((player getVariable ["total_montant", 0]) - abs(_newPrice - _price))];
+};
+hint parseText format [localize "STR_Shop_Weapon_BoughtItem",(_itemInfo select 1),[_newPrice] call ALF_fnc_numberText];
+CASH = CASH - _newPrice;
+
+
+Puis remplacez par celles ci (ne pas oublier de le faire deux fois):
+
+    _handle = [_price] spawn the_programmer_bank_system_fnc_paymentType;
+    waitUntil {scriptDone _handle};
+    if (no_money) exitWith {};
+ hint parseText format [localize "STR_Shop_Weapon_BoughtItem",_itemInfo select 1,[_price] call ALF_fnc_numberText];
+
+---
+
+Dans les deux cas : Dans le fichier "fn_weaponShopSelection.sqf" dans le dossier "core/shops" remplacez la ligne :
+
+if (_price > CASH ) then {
+Par la ligne suivante : 
+
+if (_price > CASH and _price > life_atmbank) then {
+
+
+
+
+
+
+
+
+(OPTIONNEL)
+
+Si vous souhaitez rajouter le choix du moyen du paiement pour le marché virtuel : 
+
+Si vous n'avez pas installé Territory Conquest : Rendez vous dans le fichier "fn_virt_buy.sqf" dans le dossier "core/shops" et supprimez les lignes suivantes :
+
+if ((_price * _amount) > CASH) exitWith {[false,_type,_amount] call life_fnc_handleInv; hint localize "STR_NOTF_NotEnoughMoney";};
+hint format [localize "STR_Shop_Virt_BoughtItem",_amount,(localize _name),[(_price * _amount)] call ALF_fnc_numberText];
+CASH = CASH - _price * _amount;
+
+
+Si vous avez installé Territory Conquest : Rendez vous dans le fichier "fn_virt_buy.sqf" dans le dossier "core/shops" et supprimez les lignes 53/61 et 64/68
+
+_price = _price * _amount; 
+_newPrice = [(- _price)] call territorySystem_fnc_taxes;
+if (_newPrice > CASH) exitWith {
+ hint localize "STR_NOTF_NotEnoughMoney"; [false,_type,_amount] call life_fnc_handleInv;
+ player setVariable ["total_montant",((player getVariable ["total_montant", 0]) - abs(_newPrice - _price))];
+};
+hint format [localize "STR_Shop_Virt_BoughtItem",_amount,(localize _name),[_newPrice] call ALF_fnc_numberText];
+CASH = CASH - _newPrice;
+
+---
+
+Dans les deux cas : Ensuite, ajoutez à l'endroit où vous avez supprimé les lignes par (ne pas oublier de le faire deux fois) :
+
+_handle = [_price * _amount] spawn the_programmer_bank_system_fnc_paymentType;
+waitUntil {scriptDone _handle};
+if (no_money) exitWith {[false,_type,_amount] call life_fnc_handleInv;};
+hint format[localize"STR_Shop_Virt_BoughtItem",_amount,(localize _name),[(_price*_amount)] call ALF_fnc_numberText];
+
+
+Dans le même fichier, trouvez la ligne : 
+
+                                                                        if ((_price * _amount) > CASH && {!isNil "_hideout" && {!isNil {group player getVariable "gang_bank"}} && {(group player getVariable "gang_bank") <= _price * _amount}}) exitWith {hint localize "STR_NOTF_NotEnoughMoney"};
+Remplacez la ligne par la suivante : 
+
+if ((_price * _amount) > life_cash && (_price * _amount) > life_atmbank && {!isNil "_hideout" && {!isNil {group player getVariable "gang_bank"}} && {(group player getVariable "gang_bank") <= _price * _amount}}) exitWith {hint localize "STR_NOTF_NotEnoughMoney"};
+
+
+Enfin, à la racine de votre mission, dans le dossier dialog, ouvrez le fichier "shop_items.hpp" et trouvez cette ligne :
+
+onButtonClick = "[] call life_fnc_virt_buy;";
+Et remplacez la par la ligne suivante :
+
+onButtonClick = "[] spawn life_fnc_virt_buy;";
+
+
+
+
+
+
+
+Posez un objet sur votre mapping pour ouvrir la banque, par exemple un panneau et ajoutez dans l’init de celui-ci :
+
+_null=this execVM "The-Programmer\BankingSystem\init.sqf";
+
+
+
+
+
+
+
+
+
+Dans le fichier « config_master.cpp » dans le dossier « The-Programmer/BankingSystem » vous pouvez personnaliser simplement quelques paramètres.
+
+
+
+Si vous souhaitez mettre votre logo sur l'ATM, remplacez le logo.paa dans le dossier BankingSystem/textures/atm
+
+Votre logo doit être impérativement de la taille 128*128 et au format .paa
+
+
+
+*/

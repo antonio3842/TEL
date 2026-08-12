@@ -1,0 +1,169 @@
+/*
+
+Copyright 2023
+
+Association law 1901 "GET YOUR PATH" registred under the RNA W252007073.
+
+Statement form the journal-officiel.gouv.fr : https://www.journal-officiel.gouv.fr/pages/associations-detail-annonce/?q.id=id:202300270403
+
+More information at kainnon@getyourpath.fr
+
+All rights reserved.
+
+*/
+
+
+//  __  __ _____  _____ _____ _____ ____  _   _    _____ ____  _   _ ______ _____ _____
+// |  \/  |_   _|/ ____/ ____|_   _/ __ \| \ | |  / ____/ __ \| \ | |  ____|_   _/ ____|
+// | \  / | | | | (___| (___   | || |  | |  \| | | |   | |  | |  \| | |__    | || |  __
+// | |\/| | | |  \___ \\___ \  | || |  | | . ` | | |   | |  | | . ` |  __|   | || | |_ |
+// | |  | |_| |_ ____) |___) |_| || |__| | |\  | | |___| |__| | |\  | |     _| || |__| |
+// |_|  |_|_____|_____/_____/|_____\____/|_| \_|  \_____\____/|_| \_|_|    |_____\_____|
+
+// ***********************************
+// ********* loading infos ***********
+// ***********************************
+skipLobby = 1;// Skip Lobby when players join the server.
+//---------------------------------
+
+// ***********************************
+// *********** server ****************
+// ***********************************
+class Header
+{
+    gameType=RPG;// Game type is a simplified category describing what a mission is about. It helps player to navigate through potentially large number of available missions and pick the one they would like to play.
+    minPlayers=1;//min of players the mission supports
+    maxPlayers=110;//max of players the mission supports
+};
+
+class CfgPatches 
+{
+    class CBA_Extended_EventHandlers {};
+};
+
+//---------------------------------
+
+/**********************************
+****** join/left configs **********
+***********************************/
+briefing=0;// Skip briefing screen for SP missions. If no briefing.html is present, it is skipped anyway.
+debriefing=0;// Defines if the debriefing is shown or not at the end of the mission.
+//---------------------------------
+
+/**********************************
+********* Removal Manager *********
+***********************************/
+corpseManagerMode=2;
+wreckManagerMode=0;
+/*
+Sets the mode for corpse removal manager.
+
+0=None - None of the units are managed by the manager
+1=All - All units are managed by the manager
+2=None_But_Respawned - Only units that can respawn are managed by the manager
+3=All_But_Respawned - All units are managed by the manager with exception of respawned (opposite to mode 2)
+Default value: 0 for SP, 2 for MP
+*/
+corpseLimit=15;// Corpse limit before which ( <= ) corpseRemovalMaxTime applies and after which ( > ) corpseRemovalMinTime applies.
+corpseRemovalMinTime=90;// Remove all bodies that have been dead longer than corpseRemovalMinTime when corpseLimit is breached.
+corpseRemovalMaxTime=180;// Maximum time a corpse can remain on the ground if total number of corpses is equal or under corpseLimit.
+
+wreckManagerMode=1;
+/*
+Sets the mode for wreck removal manager.
+
+0=None - None of the vehicles are managed by the manager
+1=All - All vehicles are managed by the manager
+2=None_But_Respawned - Only vehicles that can respawn are managed by the manager
+3=All_But_Respawned - All vehicles are managed by the manager with exception of respawned (opposite to mode 2)
+Default value: 0 for SP, 2 for MP
+*/
+wreckLimit=15;// Vehicle wreck limit before which ( <= ) wreckRemovalMaxTime applies and after which ( > ) wreckRemovalMinTime applies (see below).
+wreckRemovalMinTime=10;// Remove all wrecks that have existed longer than wreckRemovalMinTime when wreckLimit is breached.
+wreckRemovalMaxTime=90;// Maximum time a wreck can remain on the ground if total number of wrecks is equal or under wreckLimit.
+minPlayerDistance=50;// The minimum distance between corpse or wreck and nearest player before the corpse or wreck is allowed to be removed by the garbage collector.
+//---------------------------------
+
+/**********************************
+********** Flying  system *********
+***********************************/
+forceRotorLibSimulation=0;// Force enable or disable RotorLib. Default value: 0 - options based;1 - force enable;2 - force disable.
+//---------------------------------
+
+/**********************************
+*********** Communication *********
+***********************************/
+// Disable global, side, command and system chat. MOTD and admin say have exception and will show in global. Introduced in BETA 1.60.93398.
+disableChannels[]={{0,false,true},{1,true,true},{2,true,true},{3,true,true},{4,true,true},{5,false,true},{6,true,true}};
+//---------------------------------
+
+/**********************************
+*************** Misc **************
+***********************************/
+
+// disableChannels[] = {{0,true,false},{1,true,true},{2,true,true},{4,true,true},{5,true,true}};
+enableDebugConsole[] = {"76561197986843516","76561198170517007","76561198197894562"};
+
+
+onPauseScript[] = {ALF_fnc_escInterupt};
+unsafeCVL=1;
+// enableDebugConsole= 1;// Allows access to the Debug Console outside of the editor during normal gameplay.
+scriptedPlayer=1;// When scripted player is enabled, game no longer shows "No player select" error message upon mission start when no player unit is present.
+allowFunctionsLog=1;// Allows functions to log to the RPT file. Set it to 1/true to allow RPT logging
+disableRandomization[]={"All"};// Disables randomization on certain objects, object types or object kinds in the mission.
+allowFunctionsRecompile=0;
+allowProfileGlasses=0;
+ALF_DebugMode = 1;
+/**********************************
+************** UI *****************
+***********************************/
+#include "ALF_Dialogs\CfgGameUserInterface.hpp"
+#include "infiSTAR_AdminMenu.hpp"
+//---------------------------------
+
+//---------------------------------
+
+/**********************************
+************ Debriefing ***********
+***********************************/
+#include "ALF_Configs\CfgDebriefings.hpp"
+//---------------------------------
+
+/**********************************
+************** Sounds *************
+***********************************/
+#include "ALF_Configs\CfgSounds.hpp"
+//---------------------------------
+
+/**********************************
+************** Others *************
+***********************************/
+#include "ALF_Configs\CfgDisabledCommands.hpp"
+#include "ALF_Configs\script_macros.hpp"
+#include "\ALF_headgear\ALF_Projecteur_2\projo.hpp"
+//#include "The-Programmer\theprogrammer_dialog_master.cpp"
+
+/**********************************
+*********** Ajout MRPV2 ***********
+***********************************/
+// #include "MRPV2_Interface_Diverse.hpp"
+//---------------------------------
+
+// import Land_ALF_Entreprise from CfgVehicles;
+// class CfgVehicles
+// {
+// 	import Land_ALF_Entreprise as Land_ALF_Entreprise_Temp;
+//     class Land_ALF_Entreprise : Land_ALF_Entreprise_Temp
+//     {
+//         displayname = "Entreprise";
+//     };
+// };
+
+// import Default from CfgTasks;
+// class CfgTasks
+// {
+// 	class MyAwesomeTask : Default
+// 	{
+// 		name = "My Awesome Task";
+// 	};
+// };

@@ -1,0 +1,97 @@
+
+extDB3: https://bitbucket.org/torndeco/extdb3/wiki/Home
+extDB3: Version: 1.033
+extDB3: Windows Version
+Message: All development for extDB3 is done on a Linux Dedicated Server
+Message: If you would like to Donate to extDB3 Development
+Message: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=2SUEFTGABTAM2
+Message: Also leave a message if there is any particular feature you would like to see added.
+Message: Thanks for all the people that have donated.
+Message: Torndeco: 18/05/15
+
+Message: This version was modified and include some improvement
+Message: The lib was recompiled using new version of TBBMalloc, Boost and MariaDB connector
+Message: The worker threads limitation was removed
+Message: Steez: 30/10/2020
+
+
+extDB3: Found extdb3-conf.ini
+extDB3: Detected 16 Cores, Setting up 6 Worker Threads
+extDB3: Detected 16 Cores, Setting up 16 Worker Threads
+extDB3: ...
+extDB3: ...
+extDB3: ...
+extDB3: ...
+extDB3: ...
+extDB3: ...
+extDB3: ...
+extDB3: ...
+extDB3: ...
+extDB3: ...
+extDB3: ...
+extDB3: ...
+extDB3: ...
+extDB3: ...
+extDB3: ...
+extDB3: ...
+
+
+[14:01:32:101223 +01:00] [Thread 836] extDB3: SQL: Initialized: Add Quotes around TEXT Datatypes mode: 2
+[14:01:32:101266 +01:00] [Thread 836] extDB3: SQL: Initialized: NULL = ""
+[14:01:32:101282 +01:00] [Thread 836] extDB3: Locked
+[14:01:32:108337 +01:00] [Thread 8616] extDB3: SQL: Error MariaDBQueryException: PROCEDURE altislife.resetLifeVehicles does not exist
+[14:01:32:108349 +01:00] [Thread 7688] extDB3: SQL: Error MariaDBQueryException: PROCEDURE altislife.Point_Permis does not exist
+[14:01:32:108356 +01:00] [Thread 5084] extDB3: SQL: Error MariaDBQueryException: PROCEDURE altislife.deleteOldHouses does not exist
+[14:01:32:108385 +01:00] [Thread 2768] extDB3: SQL: Error MariaDBQueryException: PROCEDURE altislife.deleteDeadVehicles does not exist
+[14:01:32:108408 +01:00] [Thread 2768] extDB3: SQL: Error MariaDBQueryException: Input: CALL deleteDeadVehicles
+[14:01:32:108412 +01:00] [Thread 9044] extDB3: SQL: Error MariaDBQueryException: PROCEDURE altislife.deleteOldGangs does not exist
+[14:01:32:108364 +01:00] [Thread 7688] extDB3: SQL: Error MariaDBQueryException: Input: CALL Point_Permis
+[14:01:32:108446 +01:00] [Thread 9044] extDB3: SQL: Error MariaDBQueryException: Input: CALL deleteOldGangs
+[14:01:32:108351 +01:00] [Thread 8616] extDB3: SQL: Error MariaDBQueryException: Input: CALL resetLifeVehicles
+[14:01:32:108408 +01:00] [Thread 5084] extDB3: SQL: Error MariaDBQueryException: Input: CALL deleteOldHouses
+[15:01:33:646682 +01:00] [Thread 2712] extDB3: SQL: Error MariaDBQueryException: PROCEDURE altislife.braceletTimeUpdate does not exist
+[15:01:33:646900 +01:00] [Thread 2712] extDB3: SQL: Error MariaDBQueryException: Input: CALL braceletTimeUpdate
+[16:01:33:716054 +01:00] [Thread 9144] extDB3: SQL: Error MariaDBQueryException: PROCEDURE altislife.braceletTimeUpdate does not exist
+[16:01:33:716190 +01:00] [Thread 9144] extDB3: SQL: Error MariaDBQueryException: Input: CALL braceletTimeUpdate
+[17:01:33:794957 +01:00] [Thread 8616] extDB3: SQL: Error MariaDBQueryException: PROCEDURE altislife.braceletTimeUpdate does not exist
+[17:01:33:795069 +01:00] [Thread 8616] extDB3: SQL: Error MariaDBQueryException: Input: CALL braceletTimeUpdate
+[18:01:33:858722 +01:00] [Thread 8536] extDB3: SQL: Error MariaDBQueryException: PROCEDURE altislife.braceletTimeUpdate does not exist
+[18:01:33:858816 +01:00] [Thread 8536] extDB3: SQL: Error MariaDBQueryException: Input: CALL braceletTimeUpdate
+[19:01:33:940089 +01:00] [Thread 7688] extDB3: SQL: Error MariaDBQueryException: PROCEDURE altislife.braceletTimeUpdate does not exist
+[19:01:33:940236 +01:00] [Thread 7688] extDB3: SQL: Error MariaDBQueryException: Input: CALL braceletTimeUpdate
+[20:01:34:015120 +01:00] [Thread 9044] extDB3: SQL: Error MariaDBQueryException: PROCEDURE altislife.braceletTimeUpdate does not exist
+[20:01:34:015204 +01:00] [Thread 9044] extDB3: SQL: Error MariaDBQueryException: Input: CALL braceletTimeUpdate
+[21:01:35:449592 +01:00] [Thread 8616] extDB3: SQL: Error MariaDBQueryException: PROCEDURE altislife.braceletTimeUpdate does not exist
+[21:01:35:449748 +01:00] [Thread 8616] extDB3: SQL: Error MariaDBQueryException: Input: CALL braceletTimeUpdate
+[22:01:35:520190 +01:00] [Thread 5084] extDB3: SQL: Error MariaDBQueryException: PROCEDURE altislife.braceletTimeUpdate does not exist
+[22:01:35:520336 +01:00] [Thread 5084] extDB3: SQL: Error MariaDBQueryException: Input: CALL braceletTimeUpdate
+[23:01:35:585512 +01:00] [Thread 2712] extDB3: SQL: Error MariaDBQueryException: PROCEDURE altislife.braceletTimeUpdate does not exist
+[23:01:35:585672 +01:00] [Thread 2712] extDB3: SQL: Error MariaDBQueryException: Input: CALL braceletTimeUpdate
+[00:01:35:652869 +01:00] [Thread 9144] extDB3: SQL: Error MariaDBQueryException: PROCEDURE altislife.braceletTimeUpdate does not exist
+[00:01:35:652987 +01:00] [Thread 9144] extDB3: SQL: Error MariaDBQueryException: Input: CALL braceletTimeUpdate
+[01:01:35:727412 +01:00] [Thread 2768] extDB3: SQL: Error MariaDBQueryException: PROCEDURE altislife.braceletTimeUpdate does not exist
+[01:01:35:727604 +01:00] [Thread 2768] extDB3: SQL: Error MariaDBQueryException: Input: CALL braceletTimeUpdate
+[02:01:35:807946 +01:00] [Thread 2712] extDB3: SQL: Error MariaDBQueryException: PROCEDURE altislife.braceletTimeUpdate does not exist
+[02:01:35:808058 +01:00] [Thread 2712] extDB3: SQL: Error MariaDBQueryException: Input: CALL braceletTimeUpdate
+[03:01:35:872307 +01:00] [Thread 7144] extDB3: SQL: Error MariaDBQueryException: PROCEDURE altislife.braceletTimeUpdate does not exist
+[03:01:35:872451 +01:00] [Thread 7144] extDB3: SQL: Error MariaDBQueryException: Input: CALL braceletTimeUpdate
+[04:01:35:937775 +01:00] [Thread 7688] extDB3: SQL: Error MariaDBQueryException: PROCEDURE altislife.braceletTimeUpdate does not exist
+[04:01:35:937862 +01:00] [Thread 7688] extDB3: SQL: Error MariaDBQueryException: Input: CALL braceletTimeUpdate
+[05:01:36:014123 +01:00] [Thread 7576] extDB3: SQL: Error MariaDBQueryException: PROCEDURE altislife.braceletTimeUpdate does not exist
+[05:01:36:014239 +01:00] [Thread 7576] extDB3: SQL: Error MariaDBQueryException: Input: CALL braceletTimeUpdate
+[06:01:36:094212 +01:00] [Thread 8748] extDB3: SQL: Error MariaDBQueryException: PROCEDURE altislife.braceletTimeUpdate does not exist
+[06:01:36:094308 +01:00] [Thread 8748] extDB3: SQL: Error MariaDBQueryException: Input: CALL braceletTimeUpdate
+[07:01:36:172731 +01:00] [Thread 8304] extDB3: SQL: Error MariaDBQueryException: PROCEDURE altislife.braceletTimeUpdate does not exist
+[07:01:36:172830 +01:00] [Thread 8304] extDB3: SQL: Error MariaDBQueryException: Input: CALL braceletTimeUpdate
+[08:01:36:239335 +01:00] [Thread 7144] extDB3: SQL: Error MariaDBQueryException: PROCEDURE altislife.braceletTimeUpdate does not exist
+[08:01:36:239417 +01:00] [Thread 7144] extDB3: SQL: Error MariaDBQueryException: Input: CALL braceletTimeUpdate
+[09:01:45:735864 +01:00] [Thread 8536] extDB3: SQL: Error MariaDBQueryException: PROCEDURE altislife.braceletTimeUpdate does not exist
+[09:01:45:735999 +01:00] [Thread 8536] extDB3: SQL: Error MariaDBQueryException: Input: CALL braceletTimeUpdate
+[10:01:45:802842 +01:00] [Thread 8616] extDB3: SQL: Error MariaDBQueryException: PROCEDURE altislife.braceletTimeUpdate does not exist
+[10:01:45:802966 +01:00] [Thread 8616] extDB3: SQL: Error MariaDBQueryException: Input: CALL braceletTimeUpdate
+[11:01:45:865751 +01:00] [Thread 7688] extDB3: SQL: Error MariaDBQueryException: PROCEDURE altislife.braceletTimeUpdate does not exist
+[11:01:45:865845 +01:00] [Thread 7688] extDB3: SQL: Error MariaDBQueryException: Input: CALL braceletTimeUpdate
+[12:01:45:941048 +01:00] [Thread 7576] extDB3: SQL: Error MariaDBQueryException: PROCEDURE altislife.braceletTimeUpdate does not exist
+[12:01:45:941125 +01:00] [Thread 7576] extDB3: SQL: Error MariaDBQueryException: Input: CALL braceletTimeUpdate
+[13:01:46:011061 +01:00] [Thread 7688] extDB3: SQL: Error MariaDBQueryException: PROCEDURE altislife.braceletTimeUpdate does not exist
+[13:01:46:011148 +01:00] [Thread 7688] extDB3: SQL: Error MariaDBQueryException: Input: CALL braceletTimeUpdate

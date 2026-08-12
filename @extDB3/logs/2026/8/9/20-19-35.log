@@ -1,0 +1,53 @@
+
+extDB3: https://bitbucket.org/torndeco/extdb3/wiki/Home
+extDB3: Version: 1.033
+extDB3: Windows Version
+Message: All development for extDB3 is done on a Linux Dedicated Server
+Message: If you would like to Donate to extDB3 Development
+Message: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=2SUEFTGABTAM2
+Message: Also leave a message if there is any particular feature you would like to see added.
+Message: Thanks for all the people that have donated.
+Message: Torndeco: 18/05/15
+
+Message: This version was modified and include some improvement
+Message: The lib was recompiled using new version of TBBMalloc, Boost and MariaDB connector
+Message: The worker threads limitation was removed
+Message: Steez: 30/10/2020
+
+
+extDB3: Found extdb3-conf.ini
+extDB3: Detected 16 Cores, Setting up 6 Worker Threads
+extDB3: Detected 16 Cores, Setting up 16 Worker Threads
+extDB3: ...
+extDB3: ...
+extDB3: ...
+extDB3: ...
+extDB3: ...
+extDB3: ...
+extDB3: ...
+extDB3: ...
+extDB3: ...
+extDB3: ...
+extDB3: ...
+extDB3: ...
+extDB3: ...
+extDB3: ...
+extDB3: ...
+extDB3: ...
+
+
+[20:19:55:408737 +02:00] [Thread 20980] extDB3: SQL: Initialized: Add Quotes around TEXT Datatypes mode: 2
+[20:19:55:408762 +02:00] [Thread 20980] extDB3: SQL: Initialized: NULL = ""
+[20:19:55:408804 +02:00] [Thread 20980] extDB3: Locked
+[20:19:55:415146 +02:00] [Thread 19360] extDB3: SQL: Error MariaDBQueryException: PROCEDURE armalife.deleteDeadVehicles does not exist
+[20:19:55:415149 +02:00] [Thread 19628] extDB3: SQL: Error MariaDBQueryException: PROCEDURE armalife.deleteOldForfait does not exist
+[20:19:55:415170 +02:00] [Thread 19360] extDB3: SQL: Error MariaDBQueryException: Input: CALL deleteDeadVehicles
+[20:19:55:415200 +02:00] [Thread 19628] extDB3: SQL: Error MariaDBQueryException: Input: CALL deleteOldForfait
+[20:19:55:415207 +02:00] [Thread 15044] extDB3: SQL: Error MariaDBQueryException: PROCEDURE armalife.deleteOldSms does not exist
+[20:19:55:415237 +02:00] [Thread 15044] extDB3: SQL: Error MariaDBQueryException: Input: CALL deleteOldSms
+[20:21:40:432869 +02:00] [Thread 15044] extDB3: SQL: Error MariaDBQueryException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'est téléporté via MapTeleport en [1965.95,9938.22,0]')' at line 1
+[20:21:40:432958 +02:00] [Thread 15044] extDB3: SQL: Error MariaDBQueryException: Input: INSERT INTO logs_alf (name, uid, type, text) VALUES ('Antonio Lopa', '76561198201065973', 'ADMIN', 'Antonio Lopa (76561198201065973) s'est téléporté via MapTeleport en [1965.95,9938.22,0]')
+[20:22:10:926739 +02:00] [Thread 15044] extDB3: SQL: Error MariaDBQueryException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'est téléporté vers Antonio Lopa (76561198201065973) en [[1976.79,9943.91,0...' at line 1
+[20:22:10:926803 +02:00] [Thread 15044] extDB3: SQL: Error MariaDBQueryException: Input: INSERT INTO logs_alf (name, uid, type, text) VALUES ('Sami BERTIN', '76561198118444651', 'ADMIN', 'Sami BERTIN (76561198118444651) s'est téléporté vers Antonio Lopa (76561198201065973) en [[1976.79,9943.91,0.00143909]].')
+[20:22:49:779918 +02:00] [Thread 15044] extDB3: SQL: Error MariaDBQueryException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'action 'Arsenal' via le menu admin.')' at line 1
+[20:22:49:779983 +02:00] [Thread 15044] extDB3: SQL: Error MariaDBQueryException: Input: INSERT INTO logs_alf (name, uid, type, text) VALUES ('Antonio Lopa', '76561198201065973', 'ADMIN', 'A utilisé l'action 'Arsenal' via le menu admin.')

@@ -1,0 +1,201 @@
+
+extDB3: https://bitbucket.org/torndeco/extdb3/wiki/Home
+extDB3: Version: 1.033
+extDB3: Windows Version
+Message: All development for extDB3 is done on a Linux Dedicated Server
+Message: If you would like to Donate to extDB3 Development
+Message: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=2SUEFTGABTAM2
+Message: Also leave a message if there is any particular feature you would like to see added.
+Message: Thanks for all the people that have donated.
+Message: Torndeco: 18/05/15
+
+Message: This version was modified and include some improvement
+Message: The lib was recompiled using new version of TBBMalloc, Boost and MariaDB connector
+Message: The worker threads limitation was removed
+Message: Steez: 30/10/2020
+
+
+extDB3: Found extdb3-conf.ini
+extDB3: Detected 16 Cores, Setting up 6 Worker Threads
+extDB3: Detected 16 Cores, Setting up 16 Worker Threads
+extDB3: ...
+extDB3: ...
+extDB3: ...
+extDB3: ...
+extDB3: ...
+extDB3: ...
+extDB3: ...
+extDB3: ...
+extDB3: ...
+extDB3: ...
+extDB3: ...
+extDB3: ...
+extDB3: ...
+extDB3: ...
+extDB3: ...
+extDB3: ...
+
+
+[11:29:16:947047 +02:00] [Thread 6572] extDB3: SQL: Initialized: Add Quotes around TEXT Datatypes mode: 2
+[11:29:16:947090 +02:00] [Thread 6572] extDB3: SQL: Initialized: NULL = ""
+[11:29:16:947109 +02:00] [Thread 6572] extDB3: Locked
+[11:34:22:342570 +02:00] [Thread 10264] extDB3: SQL: Error MariaDBConnectorException: Too many connections
+[11:34:22:342625 +02:00] [Thread 10264] extDB3: SQL: Error MariaDBConnectorException: Input: UPDATE bourse SET price=15 WHERE itemName='"ble"'
+[11:34:22:343693 +02:00] [Thread 10836] extDB3: SQL: Error MariaDBConnectorException: Too many connections
+[11:34:22:343719 +02:00] [Thread 10836] extDB3: SQL: Error MariaDBConnectorException: Input: UPDATE bourse SET price=65 WHERE itemName='"strawberry"'
+[11:34:22:345134 +02:00] [Thread 11588] extDB3: SQL: Error MariaDBConnectorException: Too many connections
+[11:34:22:345162 +02:00] [Thread 11588] extDB3: SQL: Error MariaDBConnectorException: Input: UPDATE bourse SET price=65 WHERE itemName='"cotton"'
+[11:34:22:346678 +02:00] [Thread 6628] extDB3: SQL: Error MariaDBConnectorException: Too many connections
+[11:34:22:346706 +02:00] [Thread 6628] extDB3: SQL: Error MariaDBConnectorException: Input: UPDATE bourse SET price=10 WHERE itemName='"Pavot"'
+[11:34:22:348657 +02:00] [Thread 10588] extDB3: SQL: Error MariaDBConnectorException: Too many connections
+[11:34:22:348680 +02:00] [Thread 10588] extDB3: SQL: Error MariaDBConnectorException: Input: UPDATE bourse SET price=25 WHERE itemName='"Lait_Chevre"'
+[11:34:22:349753 +02:00] [Thread 10836] extDB3: SQL: Error MariaDBConnectorException: Too many connections
+[11:34:22:349777 +02:00] [Thread 10836] extDB3: SQL: Error MariaDBConnectorException: Input: UPDATE bourse SET price=69 WHERE itemName='"Lingot_Cuivre"'
+[11:34:22:351164 +02:00] [Thread 11592] extDB3: SQL: Error MariaDBConnectorException: Too many connections
+[11:34:22:351186 +02:00] [Thread 11592] extDB3: SQL: Error MariaDBConnectorException: Input: UPDATE bourse SET price=65 WHERE itemName='"corn"'
+[11:34:22:352370 +02:00] [Thread 1756] extDB3: SQL: Error MariaDBConnectorException: Too many connections
+[11:34:22:352389 +02:00] [Thread 1756] extDB3: SQL: Error MariaDBConnectorException: Input: UPDATE bourse SET price=65 WHERE itemName='"artichoke"'
+[11:34:22:354750 +02:00] [Thread 7296] extDB3: SQL: Error MariaDBConnectorException: Too many connections
+[11:34:22:354776 +02:00] [Thread 7296] extDB3: SQL: Error MariaDBConnectorException: Input: UPDATE bourse SET price=120 WHERE itemName='"bague"'
+[11:34:22:358304 +02:00] [Thread 11588] extDB3: SQL: Error MariaDBConnectorException: Too many connections
+[11:34:22:358339 +02:00] [Thread 11588] extDB3: SQL: Error MariaDBConnectorException: Input: UPDATE bourse SET price=30 WHERE itemName='"sand"'
+[11:34:22:359670 +02:00] [Thread 10588] extDB3: SQL: Error MariaDBConnectorException: Too many connections
+[11:34:22:359701 +02:00] [Thread 10588] extDB3: SQL: Error MariaDBConnectorException: Input: UPDATE bourse SET price=1350 WHERE itemName='"heroin_processed"'
+[11:39:25:692853 +02:00] [Thread 6628] extDB3: SQL: Error MariaDBConnectorException: Too many connections
+[11:39:25:692895 +02:00] [Thread 6628] extDB3: SQL: Error MariaDBConnectorException: Input: UPDATE bourse SET price=50 WHERE itemName='"Farine"'
+[11:39:25:694462 +02:00] [Thread 10264] extDB3: SQL: Error MariaDBConnectorException: Too many connections
+[11:39:25:694486 +02:00] [Thread 10264] extDB3: SQL: Error MariaDBConnectorException: Input: UPDATE bourse SET price=15 WHERE itemName='"ble"'
+[11:39:25:695532 +02:00] [Thread 11588] extDB3: SQL: Error MariaDBConnectorException: Too many connections
+[11:39:25:695553 +02:00] [Thread 11588] extDB3: SQL: Error MariaDBConnectorException: Input: UPDATE bourse SET price=25 WHERE itemName='"Lait_Chevre"'
+[11:39:25:696535 +02:00] [Thread 7296] extDB3: SQL: Error MariaDBConnectorException: Too many connections
+[11:39:25:696561 +02:00] [Thread 7296] extDB3: SQL: Error MariaDBConnectorException: Input: UPDATE bourse SET price=65 WHERE itemName='"corn"'
+[11:39:25:697634 +02:00] [Thread 6628] extDB3: SQL: Error MariaDBConnectorException: Too many connections
+[11:39:25:697655 +02:00] [Thread 6628] extDB3: SQL: Error MariaDBConnectorException: Input: UPDATE bourse SET price=65 WHERE itemName='"lettuce"'
+[11:39:25:698807 +02:00] [Thread 11588] extDB3: SQL: Error MariaDBConnectorException: Too many connections
+[11:39:25:698828 +02:00] [Thread 11588] extDB3: SQL: Error MariaDBConnectorException: Input: UPDATE bourse SET price=65 WHERE itemName='"sunflower"'
+[11:39:25:700244 +02:00] [Thread 2296] extDB3: SQL: Error MariaDBConnectorException: Too many connections
+[11:39:25:700273 +02:00] [Thread 2296] extDB3: SQL: Error MariaDBConnectorException: Input: UPDATE bourse SET price=65 WHERE itemName='"Jus_Pomme"'
+[11:39:25:701235 +02:00] [Thread 10588] extDB3: SQL: Error MariaDBConnectorException: Too many connections
+[11:39:25:701257 +02:00] [Thread 10588] extDB3: SQL: Error MariaDBConnectorException: Input: UPDATE bourse SET price=80 WHERE itemName='"Batterie"'
+[11:39:25:702309 +02:00] [Thread 11592] extDB3: SQL: Error MariaDBConnectorException: Too many connections
+[11:39:25:702331 +02:00] [Thread 11592] extDB3: SQL: Error MariaDBConnectorException: Input: UPDATE bourse SET price=65 WHERE itemName='"cotton"'
+[11:39:25:703342 +02:00] [Thread 7296] extDB3: SQL: Error MariaDBConnectorException: Too many connections
+[11:39:25:703360 +02:00] [Thread 7296] extDB3: SQL: Error MariaDBConnectorException: Input: UPDATE bourse SET price=80 WHERE itemName='"Petrole"'
+[11:39:25:704452 +02:00] [Thread 10588] extDB3: SQL: Error MariaDBConnectorException: Too many connections
+[11:39:25:704468 +02:00] [Thread 10588] extDB3: SQL: Error MariaDBConnectorException: Input: UPDATE bourse SET price=100 WHERE itemName='"diamond_cut"'
+[11:39:25:705502 +02:00] [Thread 6628] extDB3: SQL: Error MariaDBConnectorException: Too many connections
+[11:39:25:705524 +02:00] [Thread 6628] extDB3: SQL: Error MariaDBConnectorException: Input: UPDATE bourse SET price=68 WHERE itemName='"Lingot_Fer"'
+[11:39:25:706964 +02:00] [Thread 10672] extDB3: SQL: Error MariaDBConnectorException: Too many connections
+[11:39:25:706989 +02:00] [Thread 10672] extDB3: SQL: Error MariaDBConnectorException: Input: UPDATE bourse SET price=1350 WHERE itemName='"heroin_processed"'
+[11:39:25:708130 +02:00] [Thread 2296] extDB3: SQL: Error MariaDBConnectorException: Too many connections
+[11:39:25:708151 +02:00] [Thread 2296] extDB3: SQL: Error MariaDBConnectorException: Input: UPDATE bourse SET price=65 WHERE itemName='"glass"'
+[11:44:28:758867 +02:00] [Thread 6628] extDB3: SQL: Error MariaDBConnectorException: Too many connections
+[11:44:28:758905 +02:00] [Thread 6628] extDB3: SQL: Error MariaDBConnectorException: Input: UPDATE bourse SET price=65 WHERE itemName='"strawberry"'
+[11:44:28:760913 +02:00] [Thread 11876] extDB3: SQL: Error MariaDBConnectorException: Too many connections
+[11:44:28:760942 +02:00] [Thread 11876] extDB3: SQL: Error MariaDBConnectorException: Input: UPDATE bourse SET price=65 WHERE itemName='"lettuce"'
+[11:44:28:762262 +02:00] [Thread 10088] extDB3: SQL: Error MariaDBConnectorException: Too many connections
+[11:44:28:762291 +02:00] [Thread 10088] extDB3: SQL: Error MariaDBConnectorException: Input: UPDATE bourse SET price=65 WHERE itemName='"tomato"'
+[11:44:28:763458 +02:00] [Thread 11592] extDB3: SQL: Error MariaDBConnectorException: Too many connections
+[11:44:28:763478 +02:00] [Thread 11592] extDB3: SQL: Error MariaDBConnectorException: Input: UPDATE bourse SET price=65 WHERE itemName='"corn"'
+[11:44:28:764596 +02:00] [Thread 10588] extDB3: SQL: Error MariaDBConnectorException: Too many connections
+[11:44:28:764619 +02:00] [Thread 10588] extDB3: SQL: Error MariaDBConnectorException: Input: UPDATE bourse SET price=65 WHERE itemName='"cotton"'
+[11:44:28:765664 +02:00] [Thread 7296] extDB3: SQL: Error MariaDBConnectorException: Too many connections
+[11:44:28:765685 +02:00] [Thread 7296] extDB3: SQL: Error MariaDBConnectorException: Input: UPDATE bourse SET price=65 WHERE itemName='"tobacco"'
+[11:44:28:766839 +02:00] [Thread 11588] extDB3: SQL: Error MariaDBConnectorException: Too many connections
+[11:44:28:766865 +02:00] [Thread 11588] extDB3: SQL: Error MariaDBConnectorException: Input: UPDATE bourse SET price=65 WHERE itemName='"artichoke"'
+[11:44:28:767774 +02:00] [Thread 10672] extDB3: SQL: Error MariaDBConnectorException: Too many connections
+[11:44:28:767792 +02:00] [Thread 10672] extDB3: SQL: Error MariaDBConnectorException: Input: UPDATE bourse SET price=65 WHERE itemName='"chili_pepper"'
+[11:44:28:768820 +02:00] [Thread 10588] extDB3: SQL: Error MariaDBConnectorException: Too many connections
+[11:44:28:768844 +02:00] [Thread 10588] extDB3: SQL: Error MariaDBConnectorException: Input: UPDATE bourse SET price=75 WHERE itemName='"planche"'
+[11:44:28:769939 +02:00] [Thread 2296] extDB3: SQL: Error MariaDBConnectorException: Too many connections
+[11:44:28:769960 +02:00] [Thread 2296] extDB3: SQL: Error MariaDBConnectorException: Input: UPDATE bourse SET price=120 WHERE itemName='"bague"'
+[11:44:28:771019 +02:00] [Thread 12168] extDB3: SQL: Error MariaDBConnectorException: Too many connections
+[11:44:28:771037 +02:00] [Thread 12168] extDB3: SQL: Error MariaDBConnectorException: Input: UPDATE bourse SET price=100 WHERE itemName='"diamond_cut"'
+[11:44:28:772186 +02:00] [Thread 11592] extDB3: SQL: Error MariaDBConnectorException: Too many connections
+[11:44:28:772206 +02:00] [Thread 11592] extDB3: SQL: Error MariaDBConnectorException: Input: UPDATE bourse SET price=90 WHERE itemName='"Vin"'
+[11:44:28:773437 +02:00] [Thread 11588] extDB3: SQL: Error MariaDBConnectorException: Too many connections
+[11:44:28:773459 +02:00] [Thread 11588] extDB3: SQL: Error MariaDBConnectorException: Input: UPDATE bourse SET price=80 WHERE itemName='"Batterie"'
+[11:44:28:774637 +02:00] [Thread 7296] extDB3: SQL: Error MariaDBConnectorException: Too many connections
+[11:44:28:774659 +02:00] [Thread 7296] extDB3: SQL: Error MariaDBConnectorException: Input: UPDATE bourse SET price=50 WHERE itemName='"Ramette_papier"'
+[11:44:28:775775 +02:00] [Thread 10672] extDB3: SQL: Error MariaDBConnectorException: Too many connections
+[11:44:28:775796 +02:00] [Thread 10672] extDB3: SQL: Error MariaDBConnectorException: Input: UPDATE bourse SET price=90 WHERE itemName='"goldbar"'
+[11:49:32:234823 +02:00] [Thread 10088] extDB3: SQL: Error MariaDBConnectorException: Too many connections
+[11:49:32:234869 +02:00] [Thread 10088] extDB3: SQL: Error MariaDBConnectorException: Input: UPDATE bourse SET price=65 WHERE itemName='"glass"'
+[11:49:32:235742 +02:00] [Thread 7296] extDB3: SQL: Error MariaDBConnectorException: Too many connections
+[11:49:32:235771 +02:00] [Thread 7296] extDB3: SQL: Error MariaDBConnectorException: Input: UPDATE bourse SET price=120 WHERE itemName='"bague"'
+[11:49:32:236646 +02:00] [Thread 11616] extDB3: SQL: Error MariaDBConnectorException: Too many connections
+[11:49:32:236662 +02:00] [Thread 11616] extDB3: SQL: Error MariaDBConnectorException: Input: UPDATE bourse SET price=69 WHERE itemName='"Lingot_Cuivre"'
+[11:49:32:237697 +02:00] [Thread 6628] extDB3: SQL: Error MariaDBConnectorException: Too many connections
+[11:49:32:237719 +02:00] [Thread 6628] extDB3: SQL: Error MariaDBConnectorException: Input: UPDATE bourse SET price=30 WHERE itemName='"sand"'
+[11:49:32:238629 +02:00] [Thread 10856] extDB3: SQL: Error MariaDBConnectorException: Too many connections
+[11:49:32:238643 +02:00] [Thread 10856] extDB3: SQL: Error MariaDBConnectorException: Input: UPDATE bourse SET price=100 WHERE itemName='"diamond_cut"'
+[11:49:32:239776 +02:00] [Thread 10520] extDB3: SQL: Error MariaDBConnectorException: Too many connections
+[11:49:32:239796 +02:00] [Thread 10520] extDB3: SQL: Error MariaDBConnectorException: Input: UPDATE bourse SET price=90 WHERE itemName='"goldbar"'
+[11:49:32:240856 +02:00] [Thread 11876] extDB3: SQL: Error MariaDBConnectorException: Too many connections
+[11:49:32:240877 +02:00] [Thread 11876] extDB3: SQL: Error MariaDBConnectorException: Input: UPDATE bourse SET price=200 WHERE itemName='"Pierre_Precieuse"'
+[11:49:32:241787 +02:00] [Thread 11588] extDB3: SQL: Error MariaDBConnectorException: Too many connections
+[11:49:32:241802 +02:00] [Thread 11588] extDB3: SQL: Error MariaDBConnectorException: Input: UPDATE bourse SET price=140 WHERE itemName='"Collier"'
+[12:04:42:151450 +02:00] [Thread 10856] extDB3: SQL: Error MariaDBConnectorException: Too many connections
+[12:04:42:151538 +02:00] [Thread 10856] extDB3: SQL: Error MariaDBConnectorException: Input: UPDATE bourse SET price=65 WHERE itemName='"cotton"'
+[12:04:42:152588 +02:00] [Thread 11588] extDB3: SQL: Error MariaDBConnectorException: Too many connections
+[12:04:42:152612 +02:00] [Thread 11588] extDB3: SQL: Error MariaDBConnectorException: Input: UPDATE bourse SET price=54 WHERE itemName='"fromage"'
+[12:04:42:153685 +02:00] [Thread 10836] extDB3: SQL: Error MariaDBConnectorException: Too many connections
+[12:04:42:153708 +02:00] [Thread 10836] extDB3: SQL: Error MariaDBConnectorException: Input: UPDATE bourse SET price=10 WHERE itemName='"Pavot"'
+[12:04:42:154986 +02:00] [Thread 2296] extDB3: SQL: Error MariaDBConnectorException: Too many connections
+[12:04:42:155009 +02:00] [Thread 2296] extDB3: SQL: Error MariaDBConnectorException: Input: UPDATE bourse SET price=15 WHERE itemName='"ble"'
+[12:04:42:156090 +02:00] [Thread 2296] extDB3: SQL: Error MariaDBConnectorException: Too many connections
+[12:04:42:156109 +02:00] [Thread 2296] extDB3: SQL: Error MariaDBConnectorException: Input: UPDATE bourse SET price=65 WHERE itemName='"sunflower"'
+[12:04:42:157045 +02:00] [Thread 2296] extDB3: SQL: Error MariaDBConnectorException: Too many connections
+[12:04:42:157062 +02:00] [Thread 2296] extDB3: SQL: Error MariaDBConnectorException: Input: UPDATE bourse SET price=65 WHERE itemName='"Jus_Peche"'
+[12:04:42:158136 +02:00] [Thread 11592] extDB3: SQL: Error MariaDBConnectorException: Too many connections
+[12:04:42:158154 +02:00] [Thread 11592] extDB3: SQL: Error MariaDBConnectorException: Input: UPDATE bourse SET price=65 WHERE itemName='"corn"'
+[12:04:42:159254 +02:00] [Thread 11592] extDB3: SQL: Error MariaDBConnectorException: Too many connections
+[12:04:42:159276 +02:00] [Thread 11592] extDB3: SQL: Error MariaDBConnectorException: Input: UPDATE bourse SET price=90 WHERE itemName='"Vin"'
+[12:04:42:160325 +02:00] [Thread 10856] extDB3: SQL: Error MariaDBConnectorException: Too many connections
+[12:04:42:160343 +02:00] [Thread 10856] extDB3: SQL: Error MariaDBConnectorException: Input: UPDATE bourse SET price=65 WHERE itemName='"lettuce"'
+[12:04:42:161462 +02:00] [Thread 2296] extDB3: SQL: Error MariaDBConnectorException: Too many connections
+[12:04:42:161483 +02:00] [Thread 2296] extDB3: SQL: Error MariaDBConnectorException: Input: UPDATE bourse SET price=65 WHERE itemName='"Jus_Pomme"'
+[12:04:42:163089 +02:00] [Thread 10264] extDB3: SQL: Error MariaDBConnectorException: Too many connections
+[12:04:42:163113 +02:00] [Thread 10264] extDB3: SQL: Error MariaDBConnectorException: Input: UPDATE bourse SET price=65 WHERE itemName='"artichoke"'
+[12:04:42:164162 +02:00] [Thread 6628] extDB3: SQL: Error MariaDBConnectorException: Too many connections
+[12:04:42:164183 +02:00] [Thread 6628] extDB3: SQL: Error MariaDBConnectorException: Input: UPDATE bourse SET price=75 WHERE itemName='"planche"'
+[12:04:42:165187 +02:00] [Thread 12168] extDB3: SQL: Error MariaDBConnectorException: Too many connections
+[12:04:42:165206 +02:00] [Thread 12168] extDB3: SQL: Error MariaDBConnectorException: Input: UPDATE bourse SET price=80 WHERE itemName='"Batterie"'
+[12:04:42:166278 +02:00] [Thread 7296] extDB3: SQL: Error MariaDBConnectorException: Too many connections
+[12:04:42:166299 +02:00] [Thread 7296] extDB3: SQL: Error MariaDBConnectorException: Input: UPDATE bourse SET price=120 WHERE itemName='"Tarte_Pomme"'
+[12:04:42:167342 +02:00] [Thread 10520] extDB3: SQL: Error MariaDBConnectorException: Too many connections
+[12:04:42:167361 +02:00] [Thread 10520] extDB3: SQL: Error MariaDBConnectorException: Input: UPDATE bourse SET price=140 WHERE itemName='"Collier"'
+[12:04:42:168772 +02:00] [Thread 10588] extDB3: SQL: Error MariaDBConnectorException: Too many connections
+[12:04:42:168797 +02:00] [Thread 10588] extDB3: SQL: Error MariaDBConnectorException: Input: UPDATE bourse SET price=50 WHERE itemName='"Farine"'
+[12:09:45:453615 +02:00] [Thread 10588] extDB3: SQL: Error MariaDBConnectorException: Too many connections
+[12:09:45:453662 +02:00] [Thread 10588] extDB3: SQL: Error MariaDBConnectorException: Input: UPDATE bourse SET price=15 WHERE itemName='"ble"'
+[12:09:45:454865 +02:00] [Thread 10264] extDB3: SQL: Error MariaDBConnectorException: Too many connections
+[12:09:45:454888 +02:00] [Thread 10264] extDB3: SQL: Error MariaDBConnectorException: Input: UPDATE bourse SET price=65 WHERE itemName='"tobacco"'
+[12:09:45:456076 +02:00] [Thread 10264] extDB3: SQL: Error MariaDBConnectorException: Too many connections
+[12:09:45:456099 +02:00] [Thread 10264] extDB3: SQL: Error MariaDBConnectorException: Input: UPDATE bourse SET price=65 WHERE itemName='"Jus_Peche"'
+[12:09:45:456971 +02:00] [Thread 7296] extDB3: SQL: Error MariaDBConnectorException: Too many connections
+[12:09:45:456986 +02:00] [Thread 7296] extDB3: SQL: Error MariaDBConnectorException: Input: UPDATE bourse SET price=65 WHERE itemName='"chili_pepper"'
+[12:09:45:458048 +02:00] [Thread 10672] extDB3: SQL: Error MariaDBConnectorException: Too many connections
+[12:09:45:458067 +02:00] [Thread 10672] extDB3: SQL: Error MariaDBConnectorException: Input: UPDATE bourse SET price=65 WHERE itemName='"strawberry"'
+[12:09:45:459252 +02:00] [Thread 11616] extDB3: SQL: Error MariaDBConnectorException: Too many connections
+[12:09:45:459272 +02:00] [Thread 11616] extDB3: SQL: Error MariaDBConnectorException: Input: UPDATE bourse SET price=65 WHERE itemName='"cotton"'
+[12:09:45:460380 +02:00] [Thread 10088] extDB3: SQL: Error MariaDBConnectorException: Too many connections
+[12:09:45:460634 +02:00] [Thread 10088] extDB3: SQL: Error MariaDBConnectorException: Input: UPDATE bourse SET price=65 WHERE itemName='"lettuce"'
+[12:09:45:461458 +02:00] [Thread 11592] extDB3: SQL: Error MariaDBConnectorException: Too many connections
+[12:09:45:461476 +02:00] [Thread 11592] extDB3: SQL: Error MariaDBConnectorException: Input: UPDATE bourse SET price=65 WHERE itemName='"corn"'
+[12:09:45:462585 +02:00] [Thread 10856] extDB3: SQL: Error MariaDBConnectorException: Too many connections
+[12:09:45:462608 +02:00] [Thread 10856] extDB3: SQL: Error MariaDBConnectorException: Input: UPDATE bourse SET price=30 WHERE itemName='"sand"'
+[12:09:45:463543 +02:00] [Thread 10856] extDB3: SQL: Error MariaDBConnectorException: Too many connections
+[12:09:45:463561 +02:00] [Thread 10856] extDB3: SQL: Error MariaDBConnectorException: Input: UPDATE bourse SET price=200 WHERE itemName='"Pierre_Precieuse"'
+[12:09:45:464622 +02:00] [Thread 2296] extDB3: SQL: Error MariaDBConnectorException: Too many connections
+[12:09:45:464648 +02:00] [Thread 2296] extDB3: SQL: Error MariaDBConnectorException: Input: UPDATE bourse SET price=100 WHERE itemName='"diamond_cut"'
+[12:09:45:465782 +02:00] [Thread 7296] extDB3: SQL: Error MariaDBConnectorException: Too many connections
+[12:09:45:465804 +02:00] [Thread 7296] extDB3: SQL: Error MariaDBConnectorException: Input: UPDATE bourse SET price=75 WHERE itemName='"planche"'
+[12:09:45:466914 +02:00] [Thread 7296] extDB3: SQL: Error MariaDBConnectorException: Too many connections
+[12:09:45:466935 +02:00] [Thread 7296] extDB3: SQL: Error MariaDBConnectorException: Input: UPDATE bourse SET price=140 WHERE itemName='"Collier"'
+[12:09:45:467845 +02:00] [Thread 10672] extDB3: SQL: Error MariaDBConnectorException: Too many connections
+[12:09:45:467867 +02:00] [Thread 10672] extDB3: SQL: Error MariaDBConnectorException: Input: UPDATE bourse SET price=80 WHERE itemName='"Batterie"'
+[12:09:45:468986 +02:00] [Thread 11616] extDB3: SQL: Error MariaDBConnectorException: Too many connections
+[12:09:45:469010 +02:00] [Thread 11616] extDB3: SQL: Error MariaDBConnectorException: Input: UPDATE bourse SET price=80 WHERE itemName='"Petrole"'
+[12:09:45:470218 +02:00] [Thread 10088] extDB3: SQL: Error MariaDBConnectorException: Too many connections
+[12:09:45:470242 +02:00] [Thread 10088] extDB3: SQL: Error MariaDBConnectorException: Input: UPDATE bourse SET price=69 WHERE itemName='"Lingot_Cuivre"'

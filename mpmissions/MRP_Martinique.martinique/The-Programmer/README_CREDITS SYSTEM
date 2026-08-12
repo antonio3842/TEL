@@ -1,0 +1,99 @@
+/* 
+
+SYSTEME DE CREDITS :
+
+-----------------------------------
+Dans le fichier « fn_buyHouse.sqf » dans le dossier « core\housing » de votre mission, remplacez ces lignes :
+-----------------------------------
+
+if (BANK < (_houseCfg select 0)) exitWith {hint format [localize "STR_House_NotEnough"]};
+BANK = BANK - (_houseCfg select 0);
+[1] call SOCK_fnc_updatePartial;
+
+-----------------------------------
+Par celles-ci :
+-----------------------------------
+
+_handle = [(_houseCfg select 0),(typeOf _house)] spawn credit_system_fnc_paymentType;
+waitUntil {scriptDone _handle};
+if (no_money) exitWith {};
+
+-----------------------------------
+Si vous souhaitez ouvrir le menu avec un objet sur votre carte :
+Posez un objet sur votre mapping, par exemple un panneau et ajoutez dans l'addAction de l’init de celui-ci :
+-----------------------------------
+
+this addAction ["Gestion des crédits",{["NOM DE CLASS"] spawn credit_system_fnc_mouvementsList;},"",0,false,false,"",""];
+
+-----------------------------------
+Remplacez le "NOM DE CLASS" par le nom de la class de la société de crédit.
+De base les sociétés sont : society_1 & society_2
+-----------------------------------
+
+class society {
+    class society_1 {
+        title_name = "The-Programmer Credit";
+        bankacc = 50000;
+        condition = "license_civ_driver";
+    };
+    class society_2 {
+        title_name = "Zoko Credit";
+        bankacc = 50000;
+        condition = "";
+    };
+};
+
+-----------------------------------
+Si vous souhaitez ouvrir le menu avec un bouton dans un menu :
+Créez un bouton et ajouter dans le onButtonClick :
+-----------------------------------
+onButtonClick = "[""NOM DE CLASS""] spawn credit_system_fnc_mouvementsList;";
+
+-----------------------------------
+Dans le fichier « config_master.cpp » dans le dossier « The-Programmer/Credit_System » vous pourrez personnaliser simplement quelques paramètres.
+
+Dans le « config_master.cpp » qui se trouve dans le dossier « The-Programmer/Credit_System », vous trouverez tous les paramètres afin de paramétrer votre produit.
+
+
+default_lang = "fr"; Permet de choisir la langue du script (EN, FR, ES, DE).
+
+tonic_version = 5; Compatibilité avec Altis_Life 4.x ou 5.
+
+bank_debit = 0.25; Multiplicateur pour les prélèvements, EX: Crédit * Multiplicateur (100 000 * 0,25 = 25 000 €). Vous paierez 25 000 par prélèvement pour rembourser votre crédit.
+
+delay_debit = 24; Prélèvement toutes les x heures (même si le joueur est déconnecté)
+
+incident_maximum = 3; Nombre d'incident maximum pour CHAQUE crédit. Au delà, le joueur se fait blacklist et ne peut re-souscrire de nouveau crédit
+
+incident_multiplicator = 0.10; Multiplicateur sur le total du crédit en cas d'incident, EX: Crédit * Multiplicateur (100 000 * 0,10 = 10 000 || 100 000 + 10 000 = 110 000€). Vos traites de remboursement seront donc plus élevés.
+
+max_interest = 100; Intérêt maximum en %; 100% = le prix du crédit en intérêts -> montant à payer = 200% du montant du crédit
+
+create_credit_for_himself = false; Le joueur peut se générer un crédit à lui même (si il a accès à la gestion des credits)
+
+vehicle_shop[] = { "B_Quadbike_01_F", "C_Hatchback_01_F", "C_Offroad_01_F", "C_SUV_01_F", "C_Hatchback_01_sport_F", "C_Van_01_transport_F", "C_Offroad_02_unarmed_F" }; Classname des véhicules qui apparaitront dans le concessionnaire du Credit System
+
+class society_1 { // NOM DE CLASS pour les panneaux
+    title_name = "The-Programmer Credit"; // Nom de la société (affiché en jeu)
+    bankacc = 50000; // Argent de départ pour la société
+    condition = "license_civ_driver"; // Condition pour délivrer des crédits dans cette société
+};
+
+-----------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*/

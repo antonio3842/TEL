@@ -1,0 +1,105 @@
+
+extDB3: https://bitbucket.org/torndeco/extdb3/wiki/Home
+extDB3: Version: 1.033
+extDB3: Windows Version
+Message: All development for extDB3 is done on a Linux Dedicated Server
+Message: If you would like to Donate to extDB3 Development
+Message: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=2SUEFTGABTAM2
+Message: Also leave a message if there is any particular feature you would like to see added.
+Message: Thanks for all the people that have donated.
+Message: Torndeco: 18/05/15
+
+Message: This version was modified and include some improvement
+Message: The lib was recompiled using new version of TBBMalloc, Boost and MariaDB connector
+Message: The worker threads limitation was removed
+Message: Steez: 30/10/2020
+
+
+extDB3: Found extdb3-conf.ini
+extDB3: Detected 16 Cores, Setting up 6 Worker Threads
+extDB3: Detected 16 Cores, Setting up 16 Worker Threads
+extDB3: ...
+extDB3: ...
+extDB3: ...
+extDB3: ...
+extDB3: ...
+extDB3: ...
+extDB3: ...
+extDB3: ...
+extDB3: ...
+extDB3: ...
+extDB3: ...
+extDB3: ...
+extDB3: ...
+extDB3: ...
+extDB3: ...
+extDB3: ...
+
+
+[13:54:16:013926 +02:00] [Thread 12608] extDB3: SQL: Initialized: Add Quotes around TEXT Datatypes mode: 2
+[13:54:16:013956 +02:00] [Thread 12608] extDB3: SQL: Initialized: NULL = ""
+[13:54:16:013974 +02:00] [Thread 12608] extDB3: Locked
+[13:54:16:021367 +02:00] [Thread 6440] extDB3: SQL: Error MariaDBQueryException: PROCEDURE armalife.deleteDeadVehicles does not exist
+[13:54:16:021370 +02:00] [Thread 11592] extDB3: SQL: Error MariaDBQueryException: PROCEDURE armalife.deleteOldSms does not exist
+[13:54:16:021374 +02:00] [Thread 18416] extDB3: SQL: Error MariaDBQueryException: PROCEDURE armalife.deleteOldForfait does not exist
+[13:54:16:021390 +02:00] [Thread 6440] extDB3: SQL: Error MariaDBQueryException: Input: CALL deleteDeadVehicles
+[13:54:16:021404 +02:00] [Thread 11592] extDB3: SQL: Error MariaDBQueryException: Input: CALL deleteOldSms
+[13:54:16:021416 +02:00] [Thread 18416] extDB3: SQL: Error MariaDBQueryException: Input: CALL deleteOldForfait
+[13:58:13:362402 +02:00] [Thread 5680] extDB3: SQL: Error MariaDBQueryException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'est téléporté via MapTeleport en [5863.96,4210.05,0]')' at line 1
+[13:58:13:362488 +02:00] [Thread 5680] extDB3: SQL: Error MariaDBQueryException: Input: INSERT INTO logs_alf (name, uid, type, text) VALUES ('Antonio Lopa', '76561198201065973', 'ADMIN', 'Antonio Lopa (76561198201065973) s'est téléporté via MapTeleport en [5863.96,4210.05,0]')
+[13:59:23:738259 +02:00] [Thread 5680] extDB3: SQL: Error MariaDBQueryException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'action 'Arsenal' via le menu admin.')' at line 1
+[13:59:23:738320 +02:00] [Thread 5680] extDB3: SQL: Error MariaDBQueryException: Input: INSERT INTO logs_alf (name, uid, type, text) VALUES ('Alex Cross', '76561198856906673', 'ADMIN', 'A utilisé l'action 'Arsenal' via le menu admin.')
+[13:59:38:009496 +02:00] [Thread 20724] extDB3: SQL: Error MariaDBQueryException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'action 'Arsenal' via le menu admin.')' at line 1
+[13:59:38:009542 +02:00] [Thread 20724] extDB3: SQL: Error MariaDBQueryException: Input: INSERT INTO logs_alf (name, uid, type, text) VALUES ('Antonio Lopa', '76561198201065973', 'ADMIN', 'A utilisé l'action 'Arsenal' via le menu admin.')
+[14:00:19:531170 +02:00] [Thread 20724] extDB3: SQL: Error MariaDBQueryException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'est téléporté via MapTeleport en [1977.77,9943.7,0]')' at line 1
+[14:00:19:531265 +02:00] [Thread 20724] extDB3: SQL: Error MariaDBQueryException: Input: INSERT INTO logs_alf (name, uid, type, text) VALUES ('Antonio Lopa', '76561198201065973', 'ADMIN', 'Antonio Lopa (76561198201065973) s'est téléporté via MapTeleport en [1977.77,9943.7,0]')
+[14:05:49:159338 +02:00] [Thread 6440] extDB3: SQL: Error MariaDBQueryException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'action 'Animations Rapides' via le menu admin.')' at line 1
+[14:05:49:159421 +02:00] [Thread 6440] extDB3: SQL: Error MariaDBQueryException: Input: INSERT INTO logs_alf (name, uid, type, text) VALUES ('Antonio Lopa', '76561198201065973', 'ADMIN', 'A utilisé l'action 'Animations Rapides' via le menu admin.')
+[14:06:22:810873 +02:00] [Thread 6440] extDB3: SQL: Error MariaDBQueryException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'est téléporté via MapTeleport en [1969.07,9939.76,0]')' at line 1
+[14:06:22:810968 +02:00] [Thread 6440] extDB3: SQL: Error MariaDBQueryException: Input: INSERT INTO logs_alf (name, uid, type, text) VALUES ('Antonio Lopa', '76561198201065973', 'ADMIN', 'Antonio Lopa (76561198201065973) s'est téléporté via MapTeleport en [1969.07,9939.76,0]')
+[14:06:56:729289 +02:00] [Thread 6440] extDB3: SQL: Error MariaDBQueryException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'action 'Se Rassasier' via le menu admin.')' at line 1
+[14:06:56:729349 +02:00] [Thread 6440] extDB3: SQL: Error MariaDBQueryException: Input: INSERT INTO logs_alf (name, uid, type, text) VALUES ('Antonio Lopa', '76561198201065973', 'ADMIN', 'A utilisé l'action 'Se Rassasier' via le menu admin.')
+[14:10:23:263007 +02:00] [Thread 21152] extDB3: SQL: Error MariaDBQueryException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'action 'Se Rassasier' via le menu admin.')' at line 1
+[14:10:23:263076 +02:00] [Thread 21152] extDB3: SQL: Error MariaDBQueryException: Input: INSERT INTO logs_alf (name, uid, type, text) VALUES ('antonio lope', '76561198658879138', 'ADMIN', 'A utilisé l'action 'Se Rassasier' via le menu admin.')
+[14:10:23:976679 +02:00] [Thread 21152] extDB3: SQL: Error MariaDBQueryException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'action 'Se Rassasier' via le menu admin.')' at line 1
+[14:10:23:976720 +02:00] [Thread 21152] extDB3: SQL: Error MariaDBQueryException: Input: INSERT INTO logs_alf (name, uid, type, text) VALUES ('antonio lope', '76561198658879138', 'ADMIN', 'A utilisé l'action 'Se Rassasier' via le menu admin.')
+[14:12:42:854675 +02:00] [Thread 19060] extDB3: SQL: Error MariaDBQueryException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'est téléporté via MapTeleport en [9250.55,2907.81,0]')' at line 1
+[14:12:42:854733 +02:00] [Thread 19060] extDB3: SQL: Error MariaDBQueryException: Input: INSERT INTO logs_alf (name, uid, type, text) VALUES ('Alex Cross', '76561198856906673', 'ADMIN', 'Alex Cross (76561198856906673) s'est téléporté via MapTeleport en [9250.55,2907.81,0]')
+[14:13:11:856622 +02:00] [Thread 19060] extDB3: SQL: Error MariaDBQueryException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'action 'Arsenal' via le menu admin.')' at line 1
+[14:13:11:856676 +02:00] [Thread 19060] extDB3: SQL: Error MariaDBQueryException: Input: INSERT INTO logs_alf (name, uid, type, text) VALUES ('Alex Cross', '76561198856906673', 'ADMIN', 'A utilisé l'action 'Arsenal' via le menu admin.')
+[14:14:01:063589 +02:00] [Thread 19060] extDB3: SQL: Error MariaDBQueryException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'est téléporté via MapTeleport en [1275.98,7379.5,0]')' at line 1
+[14:14:01:063706 +02:00] [Thread 19060] extDB3: SQL: Error MariaDBQueryException: Input: INSERT INTO logs_alf (name, uid, type, text) VALUES ('Alex Cross', '76561198856906673', 'ADMIN', 'Alex Cross (76561198856906673) s'est téléporté via MapTeleport en [1275.98,7379.5,0]')
+[14:15:20:496288 +02:00] [Thread 11592] extDB3: SQL: Error MariaDBQueryException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'est téléporté via MapTeleport en [1130.68,7226.95,0]')' at line 1
+[14:15:20:496355 +02:00] [Thread 11592] extDB3: SQL: Error MariaDBQueryException: Input: INSERT INTO logs_alf (name, uid, type, text) VALUES ('Alex Cross', '76561198856906673', 'ADMIN', 'Alex Cross (76561198856906673) s'est téléporté via MapTeleport en [1130.68,7226.95,0]')
+[14:17:54:305217 +02:00] [Thread 10608] extDB3: SQL: Error MariaDBQueryException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'est téléporté via MapTeleport en [1279.02,7382.14,0]')' at line 1
+[14:17:54:305269 +02:00] [Thread 10608] extDB3: SQL: Error MariaDBQueryException: Input: INSERT INTO logs_alf (name, uid, type, text) VALUES ('Alex Cross', '76561198856906673', 'ADMIN', 'Alex Cross (76561198856906673) s'est téléporté via MapTeleport en [1279.02,7382.14,0]')
+[14:18:57:122011 +02:00] [Thread 10272] extDB3: SQL: Error MariaDBQueryException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'est téléporté via MapTeleport en [9254.83,2909.67,0]')' at line 1
+[14:18:57:122062 +02:00] [Thread 10272] extDB3: SQL: Error MariaDBQueryException: Input: INSERT INTO logs_alf (name, uid, type, text) VALUES ('Alex Cross', '76561198856906673', 'ADMIN', 'Alex Cross (76561198856906673) s'est téléporté via MapTeleport en [9254.83,2909.67,0]')
+[14:20:18:527518 +02:00] [Thread 12040] extDB3: SQL: Error MariaDBQueryException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'action 'Se Rassasier' via le menu admin.')' at line 1
+[14:20:18:527588 +02:00] [Thread 12040] extDB3: SQL: Error MariaDBQueryException: Input: INSERT INTO logs_alf (name, uid, type, text) VALUES ('Alex Cross', '76561198856906673', 'ADMIN', 'A utilisé l'action 'Se Rassasier' via le menu admin.')
+[14:20:19:789530 +02:00] [Thread 12040] extDB3: SQL: Error MariaDBQueryException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'action 'Se Rassasier' via le menu admin.')' at line 1
+[14:20:19:789581 +02:00] [Thread 12040] extDB3: SQL: Error MariaDBQueryException: Input: INSERT INTO logs_alf (name, uid, type, text) VALUES ('Alex Cross', '76561198856906673', 'ADMIN', 'A utilisé l'action 'Se Rassasier' via le menu admin.')
+[14:31:48:099569 +02:00] [Thread 21152] extDB3: SQL: Error MariaDBQueryException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'action 'Marqueurs' via le menu admin.')' at line 1
+[14:31:48:099631 +02:00] [Thread 21152] extDB3: SQL: Error MariaDBQueryException: Input: INSERT INTO logs_alf (name, uid, type, text) VALUES ('Antonio Lopa', '76561198201065973', 'ADMIN', 'A utilisé l'action 'Marqueurs' via le menu admin.')
+[14:54:05:801848 +02:00] [Thread 10608] extDB3: SQL: Error MariaDBQueryException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'est téléporté via MapTeleport en [6264.31,4800.69,0]')' at line 1
+[14:54:05:802007 +02:00] [Thread 10608] extDB3: SQL: Error MariaDBQueryException: Input: INSERT INTO logs_alf (name, uid, type, text) VALUES ('Alex Cross', '76561198856906673', 'ADMIN', 'Alex Cross (76561198856906673) s'est téléporté via MapTeleport en [6264.31,4800.69,0]')
+[14:55:00:530450 +02:00] [Thread 21152] extDB3: SQL: Error MariaDBQueryException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'est téléporté via MapTeleport en [6055.82,5342.13,0]')' at line 1
+[14:55:00:530501 +02:00] [Thread 21152] extDB3: SQL: Error MariaDBQueryException: Input: INSERT INTO logs_alf (name, uid, type, text) VALUES ('Alex Cross', '76561198856906673', 'ADMIN', 'Alex Cross (76561198856906673) s'est téléporté via MapTeleport en [6055.82,5342.13,0]')
+[15:10:53:152787 +02:00] [Thread 12892] extDB3: SQL: Error MariaDBQueryException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'est téléporté via MapTeleport en [6666.06,6003.44,0]')' at line 1
+[15:10:53:152841 +02:00] [Thread 12892] extDB3: SQL: Error MariaDBQueryException: Input: INSERT INTO logs_alf (name, uid, type, text) VALUES ('Alex Cross', '76561198856906673', 'ADMIN', 'Alex Cross (76561198856906673) s'est téléporté via MapTeleport en [6666.06,6003.44,0]')
+[15:30:46:680313 +02:00] [Thread 1816] extDB3: SQL: Error MariaDBQueryException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'est téléporté via MapTeleport en [383.675,9048.56,0]')' at line 1
+[15:30:46:680506 +02:00] [Thread 1816] extDB3: SQL: Error MariaDBQueryException: Input: INSERT INTO logs_alf (name, uid, type, text) VALUES ('Alex Cross', '76561198856906673', 'ADMIN', 'Alex Cross (76561198856906673) s'est téléporté via MapTeleport en [383.675,9048.56,0]')
+[15:32:15:054368 +02:00] [Thread 1816] extDB3: SQL: Error MariaDBQueryException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'est téléporté via MapTeleport en [9275.14,2853.03,0]')' at line 1
+[15:32:15:054417 +02:00] [Thread 1816] extDB3: SQL: Error MariaDBQueryException: Input: INSERT INTO logs_alf (name, uid, type, text) VALUES ('Alex Cross', '76561198856906673', 'ADMIN', 'Alex Cross (76561198856906673) s'est téléporté via MapTeleport en [9275.14,2853.03,0]')
+[15:34:29:380653 +02:00] [Thread 1816] extDB3: SQL: Error MariaDBQueryException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'est téléporté via MapTeleport en [6659.7,6004.75,0]')' at line 1
+[15:34:29:380692 +02:00] [Thread 1816] extDB3: SQL: Error MariaDBQueryException: Input: INSERT INTO logs_alf (name, uid, type, text) VALUES ('Alex Cross', '76561198856906673', 'ADMIN', 'Alex Cross (76561198856906673) s'est téléporté via MapTeleport en [6659.7,6004.75,0]')
+[15:47:15:604106 +02:00] [Thread 1816] extDB3: SQL: Error MariaDBQueryException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'est téléporté via MapTeleport en [4384.97,7212.33,0]')' at line 1
+[15:47:15:604157 +02:00] [Thread 1816] extDB3: SQL: Error MariaDBQueryException: Input: INSERT INTO logs_alf (name, uid, type, text) VALUES ('Alex Cross', '76561198856906673', 'ADMIN', 'Alex Cross (76561198856906673) s'est téléporté via MapTeleport en [4384.97,7212.33,0]')
+[15:48:08:039402 +02:00] [Thread 1816] extDB3: SQL: Error MariaDBQueryException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'est téléporté via MapTeleport en [2467.55,7261.63,0]')' at line 1
+[15:48:08:039451 +02:00] [Thread 1816] extDB3: SQL: Error MariaDBQueryException: Input: INSERT INTO logs_alf (name, uid, type, text) VALUES ('Alex Cross', '76561198856906673', 'ADMIN', 'Alex Cross (76561198856906673) s'est téléporté via MapTeleport en [2467.55,7261.63,0]')
+[15:49:05:536151 +02:00] [Thread 1816] extDB3: SQL: Error MariaDBQueryException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'est téléporté via MapTeleport en [608.87,8049.61,0]')' at line 1
+[15:49:05:536257 +02:00] [Thread 1816] extDB3: SQL: Error MariaDBQueryException: Input: INSERT INTO logs_alf (name, uid, type, text) VALUES ('Alex Cross', '76561198856906673', 'ADMIN', 'Alex Cross (76561198856906673) s'est téléporté via MapTeleport en [608.87,8049.61,0]')
+[16:18:24:115569 +02:00] [Thread 10608] extDB3: SQL: Error MariaDBQueryException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'action 'Se Rassasier' via le menu admin.')' at line 1
+[16:18:24:115670 +02:00] [Thread 10608] extDB3: SQL: Error MariaDBQueryException: Input: INSERT INTO logs_alf (name, uid, type, text) VALUES ('Alex Cross', '76561198856906673', 'ADMIN', 'A utilisé l'action 'Se Rassasier' via le menu admin.')
+[16:18:54:510349 +02:00] [Thread 10608] extDB3: SQL: Error MariaDBQueryException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'est téléporté via MapTeleport en [6148.58,7313.67,0]')' at line 1
+[16:18:54:510395 +02:00] [Thread 10608] extDB3: SQL: Error MariaDBQueryException: Input: INSERT INTO logs_alf (name, uid, type, text) VALUES ('Alex Cross', '76561198856906673', 'ADMIN', 'Alex Cross (76561198856906673) s'est téléporté via MapTeleport en [6148.58,7313.67,0]')

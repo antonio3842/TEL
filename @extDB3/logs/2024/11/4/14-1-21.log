@@ -1,0 +1,55 @@
+
+extDB3: https://bitbucket.org/torndeco/extdb3/wiki/Home
+extDB3: Version: 1.033
+extDB3: Windows Version
+Message: All development for extDB3 is done on a Linux Dedicated Server
+Message: If you would like to Donate to extDB3 Development
+Message: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=2SUEFTGABTAM2
+Message: Also leave a message if there is any particular feature you would like to see added.
+Message: Thanks for all the people that have donated.
+Message: Torndeco: 18/05/15
+
+Message: This version was modified and include some improvement
+Message: The lib was recompiled using new version of TBBMalloc, Boost and MariaDB connector
+Message: The worker threads limitation was removed
+Message: Steez: 30/10/2020
+
+
+extDB3: Found extdb3-conf.ini
+extDB3: Detected 16 Cores, Setting up 6 Worker Threads
+extDB3: Detected 16 Cores, Setting up 16 Worker Threads
+extDB3: ...
+extDB3: ...
+extDB3: ...
+extDB3: ...
+extDB3: ...
+extDB3: ...
+extDB3: ...
+extDB3: ...
+extDB3: ...
+extDB3: ...
+extDB3: ...
+extDB3: ...
+extDB3: ...
+extDB3: ...
+extDB3: ...
+extDB3: ...
+
+
+[14:01:32:399846 +01:00] [Thread 6412] extDB3: SQL: Initialized: Add Quotes around TEXT Datatypes mode: 2
+[14:01:32:399866 +01:00] [Thread 6412] extDB3: SQL: Initialized: NULL = ""
+[14:01:32:399877 +01:00] [Thread 6412] extDB3: Locked
+[14:01:32:408648 +01:00] [Thread 2172] extDB3: SQL: Error MariaDBQueryException: PROCEDURE altislife.resetLifeVehicles does not exist
+[14:01:32:408651 +01:00] [Thread 7504] extDB3: SQL: Error MariaDBQueryException: PROCEDURE altislife.deleteDeadVehicles does not exist
+[14:01:32:408659 +01:00] [Thread 5348] extDB3: SQL: Error MariaDBQueryException: PROCEDURE altislife.deleteOldGangs does not exist
+[14:01:32:408664 +01:00] [Thread 2172] extDB3: SQL: Error MariaDBQueryException: Input: CALL resetLifeVehicles
+[14:01:32:408724 +01:00] [Thread 9040] extDB3: SQL: Error MariaDBQueryException: PROCEDURE altislife.deleteOldHouses does not exist
+[14:01:32:408694 +01:00] [Thread 7504] extDB3: SQL: Error MariaDBQueryException: Input: CALL deleteDeadVehicles
+[14:01:32:408733 +01:00] [Thread 9040] extDB3: SQL: Error MariaDBQueryException: Input: CALL deleteOldHouses
+[14:01:32:408753 +01:00] [Thread 8908] extDB3: SQL: Error MariaDBQueryException: PROCEDURE altislife.Point_Permis does not exist
+[14:01:32:408796 +01:00] [Thread 8908] extDB3: SQL: Error MariaDBQueryException: Input: CALL Point_Permis
+[14:01:32:408719 +01:00] [Thread 5348] extDB3: SQL: Error MariaDBQueryException: Input: CALL deleteOldGangs
+[15:01:33:092876 +01:00] [Thread 5452] extDB3: SQL: Error MariaDBQueryException: PROCEDURE altislife.braceletTimeUpdate does not exist
+[15:01:33:093079 +01:00] [Thread 5452] extDB3: SQL: Error MariaDBQueryException: Input: CALL braceletTimeUpdate
+[16:01:33:160042 +01:00] [Thread 9040] extDB3: SQL: Error MariaDBQueryException: PROCEDURE altislife.braceletTimeUpdate does not exist
+[16:01:33:160171 +01:00] [Thread 9040] extDB3: SQL: Error MariaDBQueryException: Input: CALL braceletTimeUpdate

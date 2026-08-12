@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<server_cfg>
+    <reboots>
+        <reboot>
+            <hour>10</hour>
+            <minut>0</minut>
+        </reboot>
+        <reboot>
+            <hour>20</hour>
+            <minut>0</minut>
+        </reboot>
+    </reboots>
+</server_cfg>

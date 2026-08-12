@@ -1,0 +1,115 @@
+/*
+-----------------------------------
+Dans le « fn_actionKeyhandler.sqf » du dossier "core\functions" de votre mission trouvez cette ligne : 
+-----------------------------------
+
+[] call life_fnc_copInteractionMenu;
+
+-----------------------------------
+Remplacez-la par :
+-----------------------------------
+
+["cop_interaction"] spawn CBX_fnc_openInteraction;
+
+-----------------------------------
+Remplacez également cette ligne par la même que précédemment :
+-----------------------------------
+
+[_curObject] call life_fnc_copInteractionMenu;
+
+-----------------------------------
+Dans le même fichier, trouvez cette ligne : 
+-----------------------------------
+
+[_curObject] call life_fnc_vInteractionMenu; 
+
+-----------------------------------
+Remplacez-la par :
+-----------------------------------
+
+['vehicle_menu'] spawn CBX_fnc_openInteraction;
+
+-----------------------------------
+Dans le même fichier, trouvez cette ligne : 
+-----------------------------------
+
+[_curObject] call ALF_fnc_houseMenu;
+
+-----------------------------------
+Remplacez-la par :
+-----------------------------------
+
+switch (side player) do {
+    case civilian: {["house_menu"] spawn CBX_fnc_openInteraction;};
+    case west: {["cop_house_menu"] spawn CBX_fnc_openInteraction;};
+    default {};
+};
+
+
+
+
+
+
+
+
+1- Dans le « config_master.cpp » qui se trouve dans « The-Programmer\Radial_Menu », vous trouverez tout les paramètres afin de modifier le fonctionnement de votre produit.
+
+
+
+1. default_lang : Définit la langue du script 
+
+2. blurry_background : Active l'effet de flou derrière le menu 
+
+3. fade_menu : Si cette option est activée, le menu apparaîtra progressivement 
+
+4. save_position : Si cette option est activée, la position du menu est sauvegardée lorsque le menu est déplacé 
+
+5. plate_system & points_driving_license & technical_inspection & ticket_system doivent être activées si vous avez installés les produits sur votre serveur afin d'avoir les interactions dans le menu.
+
+
+
+
+
+2- Dans le « config_button.cpp » qui se trouve dans «The-Programmer\Radial_Menu », vous trouverez la liste des buttons présent dans chaque menu.
+
+
+
+Vous devriez trouver en haut une classe nommée vehicle_menu, elle correspond à la liste des buttons présent dans le menu véhicule. Pour chaque bouton vous avez ces paramètres :
+
+class button_1 {
+    displayName = "STR_vInAct_Registration"; 
+    buttonAction = "[cursorObject] spawn ALF_fnc_searchVehAction; closeDialog 0;";
+    buttonToolTip = "";
+    side[] = {west}; 
+    disable = false; 
+    condition = "((getNumber (missionConfigFile >> ""The_Programmer_Settings_RadialMenu"" >> ""plate_system"")) isEqualTo 0)"; 
+};
+
+
+ 
+
+1. displayname: Correspond au texte afficher sur le bouton 
+
+2. buttonAction:Est l'action que va exécuter le button une fois appuyer dessus
+
+3. buttonToolTip: Est l'infobulle qui s'affichera lorsque votre curseur se trouvera au-dessus du bouton 
+
+4. side[]: Limitera la visibilité du bouton aux sides qui sont écrits dans la ce paramètre 
+
+5. disable: Permet d'activer ou de désactiver le bouton 
+
+6. condition: Affiche le bouton si la condition est remplie
+
+
+
+Pour ajouter un bouton, il suffit de copier un bouton existant et de modifier ces paramètres ainsi que le numéro dans le nom du bouton.
+
+
+
+Si vous voulez ouvrir un menu dans un script, vous pouvez utiliser cette ligne : 
+
+["le nom de la classe de votre menu"] spawn CBX_fnc_openInteraction;
+Par exemple :
+
+["vehicle_menu"] spawn CBX_fnc_openInteraction; //Ouvrira la class vehicle_menu
+*/

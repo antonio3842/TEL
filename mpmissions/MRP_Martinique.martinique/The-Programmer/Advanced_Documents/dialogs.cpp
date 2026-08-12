@@ -1,0 +1,6 @@
+#include "config_master.cpp"
+#include "localization.hpp"
+#include "dialogs\common.hpp"
+#include "dialogs\documents_list.hpp"
+#include "dialogs\create_document.hpp"
+#include "dialogs\document.hpp"
