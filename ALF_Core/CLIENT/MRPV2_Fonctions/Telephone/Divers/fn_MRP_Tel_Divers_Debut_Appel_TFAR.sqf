@@ -1,14 +1,22 @@
 // MRPV2_fnc_MRP_Tel_Divers_Debut_Appel_TFAR = {
 private _numero_Appel = param [0,""];
 
-systemchat "Début call";
-
 [] call MRPV2_fnc_MRP_Tel_Divers_Suppr_Son;
 
 // Si le joueur est a terre ou mort on quitte
 private _MRP_Appel_Etat = player getvariable ["MRP_Appel_Etat",""];
 if (_MRP_Appel_Etat isequalto "") exitwith {FALSE};
 if (isnull player) exitwith {FALSE};
+
+// FIX (bug "rappel qui se connecte sans que le CA décroche") : on force la
+// remise à zéro du canal téléphonique (12) AVANT de le retuner sur la nouvelle
+// fréquence. Si un appel précédent n'a pas été proprement raccroché côté
+// serveur/opérateur, sa fréquence pouvait rester accrochée sur cette radio ;
+// comme la fréquence utilisée est toujours le numéro de l'appelant (donc
+// identique à chaque appel), un rappel se reconnectait alors instantanément
+// à l'ancienne communication. Ce reset rend une éventuelle fréquence "collée"
+// inoffensive avant d'établir la nouvelle communication.
+[(call TFAR_fnc_ActiveSwRadio),12,""] call TFAR_fnc_SetChannelFrequency;
 
 if ((call TFAR_fnc_ActiveSwRadio) call TFAR_fnc_getSwSpeakers) then {[(call TFAR_fnc_ActiveSwRadio)] call TFAR_fnc_setSwSpeakers;};
 

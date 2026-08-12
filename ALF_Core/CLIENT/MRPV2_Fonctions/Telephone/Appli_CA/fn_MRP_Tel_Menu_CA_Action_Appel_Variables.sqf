@@ -15,9 +15,7 @@ private _mode_Entreprise = _info_Appel_CA_Ope # 4;
 [_numero,"Appel mon appel",_id_Appelant,""] call MRPV2_fnc_MRP_Tel_Menu_CA_Gestion_Etat;
 
 // On maj les cadres et statut des autres opé
-private _liste_Unites_En_Service = (units group player);;
-
-systemchat format ["[CA apel variable] _liste_Unites_En_Service = %1",_liste_Unites_En_Service];
+private _liste_Unites_En_Service = (units group player);
 
 [_numero,"Appel opé maj opé",clientowner] remoteExec ["MRPV2_fnc_MRP_Tel_Menu_CA_Gestion_Etat",_liste_Unites_En_Service];
 

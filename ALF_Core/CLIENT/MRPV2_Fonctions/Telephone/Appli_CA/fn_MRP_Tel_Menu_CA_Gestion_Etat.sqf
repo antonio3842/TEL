@@ -10,7 +10,6 @@ _numero = _numero regexReplace [" ",""];
 
 if (_type isequalto "Appel civil") exitwith
 {
-systemchat "Appel civil";
 	private _numero_Masquer = player getvariable ["MRP_Telephone_Numero_Cacher",FALSE];
 	private _mode_Entreprise = player getvariable ["MRP_Telephone_Mode_Entreprise",FALSE];
 	player setvariable ["MRP_Tel_CA_Info_Appelant",[_numero,servertime,"",[_id],_numero_Masquer,_service,_mode_Entreprise],TRUE];
@@ -19,7 +18,6 @@ systemchat "Appel civil";
 // script opérateur quand un civil les appel
 if (_type isequalto "Appel civil maj opé") exitwith
 {
-		systemchat "Appel civil maj opé";
 	if (player getvariable ["MRP_Telephone_Mode_Avion",FALSE]) exitwith {};
 
 	private _joueur_Appellant = (allplayers select {_x getvariable ["phoneNumber",""] isEqualTo (_numero)}) # 0;
@@ -49,7 +47,6 @@ if (_type isequalto "Appel civil maj opé") exitwith
 
 if (_type isequalto "Appel mon appel") exitwith
 {
-		systemchat "Appel mon appel";
 	private _tel_CA_Info_Ope = player getvariable ["MRP_Tel_CA_Info_Operateur",createhashmap];
 	_tel_CA_Info_Ope set ["Mon appel",[_numero,"Appel",_id]];
 	player setvariable ["MRP_Tel_CA_Info_Operateur",_tel_CA_Info_Ope];
@@ -57,13 +54,10 @@ if (_type isequalto "Appel mon appel") exitwith
 
 if (_type isequalto "Appel opé maj opé") exitwith
 {
-	systemchat "OK Appel opé maj opé";
 	private _tel_CA_Info_Ope = player getvariable ["MRP_Tel_CA_Info_Operateur",createhashmap];
 	private _tel_CA_Info_Ope_Num = _tel_CA_Info_Ope getorDefault [_numero,[]];
 	private _liste_id_Appelants = _tel_CA_Info_Ope_Num # 2;
 
-	diag_log format ["[DEBUG CA gestion etat] _tel_CA_Info_Ope = %1",_tel_CA_Info_Ope];
-	diag_log format ["[DEBUG CA gestion etat] _tel_CA_Info_Ope_Num = %1",_tel_CA_Info_Ope_Num];
 
 	_tel_CA_Info_Ope_Num set [1,"Appel"];
 	_tel_CA_Info_Ope_Num set [2,_liste_id_Appelants + [_id]];
@@ -75,12 +69,9 @@ if (_type isequalto "Appel opé maj opé") exitwith
 
 if (_type isequalto "Appel opé maj appelant") exitwith
 {
-		systemchat "OK Appel opé maj appelant";
 	private _tel_CA_Info_Appelant = player getvariable ["MRP_Tel_CA_Info_Appelant",[]];
 	private _liste_id_Appelants = _tel_CA_Info_Appelant # 3;
 
-	diag_log format ["[DEBUG CA gestion etat] _tel_CA_Info_Appelant = %1",_tel_CA_Info_Appelant];
-	diag_log format ["[DEBUG CA gestion etat] _liste_id_Appelants = %1",_liste_id_Appelants];
 
 	_liste_id_Appelants pushback _id;
 
@@ -92,7 +83,6 @@ if (_type isequalto "Appel opé maj appelant") exitwith
 
 if (_type isequalto "Pause civil simple") exitwith
 {
-	systemchat "Pause civil simple";
 	private _tel_CA_Info_Appelant = player getvariable ["MRP_Tel_CA_Info_Appelant",[]];
 	private _liste_id_Appelants = _tel_CA_Info_Appelant # 3;
 
@@ -105,7 +95,6 @@ if (_type isequalto "Pause civil simple") exitwith
 
 if (_type isequalto "Pause opé simple") exitwith
 {
-	systemchat "Pause opé simple";
 	private _tel_CA_Info_Ope = player getvariable ["MRP_Tel_CA_Info_Operateur",createhashmap];
 	private _tel_CA_Info_Ope_Num = _tel_CA_Info_Ope getorDefault [_numero,[]];
 	private _tel_CA_Info_Ope_Mon_Appel = _tel_CA_Info_Ope getorDefault ["Mon appel",[]];
@@ -154,7 +143,6 @@ if (_type isequalto "Pause opé multi") exitwith
 
 if (_type isequalto "Arret civil") exitwith
 {
-		systemchat "Arret civil";
 	// Pour les prises de service on supprime en global
 	player setvariable ["MRP_Tel_CA_Info_Appelant",nil,TRUE];
 	player setvariable ["MRP_Appel_Etat","Arret appel en cours"];
@@ -164,18 +152,35 @@ if (_type isequalto "Arret civil") exitwith
 
 if (_type isequalto "Arret opé") exitwith
 {
-		systemchat "Arret opé";
 	private _tel_CA_Info_Ope = player getvariable ["MRP_Tel_CA_Info_Operateur",createhashmap];
 	_tel_CA_Info_Ope deleteAt _numero;
 
 	private _tel_CA_Info_Ope_Mon_Appel = _tel_CA_Info_Ope getorDefault ["Mon appel",[]];
-	if (_tel_CA_Info_Ope_Mon_Appel isnotEqualto []) then
+	private _numero_Mon_Appel = if (_tel_CA_Info_Ope_Mon_Appel isnotEqualto []) then {_tel_CA_Info_Ope_Mon_Appel # 0} else {""};
+
+	// FIX : on ne passe en pause / on ne supprime "Mon appel" que si c'est bien
+	// L'APPEL EN COURS DE CET OPÉRATEUR qui se termine. Avant, la condition ne
+	// vérifiait pas le numéro : la fin d'un AUTRE appel dans la file (ex: un civil
+	// qui raccroche avant d'être décroché) pouvait faire croire à tort que
+	// l'opérateur devait passer en pause / repasser son "Mon appel" à nil.
+	if (_tel_CA_Info_Ope_Mon_Appel isnotEqualto [] AND {_numero_Mon_Appel isEqualTo _numero}) then
 	{
 		player setvariable ["MRP_Appel_Etat","Pause appel CA"];
+		_tel_CA_Info_Ope deleteAt "Mon appel";
 
-		private _numero_Mon_Appel = _tel_CA_Info_Ope_Mon_Appel # 0;
-		if (_numero_Mon_Appel isequalto _numero OR {count _tel_CA_Info_Ope isequalto 1}) then {_tel_CA_Info_Ope deleteAt "Mon appel";};
+		[] call MRPV2_fnc_MRP_Tel_Divers_Fin_Appel_TFAR;
+	};
 
+	// FILET DE SÉCURITÉ (fix bug "rappel qui se connecte tout seul") :
+	// même si la logique "Mon appel" ci-dessus n'a pas matché (désync d'état,
+	// appel jamais officiellement décroché côté opérateur, race condition réseau...),
+	// on force quand même la remise à zéro du canal téléphonique SI la radio de cet
+	// opérateur est encore accrochée sur la fréquence de CET appel qui se termine.
+	// Sans ça, la fréquence (= numéro de l'appelant, donc identique à chaque appel)
+	// pouvait rester "collée" sur la radio de l'opérateur, et le prochain appel du
+	// même joueur se connectait alors automatiquement, sans que l'opérateur décroche.
+	if (((call TFAR_fnc_ActiveSwRadio) call TFAR_fnc_getSwFrequency) isEqualTo _numero) then
+	{
 		[] call MRPV2_fnc_MRP_Tel_Divers_Fin_Appel_TFAR;
 	};
 
@@ -186,9 +191,15 @@ if (_type isequalto "Arret opé") exitwith
 
 if (_type isequalto "Arret opé maj autre opé") then
 {
-		systemchat "Arret opé maj autre opé";
 	private _tel_CA_Info_Ope = player getvariable ["MRP_Tel_CA_Info_Operateur",createhashmap];
 	_tel_CA_Info_Ope deleteAt _numero;
+
+	// Même filet de sécurité que ci-dessus, pour les opérateurs qui n'avaient
+	// pas décroché mais dont la radio serait quand même restée accrochée.
+	if (((call TFAR_fnc_ActiveSwRadio) call TFAR_fnc_getSwFrequency) isEqualTo _numero) then
+	{
+		[] call MRPV2_fnc_MRP_Tel_Divers_Fin_Appel_TFAR;
+	};
 
 	[_numero] call MRPV2_fnc_MRP_Tel_Menu_CA_Suppr_Cadre;
 

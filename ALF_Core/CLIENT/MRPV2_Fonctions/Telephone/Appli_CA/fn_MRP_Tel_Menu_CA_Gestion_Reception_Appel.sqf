@@ -49,8 +49,6 @@ if (_numero_Masquer) then
 	};
 };
 
-systemchat format ["[DEBUG CA_gestion reception] _numero = %1",_numero];
-
 [_numero,format ["<t color='#ffffff' align='center'>Appel en attente dans l%1application : %2</t>",'''',_appli],"info"] spawn ALF_fnc_doMsg;
 
 TRUE

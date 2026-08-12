@@ -3,8 +3,6 @@ private _radio = tolower (call TFAR_fnc_activeSwRadio);
 
 if (isnil {_radio}) exitwith {FALSE};
 
-systemchat "Fin de call";
-
 ["Déconnexion"] call MRPV2_fnc_MRP_Tel_Divers_Connexion_TFAR;
 
 private _radio = tolower (call TFAR_fnc_activeSwRadio);
@@ -20,8 +18,6 @@ private _frequence_radio = player getvariable ["MRP_Tel_Freq_Radio",""];
 
 if (_MRP_Appel_Etat isnoTequalto "Pause appel CA" AND {!isnil {MRP_Telephone_Info_Dispatch}} OR {_frequence_radio isnotequalto ""})  then
 {
-
-	systemchat "Fin de call IF OK";
 
 	private _pos_Ecouteur_Radio_principale = (profileNamespace getvariable ["MRP_Telephone_Configuration",[]]) # 10 # 0;
 	[_radio,_pos_Ecouteur_Radio_principale] call TFAR_fnc_setSwStereo;
@@ -111,7 +107,6 @@ if (_MRP_Appel_Etat isnoTequalto "Pause appel CA" AND {!isnil {MRP_Telephone_Inf
 if (_radio call TFAR_fnc_getSwSpeakers) then {[_radio] call TFAR_fnc_setSwSpeakers;};
 
 [_radio,0] call TFAR_fnc_setSwVolume;
-systemchat "Son Call mis à 0 fin appel";
 [] call TFAR_fnc_hideHint;
 player call TFAR_fnc_releaseAllTangents;
 
