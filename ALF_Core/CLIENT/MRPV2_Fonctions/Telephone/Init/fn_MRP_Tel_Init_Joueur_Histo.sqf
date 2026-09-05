@@ -18,7 +18,7 @@ if (_code_Rep isequalto 200 AND {_liste_Histo isEqualTo []}) then
 {
 	profileNamespace getvariable ["MRP_Telephone_Liste_Historique",[]];
 	private _Telephone_Configuration_Vide = (profileNamespace getVariable ["MRP_Telephone_Configuration",[]]) isequalto [];
-	
+
 	if (_Telephone_Configuration_Vide) then
 	{
 		_config_Tel =

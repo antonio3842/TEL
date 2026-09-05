@@ -5,7 +5,6 @@ _control ctrlenable false;
 playsound "MRP_Telephone_Touche_Appli";
 
 private _numero = _control getvariable ["_numero",""];
-systemchat format ["[DEBUG Action Pause CA] _numero = %1",_numero];
 private _CG_Options = _control getVariable ["_CG_Options",controlNull];
 
 playsound "MRP_Telephone_Touche_Appli";

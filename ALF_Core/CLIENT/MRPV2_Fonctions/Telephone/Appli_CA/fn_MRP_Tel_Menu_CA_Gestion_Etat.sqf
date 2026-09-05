@@ -58,7 +58,6 @@ if (_type isequalto "Appel opé maj opé") exitwith
 	private _tel_CA_Info_Ope_Num = _tel_CA_Info_Ope getorDefault [_numero,[]];
 	private _liste_id_Appelants = _tel_CA_Info_Ope_Num # 2;
 
-
 	_tel_CA_Info_Ope_Num set [1,"Appel"];
 	_tel_CA_Info_Ope_Num set [2,_liste_id_Appelants + [_id]];
 
@@ -71,7 +70,6 @@ if (_type isequalto "Appel opé maj appelant") exitwith
 {
 	private _tel_CA_Info_Appelant = player getvariable ["MRP_Tel_CA_Info_Appelant",[]];
 	private _liste_id_Appelants = _tel_CA_Info_Appelant # 3;
-
 
 	_liste_id_Appelants pushback _id;
 
@@ -156,31 +154,13 @@ if (_type isequalto "Arret opé") exitwith
 	_tel_CA_Info_Ope deleteAt _numero;
 
 	private _tel_CA_Info_Ope_Mon_Appel = _tel_CA_Info_Ope getorDefault ["Mon appel",[]];
-	private _numero_Mon_Appel = if (_tel_CA_Info_Ope_Mon_Appel isnotEqualto []) then {_tel_CA_Info_Ope_Mon_Appel # 0} else {""};
-
-	// FIX : on ne passe en pause / on ne supprime "Mon appel" que si c'est bien
-	// L'APPEL EN COURS DE CET OPÉRATEUR qui se termine. Avant, la condition ne
-	// vérifiait pas le numéro : la fin d'un AUTRE appel dans la file (ex: un civil
-	// qui raccroche avant d'être décroché) pouvait faire croire à tort que
-	// l'opérateur devait passer en pause / repasser son "Mon appel" à nil.
-	if (_tel_CA_Info_Ope_Mon_Appel isnotEqualto [] AND {_numero_Mon_Appel isEqualTo _numero}) then
+	if (_tel_CA_Info_Ope_Mon_Appel isnotEqualto []) then
 	{
 		player setvariable ["MRP_Appel_Etat","Pause appel CA"];
-		_tel_CA_Info_Ope deleteAt "Mon appel";
 
-		[] call MRPV2_fnc_MRP_Tel_Divers_Fin_Appel_TFAR;
-	};
+		private _numero_Mon_Appel = _tel_CA_Info_Ope_Mon_Appel # 0;
+		if (_numero_Mon_Appel isequalto _numero OR {count _tel_CA_Info_Ope isequalto 1}) then {_tel_CA_Info_Ope deleteAt "Mon appel";};
 
-	// FILET DE SÉCURITÉ (fix bug "rappel qui se connecte tout seul") :
-	// même si la logique "Mon appel" ci-dessus n'a pas matché (désync d'état,
-	// appel jamais officiellement décroché côté opérateur, race condition réseau...),
-	// on force quand même la remise à zéro du canal téléphonique SI la radio de cet
-	// opérateur est encore accrochée sur la fréquence de CET appel qui se termine.
-	// Sans ça, la fréquence (= numéro de l'appelant, donc identique à chaque appel)
-	// pouvait rester "collée" sur la radio de l'opérateur, et le prochain appel du
-	// même joueur se connectait alors automatiquement, sans que l'opérateur décroche.
-	if (((call TFAR_fnc_ActiveSwRadio) call TFAR_fnc_getSwFrequency) isEqualTo _numero) then
-	{
 		[] call MRPV2_fnc_MRP_Tel_Divers_Fin_Appel_TFAR;
 	};
 
@@ -193,13 +173,6 @@ if (_type isequalto "Arret opé maj autre opé") then
 {
 	private _tel_CA_Info_Ope = player getvariable ["MRP_Tel_CA_Info_Operateur",createhashmap];
 	_tel_CA_Info_Ope deleteAt _numero;
-
-	// Même filet de sécurité que ci-dessus, pour les opérateurs qui n'avaient
-	// pas décroché mais dont la radio serait quand même restée accrochée.
-	if (((call TFAR_fnc_ActiveSwRadio) call TFAR_fnc_getSwFrequency) isEqualTo _numero) then
-	{
-		[] call MRPV2_fnc_MRP_Tel_Divers_Fin_Appel_TFAR;
-	};
 
 	[_numero] call MRPV2_fnc_MRP_Tel_Menu_CA_Suppr_Cadre;
 

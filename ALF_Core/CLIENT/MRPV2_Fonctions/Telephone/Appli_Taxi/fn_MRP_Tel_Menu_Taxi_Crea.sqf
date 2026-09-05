@@ -5,7 +5,7 @@ private _Telephone_Base = uiNamespace getVariable ["MRP_Telephone_Base", display
 private _Telephone_Fond = uiNamespace getVariable ["MRP_Telephone_Fond", controlNull];
 private _telephone_Cadre_Base = uiNamespace getVariable ["MRP_Telephone_Cadre_Base", controlNull];
 
-_Telephone_Fond ctrlSetText "MRP_Telephones\Data\Menu_Bloc_Note\Menu_Note_Vide_dxt5.paa";
+_Telephone_Fond ctrlSetText "MRP_icone_tel\Data\Menu_Bloc_Note\Menu_Note_Vide_dxt5.paa";
 
 private _ctrl_Titre = _Telephone_Base ctrlCreate ["RscStructuredText", -1, _telephone_Cadre_Base];
 uiNamespace setVariable ["MRP_Tel_Menu_Taxi", _ctrl_Titre];
@@ -22,6 +22,7 @@ private _ctrlButton = _Telephone_Base ctrlCreate ["MRP_Bouton", -1, _telephone_C
 uiNamespace setVariable ["MRP_Tel_Menu_Taxi_Bouton_Appel", _ctrlButton];
 _ctrlButton ctrlSetPosition [0.08, 0.48, 0.4, 0.1];
 _ctrlButton ctrlSetText "Appeler un taxi";
+_ctrlButton ctrlSetTextColor [0, 0, 0, 1];
 _ctrlButton ctrlCommit 0;
 
 _ctrlButton ctrlAddEventHandler ["ButtonClick",

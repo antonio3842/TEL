@@ -10,14 +10,14 @@ private _telephone_Cadre_Base = uiNamespace getVariable ["MRP_Telephone_Cadre_Ba
 private _ctrl_Image = _Telephone_Base ctrlCreate ["RscPicture",-1,_telephone_Cadre_Base];
 uiNamespace setVariable ["MRP_Telephone_Menu_Principal_Creation_Fond_Menu_Bas",_ctrl_Image];
 _ctrl_Image ctrlSetPosition [0.005,1.17,0.55,0.18];
-_ctrl_Image ctrlSetText "MRP_Telephones\Data\Menu_Principal\Barre_Fond_Menu_Principal_dxt5.paa";
+_ctrl_Image ctrlSetText "MRP_icone_tel\Data\Menu_Principal\Barre_Fond_Menu_Principal_dxt5.paa";
 _ctrl_Image ctrlCommit 0;
 
 // Creation bouton Appel
 private _ctrlButton = _Telephone_Base ctrlCreate ["MRP_RscClickableText",-1,_telephone_Cadre_Base];
 uiNamespace setVariable ["MRP_Telephone_Menu_Principal_Creation_Bouton_Appel",_ctrlButton];
 _ctrlButton ctrlSetPosition [0.07,1.201,0.092,0.12];
-_ctrlButton ctrlSetText "MRP_Telephones\Data\Menu_Principal\Icone_appel.paa";
+_ctrlButton ctrlSetText "MRP_icone_tel\Data\Menu_Principal\Icone_appel.paa";
 _ctrlButton ctrlSetTextColor [0.9,0.9,0.9,1];
 _ctrlButton ctrlCommit 0;
 
@@ -35,7 +35,7 @@ _ctrlButton ctrlAddEventHandler ["ButtonClick",
 		private _telephone_Fond = uiNamespace getVariable ["MRP_Telephone_Fond",controlNull];
 		private _fond = ctrltext _Telephone_Fond;
 
-		private _adresse_Fond_Appel = "MRP_Telephones\Data\Menu_Appel\Fond_Appel_dxt5.paa";
+		private _adresse_Fond_Appel = "MRP_icone_tel\Data\Menu_Appel\Fond_Appel_dxt5.paa";
 		if (_fond isequalto _adresse_Fond_Appel) exitwith {};
 
 		[] call MRPV2_fnc_MRP_Tel_Divers_Suppr_Ecran;
@@ -48,7 +48,7 @@ private _compteur_Nouveau_Appel = ([] call MRPV2_fnc_MRP_Tel_Divers_Gestion_Nomb
 // modification icone si nouveau appel sur le menu principal
 if (_compteur_Nouveau_Appel > 0) then
 {
-	_ctrlButton ctrlSetText "MRP_Telephones\Data\Menu_Principal\Icone_Appel_Rec.paa";
+	_ctrlButton ctrlSetText "MRP_icone_tel\Data\Menu_Principal\Icone_Appel_Rec.paa";
 	_ctrlButton ctrlSetPosition [0.053,1.188,0.133,0.133];
 	_ctrlButton ctrlCommit 0;
 
@@ -69,7 +69,7 @@ if (_compteur_Nouveau_Appel > 0) then
 private _ctrlButton = _Telephone_Base ctrlCreate ["MRP_RscClickableText",-1,_telephone_Cadre_Base];
 uiNamespace setVariable ["MRP_Telephone_Menu_Principal_Creation_Bouton_SMS",_ctrlButton];
 _ctrlButton ctrlSetPosition [0.18,1.201,0.092,0.12];
-_ctrlButton ctrlSetText "MRP_Telephones\Data\Menu_Principal\Icone_SMS.paa";
+_ctrlButton ctrlSetText "MRP_icone_tel\Data\Menu_Principal\Icone_SMS.paa";
 _ctrlButton ctrlSetTextColor [0.9,0.9,0.9,1];
 _ctrlButton ctrlCommit 0;
 
@@ -85,7 +85,7 @@ _ctrlButton ctrlAddEventHandler ["ButtonClick",
 		private _telephone_Fond = uiNamespace getVariable ["MRP_Telephone_Fond",controlNull];
 		private _fond = ctrltext _Telephone_Fond;
 
-		private _adresse_Fond_Appel = "MRP_Telephones\Data\Menu_Appel\Fond_Appel_dxt5.paa";
+		private _adresse_Fond_Appel = "MRP_icone_tel\Data\Menu_Appel\Fond_Appel_dxt5.paa";
 		if (_fond isequalto _adresse_Fond_Appel) exitwith {};
 
 		[] call MRPV2_fnc_MRP_Tel_Divers_Suppr_Ecran;
@@ -98,7 +98,7 @@ private _compteur_Nouveau_SMS = (["Menu principal"] call MRPV2_fnc_MRP_Tel_Menu_
 // modification icone si nouveau SMS sur le menu principal
 if (_compteur_Nouveau_SMS > 0) then
 {
-	_ctrlButton ctrlSetText "MRP_Telephones\Data\Menu_Principal\Icone_SMS_Mess.paa";
+	_ctrlButton ctrlSetText "MRP_icone_tel\Data\Menu_Principal\Icone_SMS_Mess.paa";
 	_ctrlButton ctrlSetPosition [0.163,1.189,0.132,0.132];
 	_ctrlButton ctrlCommit 0;
 
@@ -121,7 +121,7 @@ private _telephone_Configuration = profileNamespace getvariable ["MRP_Telephone_
 private _ctrlButton = _Telephone_Base ctrlCreate ["MRP_RscClickableText",-1,_telephone_Cadre_Base];
 uiNamespace setVariable ["MRP_Telephone_Menu_Principal_Creation_Bouton_Contact",_ctrlButton];
 _ctrlButton ctrlSetPosition [0.29,1.201,0.092,0.12];
-_ctrlButton ctrlSetText "MRP_Telephones\Data\Menu_Principal\Icone_Contacts.paa";
+_ctrlButton ctrlSetText "MRP_icone_tel\Data\Menu_Principal\Icone_Contacts.paa";
 _ctrlButton ctrlSetTextColor [0.9,0.9,0.9,1];
 _ctrlButton ctrlCommit 0;
 
@@ -137,7 +137,7 @@ _ctrlButton ctrlAddEventHandler ["ButtonClick",
 		private _telephone_Fond = uiNamespace getVariable ["MRP_Telephone_Fond",controlNull];
 		private _fond = ctrltext _Telephone_Fond;
 
-		private _adresse_Fond_Appel = "MRP_Telephones\Data\Menu_Appel\Fond_Appel_dxt5.paa";
+		private _adresse_Fond_Appel = "MRP_icone_tel\Data\Menu_Appel\Fond_Appel_dxt5.paa";
 		if (_fond isequalto _adresse_Fond_Appel) exitwith {};
 
 		[] call MRPV2_fnc_MRP_Tel_Divers_Suppr_Ecran;
@@ -149,7 +149,7 @@ _ctrlButton ctrlAddEventHandler ["ButtonClick",
 private _ctrlButton = _Telephone_Base ctrlCreate ["MRP_RscClickableText",-1,_telephone_Cadre_Base];
 uiNamespace setVariable ["MRP_Telephone_Menu_Principal_Creation_Bouton_Reglages",_ctrlButton];
 _ctrlButton ctrlSetPosition [0.4,1.201,0.092,0.12];
-_ctrlButton ctrlSetText "MRP_Telephones\Data\Menu_Principal\Icone_Reglages.paa";
+_ctrlButton ctrlSetText "MRP_icone_tel\Data\Menu_Principal\Icone_Reglages.paa";
 _ctrlButton ctrlSetTextColor [0.9,0.9,0.9,1];
 _ctrlButton ctrlCommit 0;
 
@@ -165,7 +165,7 @@ _ctrlButton ctrlAddEventHandler ["ButtonClick",
 		private _telephone_Fond = uiNamespace getVariable ["MRP_Telephone_Fond",controlNull];
 		private _fond = ctrltext _Telephone_Fond;
 
-		private _adresse_Fond_Appel = "MRP_Telephones\Data\Menu_Appel\Fond_Appel_dxt5.paa";
+		private _adresse_Fond_Appel = "MRP_icone_tel\Data\Menu_Appel\Fond_Appel_dxt5.paa";
 		if (_fond isequalto _adresse_Fond_Appel) exitwith {};
 
 		[] call MRPV2_fnc_MRP_Tel_Divers_Suppr_Ecran;

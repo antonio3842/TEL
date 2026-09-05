@@ -3,21 +3,21 @@ private _Telephone_Base = uiNamespace getVariable ["MRP_Telephone_Base",displayN
 private _Telephone_Fond = uiNamespace getVariable ["MRP_Telephone_Fond",controlNull];
 private _telephone_Cadre_Base = uiNamespace getVariable ["MRP_Telephone_Cadre_Base",controlNull];
 
-_Telephone_Fond ctrlSetText "MRP_Telephones\Data\Menu_Reglages\Menu_reglages.paa";
+_Telephone_Fond ctrlSetText "MRP_icone_tel\Data\Menu_Reglages\Menu_reglages.paa";
 
 private _base_Y = 0.496;
 
 // Image Fond Vert Mode avion
 private _ctrl_Image_Fond = _Telephone_Base ctrlCreate ["RscPicture",-1,_telephone_Cadre_Base];
 _ctrl_Image_Fond ctrlSetPosition [0.4215,_base_Y,0.069,0.09];
-_ctrl_Image_Fond ctrlSetText "MRP_Telephones\Data\Menu_Reglages\Petite_icone_reglage_fondvert.paa";
+_ctrl_Image_Fond ctrlSetText "MRP_icone_tel\Data\Menu_Reglages\Petite_icone_reglage_fondvert.paa";
 _ctrl_Image_Fond ctrlSetFade 1;
 _ctrl_Image_Fond ctrlCommit 0;
 
 // Image Bouton Mode avion
 private _ctrl_Image = _Telephone_Base ctrlCreate ["RscPicture",-1,_telephone_Cadre_Base];
 _ctrl_Image ctrlSetPosition [0.408,_base_Y,0.069,0.09];
-_ctrl_Image ctrlSetText "MRP_Telephones\Data\Menu_Reglages\Petite_icone_reglage_bouton.paa";
+_ctrl_Image ctrlSetText "MRP_icone_tel\Data\Menu_Reglages\Petite_icone_reglage_bouton.paa";
 _ctrl_Image ctrlCommit 0;
 
 // Bouton Mode avion
@@ -44,14 +44,14 @@ _base_Y = _base_Y + 0.069;
 // Image Fond Vert Mode silencieux
 private _ctrl_Image_Fond = _Telephone_Base ctrlCreate ["RscPicture",-1,_telephone_Cadre_Base];
 _ctrl_Image_Fond ctrlSetPosition [0.4215,_base_Y,0.069,0.09];
-_ctrl_Image_Fond ctrlSetText "MRP_Telephones\Data\Menu_Reglages\Petite_icone_reglage_fondvert.paa";
+_ctrl_Image_Fond ctrlSetText "MRP_icone_tel\Data\Menu_Reglages\Petite_icone_reglage_fondvert.paa";
 _ctrl_Image_Fond ctrlSetFade 1;
 _ctrl_Image_Fond ctrlCommit 0;
 
 // Image Bouton Mode silencieux
 private _ctrl_Image = _Telephone_Base ctrlCreate ["RscPicture",-1,_telephone_Cadre_Base];
 _ctrl_Image ctrlSetPosition [0.408,_base_Y,0.069,0.09];
-_ctrl_Image ctrlSetText "MRP_Telephones\Data\Menu_Reglages\Petite_icone_reglage_bouton.paa";
+_ctrl_Image ctrlSetText "MRP_icone_tel\Data\Menu_Reglages\Petite_icone_reglage_bouton.paa";
 _ctrl_Image ctrlCommit 0;
 
 // Bouton Mode silencieux
@@ -78,14 +78,14 @@ _base_Y = _base_Y + 0.069;
 // Image Fond Vert Cacher numero
 private _ctrl_Image_Fond = _Telephone_Base ctrlCreate ["RscPicture",-1,_telephone_Cadre_Base];
 _ctrl_Image_Fond ctrlSetPosition [0.4215,_base_Y,0.069,0.09];
-_ctrl_Image_Fond ctrlSetText "MRP_Telephones\Data\Menu_Reglages\Petite_icone_reglage_fondvert.paa";
+_ctrl_Image_Fond ctrlSetText "MRP_icone_tel\Data\Menu_Reglages\Petite_icone_reglage_fondvert.paa";
 _ctrl_Image_Fond ctrlSetFade 1;
 _ctrl_Image_Fond ctrlCommit 0;
 
 // Image Bouton Cacher numero
 private _ctrl_Image = _Telephone_Base ctrlCreate ["RscPicture",-1,_telephone_Cadre_Base];
 _ctrl_Image ctrlSetPosition [0.408,_base_Y,0.069,0.09];
-_ctrl_Image ctrlSetText "MRP_Telephones\Data\Menu_Reglages\Petite_icone_reglage_bouton.paa";
+_ctrl_Image ctrlSetText "MRP_icone_tel\Data\Menu_Reglages\Petite_icone_reglage_bouton.paa";
 _ctrl_Image ctrlCommit 0;
 
 // Bouton Cacher numero
@@ -121,14 +121,14 @@ _base_Y = _base_Y + 0.069;
 // Image Fond Vert Mode entreprise
 private _ctrl_Image_Fond = _Telephone_Base ctrlCreate ["RscPicture",-1,_telephone_Cadre_Base];
 _ctrl_Image_Fond ctrlSetPosition [0.4215,_base_Y,0.069,0.09];
-_ctrl_Image_Fond ctrlSetText "MRP_Telephones\Data\Menu_Reglages\Petite_icone_reglage_fondvert.paa";
+_ctrl_Image_Fond ctrlSetText "MRP_icone_tel\Data\Menu_Reglages\Petite_icone_reglage_fondvert.paa";
 _ctrl_Image_Fond ctrlSetFade 1;
 _ctrl_Image_Fond ctrlCommit 0;
 
 // Image Bouton Mode entreprise
 private _ctrl_Image = _Telephone_Base ctrlCreate ["RscPicture",-1,_telephone_Cadre_Base];
 _ctrl_Image ctrlSetPosition [0.408,_base_Y - 0.0005,0.069,0.09];
-_ctrl_Image ctrlSetText "MRP_Telephones\Data\Menu_Reglages\Petite_icone_reglage_bouton.paa";
+_ctrl_Image ctrlSetText "MRP_icone_tel\Data\Menu_Reglages\Petite_icone_reglage_bouton.paa";
 _ctrl_Image ctrlCommit 0;
 
 // Bouton Mode entreprise
@@ -144,7 +144,7 @@ _ctrlButton ctrlAddEventHandler ["ButtonClick",
 	private _Image_Fond_Vert_Cacher =  _control getvariable ["_Image_Fond_Vert_Cacher",controlNull];
 	private _Image_Bouton_Cacher = _control getvariable ["_Image_Bouton_Cacher",controlNull];
 
-	if !(b_enService) exitwith
+	if !(b_enService || life_gendarme_service || life_pompier_service || life_penit_service) exitwith
 	{
 		["Mode entreprise",format ["<t color='#ffffff' align='center'>%1</t>","Vous devez avoir pris votre service pour utiliser le mode entreprise."],"warning"] spawn ALF_fnc_doMsg;
 	};
@@ -163,7 +163,7 @@ _ctrlButton ctrlAddEventHandler ["ButtonClick",
 	player setVariable ["MRP_Telephone_Mode_Entreprise",_mode_Entreprise];
 }];
 
-if !(b_enService) then
+if !(b_enService || life_gendarme_service || life_pompier_service || life_penit_service) then
 {
 	private _telephone_Configuration = profileNamespace getvariable ["MRP_Telephone_Configuration",[]];
 	_telephone_Configuration set [11,FALSE];

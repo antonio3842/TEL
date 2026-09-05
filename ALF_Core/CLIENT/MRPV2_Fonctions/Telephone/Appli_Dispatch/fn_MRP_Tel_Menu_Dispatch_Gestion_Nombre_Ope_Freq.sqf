@@ -10,7 +10,7 @@ private _frequence = _frequence_base;
 if (_index isnotequalto -1) then {_frequence = _frequence_base + _index};
 
 private _service = (((player getvariable ["service",objnull]) getvariable ["ent",[-1,""]]) # 0);
-private _liste_Collegues = (allplayers select {([_x] call MRPV2_fnc_MRP_NB_Service_Vers_TXT) isEquaLTo ([] call MRPV2_fnc_MRP_NB_Service_Vers_TXT)}) - [player];
+private _liste_Collegues = (allplayers select {([_x] call MRPV2_fnc_MRP_NB_Service_Vers_TXT) isEquaLTo ([] call MRPV2_fnc_MRP_NB_Service_Vers_TXT)});
 
 private _canal_rechercher = 1;
 if (_index isequalto 0) then {_canal_rechercher = 2;};

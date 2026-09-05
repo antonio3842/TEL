@@ -1,8 +1,6 @@
 // MRPV2_fnc_MRP_Tel_Menu_CA_Action_Repondeur = {
 private _service = param [0,""];
 
-systemchat format ["[DEBUG Repondeur] _service = %1",_service];
-
 private _voix_Repondeur = "";
 private _musique_Repondeur = "";
 

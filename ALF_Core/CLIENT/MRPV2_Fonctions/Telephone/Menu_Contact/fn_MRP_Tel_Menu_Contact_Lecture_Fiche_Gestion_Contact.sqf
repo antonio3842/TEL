@@ -15,7 +15,7 @@ _Telephone_Cadre_Base_Tentative ctrlCommit 0;
 
 private _fond_Ecran = _Telephone_Base ctrlCreate ["RscPicture",-1,_Telephone_Cadre_Base_Tentative];
 _fond_Ecran ctrlSetPosition [0.03,1.08,0.5,0.09];
-_fond_Ecran ctrlSetText "MRP_Telephones\Data\Menu_Principal\Prompt_dxt5.paa";
+_fond_Ecran ctrlSetText "MRP_icone_tel\Data\Menu_Principal\Prompt_dxt5.paa";
 _fond_Ecran ctrlSetTextColor [0.9,0.9,0.9,1];
 _fond_Ecran ctrlCommit 0;
 
@@ -84,12 +84,12 @@ _ctrlButton ctrlAddEventHandler ["ButtonClick",
 				if (_contact_Est_Bloquer) then
 				{
 					_info_Contact set [5,FALSE];
-					_bouton_Bloquage ctrlSetText "MRP_Telephones\Data\Menu_Contact\Icone_Bloquer_dxt5.paa";
+					_bouton_Bloquage ctrlSetText "MRP_icone_tel\Data\Menu_Contact\Icone_Bloquer_dxt5.paa";
 					_bouton_Bloquage ctrlSetPosition [0.035,0.19,0.11,0.05];
 				} else
 				{
 					_info_Contact set [5,TRUE];
-					_bouton_Bloquage ctrlSetText "MRP_Telephones\Data\Menu_Contact\Icone_Debloquer_dxt5.paa";
+					_bouton_Bloquage ctrlSetText "MRP_icone_tel\Data\Menu_Contact\Icone_Debloquer_dxt5.paa";
 					_bouton_Bloquage ctrlSetPosition [0.045,0.19,0.11,0.05];
 				};
 
@@ -136,7 +136,7 @@ _ctrlButton ctrlAddEventHandler ["MouseExit",
 
 private _fond_Ecran = _Telephone_Base ctrlCreate ["RscPicture",-1,_Telephone_Cadre_Base_Tentative];
 _fond_Ecran ctrlSetPosition [0.03,1.18,0.5,0.09];
-_fond_Ecran ctrlSetText "MRP_Telephones\Data\Menu_Principal\Prompt_dxt5.paa";
+_fond_Ecran ctrlSetText "MRP_icone_tel\Data\Menu_Principal\Prompt_dxt5.paa";
 _fond_Ecran ctrlSetTextColor [0.9,0.9,0.9,1];
 _fond_Ecran ctrlCommit 0;
 

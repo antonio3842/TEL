@@ -5,10 +5,26 @@ private _service_Pris = param [0,FALSE];
 if (_service_Pris) then
 {
 	[{
-		b_enService
+		b_enService || life_gendarme_service  ||  life_pompier_service || life_penit_service
 	},
 	{
-		private _mon_Ent = player getVariable ["isEmployed",""];;
+		private _mon_Ent = player getVariable ["isEmployed",""];
+		
+		if (_mon_Ent isequalto "") then {
+			if (life_gendarme_service) then 
+			{
+			_mon_Ent = "1";
+			};
+			if (life_pompier_service) then 
+			{
+			_mon_Ent = "2";
+			};
+			if (life_penit_service) then 
+			{
+			_mon_Ent = "3";
+			};
+		};
+		
 		if (_mon_Ent isequalto -1) exitwith {};
 
 		private _liste_Joueurs_Appel_Mon_Ent = allPlayers select 
@@ -40,8 +56,24 @@ if (_service_Pris) then
 	private _MRP_Appel_Etat = player getvariable ["MRP_Appel_Etat",""];
 	if (_MRP_Appel_Etat in ["Appel CA en cours"]) then
 	{
-		private _mon_Ent = player getVariable ["isEmployed",""];;
-		if (_mon_Ent isNotequalto -1) then
+		private _mon_Ent = player getVariable ["isEmployed",""];
+		
+		if (_mon_Ent isequalto "") then {
+			if (life_gendarme_service) then 
+			{
+			_mon_Ent = "1";
+			};
+			if (life_pompier_service) then 
+			{
+			_mon_Ent = "2";
+			};
+			if (life_penit_service) then 
+			{
+			_mon_Ent = "3";
+			};
+		};
+		
+		if (_mon_Ent isequalto -1) then
 		{
 			private _tel_CA_Info_Ope = player getvariable ["MRP_Tel_CA_Info_Operateur",createhashmap];
 			private _numero_Enregistrer = (_tel_CA_Info_Ope get "Mon appel") # 0;

@@ -3,12 +3,12 @@ private _Telephone_Base = uiNamespace getVariable ["MRP_Telephone_Base",displayN
 private _Telephone_Fond = uiNamespace getVariable ["MRP_Telephone_Fond",controlNull];
 private _telephone_Cadre_Base = uiNamespace getVariable ["MRP_Telephone_Cadre_Base",controlNull];
 
-_Telephone_Fond ctrlSetText "MRP_Telephones\Data\Menu_Contact\Menu_Contact_Fiche_dxt5.paa";
+_Telephone_Fond ctrlSetText "MRP_icone_tel\Data\Menu_Contact\Menu_Contact_Fiche_dxt5.paa";
 
 // Bouton menu contact
 private _ctrlButton = _Telephone_Base ctrlCreate ["MRP_RscClickableText",-1,_telephone_Cadre_Base];
 _ctrlButton ctrlSetPosition [0.03,0.07,0.15,0.1];
-_ctrlButton ctrlSetText "MRP_Telephones\Data\Menu_Contact\Icone_Contact.paa";
+_ctrlButton ctrlSetText "MRP_icone_tel\Data\Menu_Contact\Icone_Contact.paa";
 _ctrlButton ctrlSetTextColor [0.8,0.8,0.8,1];
 _ctrlButton ctrlCommit 0;
 
@@ -32,7 +32,7 @@ _ctrlButton ctrlAddEventHandler ["ButtonClick",
 // Bouton modifier contact en haut a droite
 private _ctrlButton = _Telephone_Base ctrlCreate ["MRP_RscClickableText",-1,_telephone_Cadre_Base];
 _ctrlButton ctrlSetPosition [0.4,0.07,0.15,0.1];
-_ctrlButton ctrlSetText "MRP_Telephones\Data\Menu_Contact\Icone_Modifier.paa";
+_ctrlButton ctrlSetText "MRP_icone_tel\Data\Menu_Contact\Icone_Modifier.paa";
 _ctrlButton ctrlSetTextColor [0.8,0.8,0.8,1];
 _ctrlButton ctrlCommit 0;
 
@@ -54,7 +54,7 @@ _ctrlButton ctrlAddEventHandler ["ButtonClick",
 // Bouton supprimer contact
 private _ctrlButton = _Telephone_Base ctrlCreate ["MRP_RscClickableText",-1,_telephone_Cadre_Base];
 _ctrlButton ctrlSetPosition [0.405,0.19,0.11,0.05];
-_ctrlButton ctrlSetText "MRP_Telephones\Data\Menu_Contact\Icone_Supprimer_dxt5.paa";
+_ctrlButton ctrlSetText "MRP_icone_tel\Data\Menu_Contact\Icone_Supprimer_dxt5.paa";
 _ctrlButton ctrlSetTextColor [0.8,0.8,0.8,1];
 _ctrlButton ctrlCommit 0;
 
@@ -83,11 +83,11 @@ private _contact_Est_Bloquer = _info_Contact # 5;
 
 if (_contact_Est_Bloquer) then
 {
-	_ctrlButton ctrlSetText "MRP_Telephones\Data\Menu_Contact\Icone_Debloquer_dxt5.paa";
+	_ctrlButton ctrlSetText "MRP_icone_tel\Data\Menu_Contact\Icone_Debloquer_dxt5.paa";
 	_ctrlButton ctrlSetPosition [0.045,0.19,0.11,0.05];
 } else
 {
-	_ctrlButton ctrlSetText "MRP_Telephones\Data\Menu_Contact\Icone_Bloquer_dxt5.paa";
+	_ctrlButton ctrlSetText "MRP_icone_tel\Data\Menu_Contact\Icone_Bloquer_dxt5.paa";
 	_ctrlButton ctrlSetPosition [0.035,0.19,0.11,0.05];
 };
 
@@ -145,12 +145,12 @@ _ctrlButton ctrlCommit 0;
 
 if (MRP_Telephone_Gestion_Numero_Interne isEqualTo "") then
 {
-	_ctrlButton ctrlSetText "MRP_Telephones\Data\Menu_Contact\Icone_Message_Gris_dxt5.paa";
+	_ctrlButton ctrlSetText "MRP_icone_tel\Data\Menu_Contact\Icone_Message_Gris_dxt5.paa";
 	_ctrlButton ctrlSetTextColor [1,1,1,1];
 	_ctrlButton ctrlenable FALSE;
 } else
 {
-	_ctrlButton ctrlSetText "MRP_Telephones\Data\Menu_Contact\Icone_Message_Bleu_dxt5.paa";
+	_ctrlButton ctrlSetText "MRP_icone_tel\Data\Menu_Contact\Icone_Message_Bleu_dxt5.paa";
 	_ctrlButton ctrlSetTextColor [0.8,0.8,0.8,1];
 };
 
@@ -179,12 +179,12 @@ private _mode_Avion = _liste_Configuration # 0;
 
 if (MRP_Telephone_Gestion_Numero_Interne isEqualTo "" OR {_mode_Avion} OR {ALF_Forfait < 1}) then
 {
-	_ctrlButton ctrlSetText "MRP_Telephones\Data\Menu_Contact\Icone_Appel_Gris_dxt5.paa";
+	_ctrlButton ctrlSetText "MRP_icone_tel\Data\Menu_Contact\Icone_Appel_Gris_dxt5.paa";
 	_ctrlButton ctrlSetTextColor [1,1,1,1];
 	_ctrlButton ctrlenable FALSE;
 } else
 {
-	_ctrlButton ctrlSetText "MRP_Telephones\Data\Menu_Contact\Icone_Appel_Bleu_dxt5.paa";
+	_ctrlButton ctrlSetText "MRP_icone_tel\Data\Menu_Contact\Icone_Appel_Bleu_dxt5.paa";
 	_ctrlButton ctrlSetTextColor [0.8,0.8,0.8,1];
 };
 

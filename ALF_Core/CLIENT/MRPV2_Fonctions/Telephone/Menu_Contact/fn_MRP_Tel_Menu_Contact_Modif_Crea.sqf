@@ -3,12 +3,12 @@ private _Telephone_Base = uiNamespace getVariable ["MRP_Telephone_Base",displayN
 private _Telephone_Fond = uiNamespace getVariable ["MRP_Telephone_Fond",controlNull];
 private _telephone_Cadre_Base = uiNamespace getVariable ["MRP_Telephone_Cadre_Base",controlNull];
 
-_Telephone_Fond ctrlSetText "MRP_Telephones\Data\Menu_Contact\Menu_Contact_Modifier_Nouveau_dxt5.paa";
+_Telephone_Fond ctrlSetText "MRP_icone_tel\Data\Menu_Contact\Menu_Contact_Modifier_Nouveau_dxt5.paa";
 
 // Bouton Annuler
 private _ctrlButton = _Telephone_Base ctrlCreate ["MRP_RscClickableText",-1,_telephone_Cadre_Base];
 _ctrlButton ctrlSetPosition [0.025,0.07,0.15,0.1];
-_ctrlButton ctrlSetText "MRP_Telephones\Data\Menu_Contact\Icone_Annuler.paa";
+_ctrlButton ctrlSetText "MRP_icone_tel\Data\Menu_Contact\Icone_Annuler.paa";
 _ctrlButton ctrlSetTextColor [0.8,0.8,0.8,1];
 _ctrlButton ctrlCommit 0;
 
@@ -394,11 +394,11 @@ private _tel_Valide = !(_numero in [""," ","Numéro de téléphone"]);
 
 if (_tel_Valide) then
 {
-	_ctrlButton ctrlSetText "MRP_Telephones\Data\Menu_Contact\Icone_OK_Bleu_dxt5.paa";
+	_ctrlButton ctrlSetText "MRP_icone_tel\Data\Menu_Contact\Icone_OK_Bleu_dxt5.paa";
 	_ctrlButton ctrlSetTextColor [0.8,0.8,0.8,1];
 } else
 {
-	_ctrlButton ctrlSetText "MRP_Telephones\Data\Menu_Contact\Icone_OK_dxt5.paa";
+	_ctrlButton ctrlSetText "MRP_icone_tel\Data\Menu_Contact\Icone_OK_dxt5.paa";
 };
 
 _ctrlButton ctrlAddEventHandler ["ButtonClick",

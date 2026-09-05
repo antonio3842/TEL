@@ -37,7 +37,7 @@ if (_option_Activer) then
 		player setVariable ["MRP_Telephone_Mode_Avion",TRUE];
 
 		private _Telephone_Etat_Reseau = uiNamespace getVariable ["MRPV2_fnc_MRP_Tel_Init_Etat_Reseau",controlNull];
-		_Telephone_Etat_Reseau ctrlSetText "MRP_Telephones\Data\Menu_Principal\Icone_Mode_Avion.paa";
+		_Telephone_Etat_Reseau ctrlSetText "MRP_icone_tel\Data\Menu_Principal\Icone_Mode_Avion.paa";
 
 		[false] call MRPV2_fnc_MRP_Tel_Divers_Prise_Service_CA;
 	};
@@ -60,7 +60,7 @@ if (_option_Activer) then
 		player setVariable ["MRP_Telephone_Mode_Avion",FALSE];
 
 		private _Telephone_Etat_Reseau = uiNamespace getVariable ["MRPV2_fnc_MRP_Tel_Init_Etat_Reseau",controlNull];
-		_Telephone_Etat_Reseau ctrlSetText "MRP_Telephones\Data\Menu_Principal\Icone_Reseau_dxt5.paa";
+		_Telephone_Etat_Reseau ctrlSetText "MRP_icone_tel\Data\Menu_Principal\Icone_Reseau_dxt5.paa";
 
 		[true] call MRPV2_fnc_MRP_Tel_Divers_Prise_Service_CA;
 	};

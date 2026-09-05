@@ -34,15 +34,6 @@ private _liste_Frequence_AP =
 	"OP 1","OP 2"
 ];
 
-private _frequence_DIR = 750;
-private _liste_Frequence_DIR =
-[
-	"GLOBAL","Central",
-	"DIR 1",
-	"DIR 2","DIR 3","DIR 4",
-	"Travaux 1","Travaux 2","Permis","SG"
-];
-
 [] call
 {
 	if (_permission_Joueur isEquaLTo "GN") exitwith

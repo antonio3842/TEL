@@ -38,8 +38,6 @@ _joueur_Appellant setvariable ["MRP_Tel_CA_Info_Appelant",[]];
 
 	_liste_Unites_En_Service = (units group player);
 
-	systemchat format ["[Debu pause var] _liste_Unites_En_Service = %1",_liste_Unites_En_Service];
-
 	if (count _liste_id_Appelants isequalto 2) then
 	{
 		[_service_Joueur] remoteExec ["MRPV2_fnc_MRP_Tel_Menu_CA_Action_Repondeur",_joueur_Appellant];

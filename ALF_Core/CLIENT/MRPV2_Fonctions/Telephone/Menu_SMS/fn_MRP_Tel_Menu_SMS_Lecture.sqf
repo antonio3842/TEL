@@ -3,14 +3,14 @@ private _Telephone_Base = uiNamespace getVariable ["MRP_Telephone_Base",displayN
 private _Telephone_Fond = uiNamespace getVariable ["MRP_Telephone_Fond",controlNull];
 private _telephone_Cadre_Base = uiNamespace getVariable ["MRP_Telephone_Cadre_Base",controlNull];
 
-_Telephone_Fond ctrlSetText "MRP_Telephones\Data\Menu_SMS\Menu_SMS_Discussion_Vide_dxt5.paa";
+_Telephone_Fond ctrlSetText "MRP_icone_tel\Data\Menu_SMS\Menu_SMS_Discussion_Vide_dxt5.paa";
 
 // Bouton retour sms en haut a gauche
 private _ctrlButton = _Telephone_Base ctrlCreate ["MRP_RscClickableText",-1,_telephone_Cadre_Base];
 _ctrlButton ctrlSetPosition [0.005,0.125,0.12,0.04];
 _ctrlButton ctrlCommit 0;
 _ctrlButton ctrlSetTextColor [0.8,0.8,0.8,1];
-_ctrlButton ctrlSetText "MRP_Telephones\Data\Menu_SMS\Menu_SMS_Fleche_Retour_dxt5.paa";
+_ctrlButton ctrlSetText "MRP_icone_tel\Data\Menu_SMS\Menu_SMS_Fleche_Retour_dxt5.paa";
 
 _ctrlButton ctrlAddEventHandler ["ButtonClick",
 {params ["_control"];
@@ -30,7 +30,7 @@ _ctrlButton ctrlAddEventHandler ["ButtonClick",
 // Bouton supprimer sms en haut a droite
 private _ctrlButton = _Telephone_Base ctrlCreate ["MRP_RscClickableText",-1,_telephone_Cadre_Base];
 _ctrlButton ctrlSetPosition [0.405,0.12,0.11,0.05];
-_ctrlButton ctrlSetText "MRP_Telephones\Data\Menu_Contact\Icone_Supprimer_dxt5.paa";
+_ctrlButton ctrlSetText "MRP_icone_tel\Data\Menu_Contact\Icone_Supprimer_dxt5.paa";
 _ctrlButton ctrlSetTextColor [0.8,0.8,0.8,1];
 _ctrlButton ctrlCommit 0;
 
@@ -58,7 +58,7 @@ _edit ctrlSetStructuredText parseText format ["<t font='SFUIDisplay_46' shadow='
 // Bouton Contact
 private _ctrlButton = _Telephone_Base ctrlCreate ["MRP_RscClickableText",-1,_telephone_Cadre_Base];
 _ctrlButton ctrlSetPosition [0.25,0.09,0.07,0.085];
-_ctrlButton ctrlSetText "MRP_Telephones\Data\Menu_SMS\Icone_Contact_dxt5.paa";
+_ctrlButton ctrlSetText "MRP_icone_tel\Data\Menu_SMS\Icone_Contact_dxt5.paa";
 _ctrlButton ctrlSetTextColor [0.9,0.9,0.9,1];
 _ctrlButton ctrlCommit 0;
 
@@ -123,7 +123,7 @@ private _ctrlButton = _Telephone_Base ctrlCreate ["MRP_RscClickableText",-1,_tel
 uiNamespace setVariable ["MRP_menu_SMS_Lecture_Boutton_Ecriture_Message",_ctrlButton];
 _ctrlButton ctrlSetPosition [0,1.2,0.6,0.1];
 _ctrlButton ctrlSetTextColor [0.8,0.8,0.8,1];
-_ctrlButton ctrlSetText "MRP_Telephones\Data\Menu_SMS\Menu_SMS_Icone_Bouton_Message_dxt5.paa";
+_ctrlButton ctrlSetText "MRP_icone_tel\Data\Menu_SMS\Menu_SMS_Icone_Bouton_Message_dxt5.paa";
 _ctrlButton ctrlCommit 0;
 
 _ctrlButton ctrlAddEventHandler ["ButtonClick",
@@ -151,7 +151,7 @@ _ctrlButton ctrlAddEventHandler ["ButtonClick",
 	_ctrlButton ctrlSetPosition [0.42,1.2,0.06,0.05];
 	_ctrlButton ctrlSetTextColor [0.8,0.8,0.8,1];
 	_ctrlButton ctrlSetfade 1;
-	_ctrlButton ctrlSetText "MRP_Telephones\Data\Menu_SMS\Icone_Envoi_Message_dxt5.paa";
+	_ctrlButton ctrlSetText "MRP_icone_tel\Data\Menu_SMS\Icone_Envoi_Message_dxt5.paa";
 	_ctrlButton ctrlCommit 0;
 
 	_ctrlButton ctrlSetPosition [0.42,0.85,0.06,0.05];

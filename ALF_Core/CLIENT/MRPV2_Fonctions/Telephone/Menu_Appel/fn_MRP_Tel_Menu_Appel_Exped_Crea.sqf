@@ -5,7 +5,7 @@ private _Telephone_Base = uiNamespace getVariable ["MRP_Telephone_Base",displayN
 private _Telephone_Fond = uiNamespace getVariable ["MRP_Telephone_Fond",controlNull];
 private _telephone_Cadre_Base = uiNamespace getVariable ["MRP_Telephone_Cadre_Base",controlNull];
 
-_Telephone_Fond ctrlSetText "MRP_Telephones\Data\Menu_Appel\Fond_Appel_dxt5.paa";
+_Telephone_Fond ctrlSetText "MRP_icone_tel\Data\Menu_Appel\Fond_Appel_dxt5.paa";
 
 private _Telephone_Cadre_Base_Tentative = _Telephone_Base ctrlCreate ["RscControlsGroupNoScrollbars",-1,_telephone_Cadre_Base];
 uiNamespace setVariable ["MRP_Telephone_Cadre_Base_Tentative",_Telephone_Cadre_Base_Tentative];
@@ -28,7 +28,7 @@ _edit ctrlCommit 0;
 _edit ctrlSetStructuredText parseText format ["<t font='SFUIDisplay_46' shadow='0' color='#ffffff' size='1.7' align='center'>%1</t>",_intituler_Identifiant];
 
 // Si le joueur est toujours en mode entrprise pour le tel mais nest plus en service on desactive le mdoe entreprise sur le tel
-if !(b_enService) then 
+if !(b_enService || life_gendarme_service || life_pompier_service || life_penit_service) then 
 {
 	private _telephone_Configuration = profileNamespace getvariable ["MRP_Telephone_Configuration",[]];
 	_telephone_Configuration set [11,FALSE];
@@ -49,7 +49,7 @@ if (_mode_Entreprise) then
 // Bouton Raccrocher
 private _ctrlButton = _Telephone_Base ctrlCreate ["MRP_RscClickableText",-1,_Telephone_Cadre_Base_Tentative];
 _ctrlButton ctrlSetPosition [0.19,1.05,0.18,0.18];
-_ctrlButton ctrlSetText "MRP_Telephones\Data\Menu_Appel\Icone_Appel_Raccrocher.paa";
+_ctrlButton ctrlSetText "MRP_icone_tel\Data\Menu_Appel\Icone_Appel_Raccrocher.paa";
 _ctrlButton ctrlSetTextColor [0.9,0.9,0.9,1];
 _ctrlButton ctrlCommit 0;
 

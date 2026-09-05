@@ -1,10 +1,7 @@
 // MRPV2_fnc_MRP_Tel_Menu_Taxi_Gestion_Statut = {
 
 private _lists = [] call ALF_fnc_iPhoneTaxiFetchLists;
-private _appelables = (_lists # 1) select {
-	private _u = _x # 0;
-	(assignedItems _u select { "MRP_Item_Iphone_12" in _x || { "MRP_Item_Neogend" in _x } }) isNotEqualTo []
-};
+private _appelables = (_lists # 1);
 
 private _nombre = count _appelables;
 

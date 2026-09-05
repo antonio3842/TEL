@@ -18,10 +18,10 @@ _ctrlButton ctrlSetPosition [0.13,1.33,0.3,0.02];
 
 if (_mode_Sombre) then
 {
-	_ctrlButton ctrlSetText "MRP_Telephones\Data\Menu_Principal\Barre_Retour_Menu_Blanche.paa";
+	_ctrlButton ctrlSetText "MRP_icone_tel\Data\Menu_Principal\Barre_Retour_Menu_Blanche.paa";
 } else
 {
-	_ctrlButton ctrlSetText "MRP_Telephones\Data\Menu_Principal\Barre_Retour_Menu.paa";
+	_ctrlButton ctrlSetText "MRP_icone_tel\Data\Menu_Principal\Barre_Retour_Menu.paa";
 };
 
 _ctrlButton ctrlCommit 0;
@@ -39,7 +39,7 @@ _ctrlButton ctrlAddEventHandler ["ButtonClick",
 		private _telephone_Fond = uiNamespace getVariable ["MRP_Telephone_Fond",controlNull];		
 		private _fond = ctrltext _Telephone_Fond;
 
-		private _adresse_Fond_Appel = "MRP_Telephones\Data\Menu_Appel\Fond_Appel_dxt5.paa";
+		private _adresse_Fond_Appel = "MRP_icone_tel\Data\Menu_Appel\Fond_Appel_dxt5.paa";
 		if (_fond isequalto _adresse_Fond_Appel) exitwith {};
 
 		private _telephone_Cadre_Base = uiNamespace getVariable ["MRP_Telephone_Cadre_Base",controlNull];

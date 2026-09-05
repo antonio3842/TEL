@@ -18,7 +18,7 @@ _Telephone_Reglage_Cadre_Fond ctrlCommit 0;
 
 private _ctrlButton = _Telephone_Base ctrlCreate ["MRP_RscClickableText",-1,_Telephone_Reglage_Cadre_Fond];
 _ctrlButton ctrlSetPosition [-0.17,0,0.55,0.55];
-_ctrlButton ctrlSetText "MRP_Telephones\Data\Fond\" + _fond + ".paa";
+_ctrlButton ctrlSetText "MRP_icone_tel\Data\Fond\" + _fond + ".paa";
 _ctrlButton ctrlSetTextColor [0.85,0.85,0.85,1];
 _ctrlButton ctrlCommit 0;
 _ctrlButton setVariable ["_fond",_fond];

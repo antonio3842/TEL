@@ -34,7 +34,7 @@ private _texte_Transmission_Radio = format
 		<t size='1' align='center'>%4</t>
 	",
 	_action,
-	"\MRP_Telephones\Data\Icones_Applications\Icone_" + _application + ".paa",
+	"\MRP_icone_tel\Data\Icones_Applications\Icone_" + _application + ".paa",
 	"Application : " + _application,
 	"Fréquence : " + _frequence
 ];

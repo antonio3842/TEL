@@ -80,7 +80,7 @@ private _SMS_Liste_Position_Verticale_Cumuler = 0;
 		private _icone_Appel = _Telephone_Base ctrlcreate ["RscPicture",-1, _tv];
 		_icone_Appel ctrlSetPosition [0.03,_SMS_Liste_Position_Verticale_Cumuler + 0.025,0.025,0.035];
 		_icone_Appel ctrlCommit 0;
-		_icone_Appel ctrlSetText "MRP_Telephones\Data\Menu_Contact\Icone_Contact_Bloquer_dxt5.paa";
+		_icone_Appel ctrlSetText "MRP_icone_tel\Data\Menu_Contact\Icone_Contact_Bloquer_dxt5.paa";
 	};
 
 	private _ctrlButton = _Telephone_Base ctrlCreate ["MRP_Bouton",-1,_tv];

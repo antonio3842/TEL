@@ -21,7 +21,7 @@ _joueur_Destinataire setvariable ["MRP_Telephone_Mode_Avion",nil];
 
 // Si le joueur est toujours en mode entrprise pour le tel mais nest plus en service on desactive le mdoe entreprise sur le tel
 
-if !(b_enService) then
+if !(b_enService || life_gendarme_service || life_pompier_service || life_penit_service) then
 {
 	private _telephone_Configuration = profileNamespace getvariable ["MRP_Telephone_Configuration",[]];
 	_telephone_Configuration set [11,FALSE];

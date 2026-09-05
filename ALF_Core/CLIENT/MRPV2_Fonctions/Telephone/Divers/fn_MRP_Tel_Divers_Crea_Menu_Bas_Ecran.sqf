@@ -15,11 +15,11 @@ _ctrlButton ctrlCommit 0;
 
 if (_icone_Recents_Bleu) then
 {
-	_ctrlButton ctrlSetText "MRP_Telephones\Data\Menu_Pied_Ecran\Icone_Historique_Bleu_dxt5.paa";
+	_ctrlButton ctrlSetText "MRP_icone_tel\Data\Menu_Pied_Ecran\Icone_Historique_Bleu_dxt5.paa";
 	_ctrlButton ctrlenable false;
 } else
 {
-	_ctrlButton ctrlSetText "MRP_Telephones\Data\Menu_Pied_Ecran\Icone_Historique_dxt5.paa";
+	_ctrlButton ctrlSetText "MRP_icone_tel\Data\Menu_Pied_Ecran\Icone_Historique_dxt5.paa";
 	_ctrlButton ctrlAddEventHandler ["ButtonClick",
 	{
 		MRP_Telephone_Gestion_Numero_Interne = nil;
@@ -37,11 +37,11 @@ _ctrlButton ctrlCommit 0;
 
 if (_icone_Contacts_Bleu) then
 {
-	_ctrlButton ctrlSetText "MRP_Telephones\Data\Menu_Pied_Ecran\Icone_Contacts_Bleu_dxt5.paa";
+	_ctrlButton ctrlSetText "MRP_icone_tel\Data\Menu_Pied_Ecran\Icone_Contacts_Bleu_dxt5.paa";
 	_ctrlButton ctrlenable false;
 } else
 {
-	_ctrlButton ctrlSetText "MRP_Telephones\Data\Menu_Pied_Ecran\Icone_Contacts_dxt5.paa";
+	_ctrlButton ctrlSetText "MRP_icone_tel\Data\Menu_Pied_Ecran\Icone_Contacts_dxt5.paa";
 	_ctrlButton ctrlAddEventHandler ["ButtonClick",
 	{
 		MRP_Telephone_Gestion_Numero_Interne = nil;
@@ -59,11 +59,11 @@ _ctrlButton ctrlCommit 0;
 
 if (_icone_Clavier_Bleu) then
 {
-	_ctrlButton ctrlSetText "MRP_Telephones\Data\Menu_Pied_Ecran\Icone_Clavier_Bleu_dxt5.paa";
+	_ctrlButton ctrlSetText "MRP_icone_tel\Data\Menu_Pied_Ecran\Icone_Clavier_Bleu_dxt5.paa";
 	_ctrlButton ctrlenable false;
 } else
 {
-	_ctrlButton ctrlSetText "MRP_Telephones\Data\Menu_Pied_Ecran\Icone_Clavier_dxt5.paa";
+	_ctrlButton ctrlSetText "MRP_icone_tel\Data\Menu_Pied_Ecran\Icone_Clavier_dxt5.paa";
 	_ctrlButton ctrlAddEventHandler ["ButtonClick",
 	{
 		MRP_Telephone_Gestion_Numero_Interne = nil;

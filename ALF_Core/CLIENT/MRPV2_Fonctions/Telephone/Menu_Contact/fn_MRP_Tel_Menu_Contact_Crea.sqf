@@ -3,12 +3,12 @@ private _Telephone_Base = uiNamespace getVariable ["MRP_Telephone_Base",displayN
 private _Telephone_Fond = uiNamespace getVariable ["MRP_Telephone_Fond",controlNull];
 private _telephone_Cadre_Base = uiNamespace getVariable ["MRP_Telephone_Cadre_Base",controlNull];
 
-_Telephone_Fond ctrlSetText "MRP_Telephones\Data\Menu_Contact\Menu_Contact_liste_dxt5.paa";
+_Telephone_Fond ctrlSetText "MRP_icone_tel\Data\Menu_Contact\Menu_Contact_liste_dxt5.paa";
 
 // Bouton ajout contact en haut a droite
 private _ctrlButton = _Telephone_Base ctrlCreate ["MRP_RscClickableText",-1,_telephone_Cadre_Base];
 _ctrlButton ctrlSetPosition [0.48,0.1,0.04,0.05];
-_ctrlButton ctrlSetText "MRP_Telephones\Data\Menu_Contact\Icone_Ajout_Contact_dxt5.paa";
+_ctrlButton ctrlSetText "MRP_icone_tel\Data\Menu_Contact\Icone_Ajout_Contact_dxt5.paa";
 _ctrlButton ctrlSetTextColor [0.8,0.8,0.8,1];
 _ctrlButton ctrlCommit 0;
 

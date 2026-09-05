@@ -81,7 +81,7 @@ private _SMS_Liste_Position_Verticale_Cumuler = 0;
 	// Cadre Icone vers SMS
 	private _ctrl_Image = _Telephone_Base ctrlCreate ["RscPicture",-1,_tv];
 	_ctrl_Image ctrlSetPosition [0.43,_SMS_Liste_Position_Verticale_Cumuler + 0.02,0.025,0.025];
-	_ctrl_Image ctrlSetText "MRP_Telephones\Data\Menu_SMS\Icone_Fleche_dxt5.paa";
+	_ctrl_Image ctrlSetText "MRP_icone_tel\Data\Menu_SMS\Icone_Fleche_dxt5.paa";
 	_ctrl_Image ctrlCommit 0;
 
 	// Cadre _description
@@ -115,14 +115,14 @@ private _SMS_Liste_Position_Verticale_Cumuler = 0;
 
 	// Bouton marqueur
 	private _ctrlButton = _Telephone_Base ctrlCreate ["MRP_RscClickableText",-1,_tv];
-	_ctrlButton ctrlSetText "MRP_Telephones\Data\Icones_Applications\Icone_Pin_Rouge.paa";
+	_ctrlButton ctrlSetText "MRP_icone_tel\Data\Icones_Applications\Icone_Pin_Rouge.paa";
 	_ctrlButton ctrlSetPosition [0.425,_SMS_Liste_Position_Verticale_Cumuler + 0.028,0.04,0.1];
 	_ctrlButton ctrlSetTextColor [0.9,0.9,0.9,1];
 	_ctrlButton ctrlCommit 0;
 	_ctrlButton setvariable ["_liste_Pos",_liste_Pos];
 	_ctrlButton setvariable ["_nom",_nom];
 
-	if (_a_Employer_Tel) then {_ctrlButton ctrlSetText "MRP_Telephones\Data\Icones_Applications\Icone_Pin_Vert.paa";};
+	if (_a_Employer_Tel) then {_ctrlButton ctrlSetText "MRP_icone_tel\Data\Icones_Applications\Icone_Pin_Vert.paa";};
 
 	_ctrlButton ctrlAddEventHandler ["ButtonClick",
 	{params ["_control"];

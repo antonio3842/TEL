@@ -27,14 +27,14 @@ if (_tel_Valide AND {_numero_Longueur_Correct AND {_numero_Pas_Dans_Contact OR {
 {
 	if !("bleu" in tolowerANSI (ctrltext _ctrlButton_Ok)) then
 	{
-		_ctrlButton_Ok ctrlSetText "MRP_Telephones\Data\Menu_Contact\Icone_OK_Bleu_dxt5.paa";
+		_ctrlButton_Ok ctrlSetText "MRP_icone_tel\Data\Menu_Contact\Icone_OK_Bleu_dxt5.paa";
 		_ctrlButton_Ok ctrlSetTextColor [0.8,0.8,0.8,1];
 	};
 } else
 {
 	if ("bleu" in tolowerANSI (ctrltext _ctrlButton_Ok)) then
 	{
-		_ctrlButton_Ok ctrlSetText "MRP_Telephones\Data\Menu_Contact\Icone_OK_dxt5.paa";
+		_ctrlButton_Ok ctrlSetText "MRP_icone_tel\Data\Menu_Contact\Icone_OK_dxt5.paa";
 	};
 };
 

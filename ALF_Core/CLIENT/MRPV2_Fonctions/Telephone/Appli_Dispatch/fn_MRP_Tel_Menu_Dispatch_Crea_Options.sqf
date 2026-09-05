@@ -68,7 +68,7 @@ _ctrlButton ctrlAddEventHandler ["ButtonClick",
 		// Bouton Son à gauche
 		private _RscPicture = _Telephone_Base ctrlCreate ["RscPicture",-1,_Telephone_Cadre_Option];
 		_RscPicture ctrlSetPosition [0,0.07,0.08,0.09];
-		_RscPicture ctrlSetText "MRP_Telephones\Data\Menu_Radio\Icone_Radio_Son_Gauche_dxt5.paa";
+		_RscPicture ctrlSetText "MRP_icone_tel\Data\Menu_Radio\Icone_Radio_Son_Gauche_dxt5.paa";
 		_RscPicture ctrlSetTextColor [0.7,0.7,0.7,1];
 		_RscPicture ctrlCommit 0;
 
@@ -159,7 +159,7 @@ _ctrlButton ctrlAddEventHandler ["ButtonClick",
 		// Bouton Son au mileu
 		private _RscPicture = _Telephone_Base ctrlCreate ["RscPicture",-1,_Telephone_Cadre_Option];
 		_RscPicture ctrlSetPosition [0.1,0.07,0.08,0.09];
-		_RscPicture ctrlSetText "MRP_Telephones\Data\Menu_Radio\Icone_Radio_Son_Centre_dxt5.paa";
+		_RscPicture ctrlSetText "MRP_icone_tel\Data\Menu_Radio\Icone_Radio_Son_Centre_dxt5.paa";
 		_RscPicture ctrlSetTextColor [0.7,0.7,0.7,1];
 		_RscPicture ctrlCommit 0;
 
@@ -247,7 +247,7 @@ _ctrlButton ctrlAddEventHandler ["ButtonClick",
 		// Bouton Son à droite
 		private _RscPicture = _Telephone_Base ctrlCreate ["RscPicture",-1,_Telephone_Cadre_Option];
 		_RscPicture ctrlSetPosition [0.2,0.07,0.08,0.09];
-		_RscPicture ctrlSetText "MRP_Telephones\Data\Menu_Radio\Icone_Radio_Son_Droite_dxt5.paa";
+		_RscPicture ctrlSetText "MRP_icone_tel\Data\Menu_Radio\Icone_Radio_Son_Droite_dxt5.paa";
 		_RscPicture ctrlSetTextColor [0.7,0.7,0.7,1];
 		_RscPicture ctrlCommit 0;
 
@@ -344,7 +344,7 @@ _ctrlButton ctrlAddEventHandler ["ButtonClick",
 		// Bouton Son à gauche
 		private _RscPicture = _Telephone_Base ctrlCreate ["RscPicture",-1,_Telephone_Cadre_Option];
 		_RscPicture ctrlSetPosition [0,0.25,0.08,0.09];
-		_RscPicture ctrlSetText "MRP_Telephones\Data\Menu_Radio\Icone_Radio_Son_Gauche_dxt5.paa";
+		_RscPicture ctrlSetText "MRP_icone_tel\Data\Menu_Radio\Icone_Radio_Son_Gauche_dxt5.paa";
 		_RscPicture ctrlSetTextColor [0.7,0.7,0.7,1];
 		_RscPicture ctrlCommit 0;
 
@@ -435,7 +435,7 @@ _ctrlButton ctrlAddEventHandler ["ButtonClick",
 		// Bouton Son au mileu
 		private _RscPicture = _Telephone_Base ctrlCreate ["RscPicture",-1,_Telephone_Cadre_Option];
 		_RscPicture ctrlSetPosition [0.1,0.25,0.08,0.09];
-		_RscPicture ctrlSetText "MRP_Telephones\Data\Menu_Radio\Icone_Radio_Son_Centre_dxt5.paa";
+		_RscPicture ctrlSetText "MRP_icone_tel\Data\Menu_Radio\Icone_Radio_Son_Centre_dxt5.paa";
 		_RscPicture ctrlSetTextColor [0.7,0.7,0.7,1];
 		_RscPicture ctrlCommit 0;
 
@@ -523,7 +523,7 @@ _ctrlButton ctrlAddEventHandler ["ButtonClick",
 		// Bouton Son à droite
 		private _RscPicture = _Telephone_Base ctrlCreate ["RscPicture",-1,_Telephone_Cadre_Option];
 		_RscPicture ctrlSetPosition [0.2,0.25,0.08,0.09];
-		_RscPicture ctrlSetText "MRP_Telephones\Data\Menu_Radio\Icone_Radio_Son_Droite_dxt5.paa";
+		_RscPicture ctrlSetText "MRP_icone_tel\Data\Menu_Radio\Icone_Radio_Son_Droite_dxt5.paa";
 		_RscPicture ctrlSetTextColor [0.7,0.7,0.7,1];
 		_RscPicture ctrlCommit 0;
 
@@ -612,7 +612,7 @@ _ctrlButton ctrlAddEventHandler ["ButtonClick",
 		_ctrlButton ctrlSetPosition [0.34,0.1,0.06,0.08];
 		_ctrlButton ctrlCommit 0;
 		_ctrlButton ctrlsettooltip "Volume +";
-		_ctrlButton ctrlSetText "MRP_Telephones\Data\Menu_Radio\Icone_Radio_Volume_Augmenter_dxt5.paa";
+		_ctrlButton ctrlSetText "MRP_icone_tel\Data\Menu_Radio\Icone_Radio_Volume_Augmenter_dxt5.paa";
 
 		_ctrlButton ctrlAddEventHandler ["ButtonClick",
 		{params ["_ctrl"];
@@ -634,7 +634,7 @@ _ctrlButton ctrlAddEventHandler ["ButtonClick",
 		_ctrlButton ctrlSetPosition [0.34,0.24,0.06,0.08];
 		_ctrlButton ctrlCommit 0;
 		_ctrlButton ctrlsettooltip "Volume -";
-		_ctrlButton ctrlSetText "MRP_Telephones\Data\Menu_Radio\Icone_Radio_Volume_Diminuer.paa";
+		_ctrlButton ctrlSetText "MRP_icone_tel\Data\Menu_Radio\Icone_Radio_Volume_Diminuer.paa";
 
 		_ctrlButton ctrlAddEventHandler ["ButtonClick",
 		{params ["_ctrl"];

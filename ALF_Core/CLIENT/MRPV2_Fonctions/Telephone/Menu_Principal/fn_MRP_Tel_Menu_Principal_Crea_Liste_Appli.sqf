@@ -11,7 +11,7 @@ private _pos_Depart_Verticale = 0.2;
 private _liste_Appli_Final = [];
 // Taxi en 2e position = 1re ligne du téléphone (3 icônes max par ligne)
 private _liste_Appli_Commun = ["Bloc_Note","Taxi","Radio","Annuaire"];
-private _liste_Appli_Gendarmerie = ["PcStorm","CORG"];
+private _liste_Appli_Gendarmerie = ["PcStorm","CORG","SIV"];
 private _liste_Appli_SAMU_Pompier = ["CODIS","CTA"];
 private _liste_Appli_AP = ["DSPOM","AP"];
 private _liste_Appli_Entreprise = ["Centre_Appel"];
@@ -44,8 +44,7 @@ private _liste_Appli_Entreprise = ["Centre_Appel"];
 
 	private _ctrlButton = _Telephone_Base ctrlCreate ["MRP_RscClickableText",-1,_telephone_Cadre_Base];
 	_ctrlButton ctrlSetPosition [_pos_Depart_Horizontal + _ecart_Horizontal,_pos_Depart_Verticale + _ecart_Vertical,0.092,0.12];
-	private _icone = format ["MRP_Telephones\Data\Icones_Applications\Icone_%1.paa", _appli];
-	if (_appli isEqualTo "Taxi") then {_icone = "MRP_Telephones\Data\Icones_Applications\Icone_Annuaire.paa";};
+	private _icone = format ["MRP_icone_tel\Data\Icones_Applications\Icone_%1.paa", _appli];
 	_ctrlButton ctrlSetText _icone;
 	_ctrlButton ctrlSetTextColor [0.9,0.9,0.9,1];
 	_ctrlButton ctrlSettooltip "";

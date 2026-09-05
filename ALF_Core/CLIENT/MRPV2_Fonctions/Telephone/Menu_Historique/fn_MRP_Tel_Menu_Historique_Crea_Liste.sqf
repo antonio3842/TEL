@@ -45,7 +45,7 @@ private _MRP_SMS_Lecture_Position_Verticale_Cumuler = 0.02;
 
 	if (_code in [2,3]) then
 	{
-		_icone_Appel ctrlSetText "MRP_Telephones\Data\Menu_Historique\Petite_icone_recent_sortant_dxt5.paa";
+		_icone_Appel ctrlSetText "MRP_icone_tel\Data\Menu_Historique\Petite_icone_recent_sortant_dxt5.paa";
 	};
 
 	// Intitulé
@@ -162,7 +162,7 @@ private _MRP_SMS_Lecture_Position_Verticale_Cumuler = 0.02;
 		private _icone_Appel = _Telephone_Base ctrlcreate ["MRP_RscClickableText",-1, _ctrl_Historique];
 		_icone_Appel ctrlSetPosition [0.44,_MRP_SMS_Lecture_Position_Verticale_Cumuler + 0.004,0.03,0.04];
 		_icone_Appel ctrlCommit 0;
-		_icone_Appel ctrlSetText "MRP_Telephones\Data\Menu_Historique\icone_Info_dxt5.paa";
+		_icone_Appel ctrlSetText "MRP_icone_tel\Data\Menu_Historique\icone_Info_dxt5.paa";
 		_icone_Appel ctrlSetTextColor [0.8,0.8,0.8,1];
 		_icone_Appel setVariable ["MRP_Telephone_Historique_Numero",_numero];
 

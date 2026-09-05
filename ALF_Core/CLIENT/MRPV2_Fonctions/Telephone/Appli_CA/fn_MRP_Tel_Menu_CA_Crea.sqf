@@ -9,17 +9,17 @@ private _permission_Joueur = [] call MRPV2_fnc_MRP_NB_Service_Vers_TXT;
 {
 	if (_permission_Joueur isequalto "GN") exitwith
 	{
-		_Telephone_Fond ctrlSetText "MRP_Telephones\Data\Fond\Neogend_Fond_PC_Storm_Vide.paa";
+		_Telephone_Fond ctrlSetText "MRP_icone_tel\Data\Fond\Neogend_Fond_PC_Storm_Vide.paa";
 	};
 
 	if (_permission_Joueur isequalto "SP") exitwith
 	{
-		_Telephone_Fond ctrlSetText "MRP_Telephones\Data\Fond\Neogend_Fond_SP_Vide.paa";
+		_Telephone_Fond ctrlSetText "MRP_icone_tel\Data\Fond\Neogend_Fond_SP_Vide.paa";
 	};
 
 	if (_permission_Joueur isequalto "AP") then
 	{
-		_Telephone_Fond ctrlSetText "MRP_Telephones\Data\Fond\Neogend_Fond_AP_Vide.paa";
+		_Telephone_Fond ctrlSetText "MRP_icone_tel\Data\Fond\Neogend_Fond_AP_Vide.paa";
 	};
 };
 
@@ -38,17 +38,17 @@ _RscPicture ctrlCommit 0;
 {
 	if (_permission_Joueur isequalto "GN") exitwith
 	{
-		_RscPicture ctrlSetText "MRP_Telephones\Data\Icones_Applications\Icone_CORG.paa";
+		_RscPicture ctrlSetText "MRP_icone_tel\Data\Icones_Applications\Icone_CORG.paa";
 	};
 
 	if (_permission_Joueur isequalto "SP") exitwith
 	{
-		_RscPicture ctrlSetText "MRP_Telephones\Data\Icones_Applications\Icone_CTA.paa";
+		_RscPicture ctrlSetText "MRP_icone_tel\Data\Icones_Applications\Icone_CTA.paa";
 	};
 
 	if (_permission_Joueur isequalto "AP") then
 	{
-		_RscPicture ctrlSetText "MRP_Telephones\Data\Icones_Applications\Icone_AP.paa";
+		_RscPicture ctrlSetText "MRP_icone_tel\Data\Icones_Applications\Icone_AP.paa";
 	};
 };
 

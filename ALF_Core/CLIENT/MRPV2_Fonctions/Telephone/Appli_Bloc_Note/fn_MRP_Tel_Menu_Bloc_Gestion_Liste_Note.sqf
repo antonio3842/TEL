@@ -61,7 +61,7 @@ private _SMS_Liste_Position_Verticale_Cumuler = 0;
 	// Cadre Icone vers SMS
 	private _ctrl_Image = _Telephone_Base ctrlCreate ["RscPicture",-1,_tv];
 	_ctrl_Image ctrlSetPosition [0.43,_SMS_Liste_Position_Verticale_Cumuler + 0.02,0.025,0.025];
-	_ctrl_Image ctrlSetText "MRP_Telephones\Data\Menu_SMS\Icone_Fleche_dxt5.paa";
+	_ctrl_Image ctrlSetText "MRP_icone_tel\Data\Menu_SMS\Icone_Fleche_dxt5.paa";
 	_ctrl_Image ctrlCommit 0;
 
 	// Cadre _texte

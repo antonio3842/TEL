@@ -45,7 +45,7 @@ private _ctrlButton = uiNamespace getVariable ["MRP_Telephone_Menu_Principal_Cre
 // Modification icone si nouveau appel sur le menu principal
 if (_compteur_Nouveau_Appel > 0 AND {_ctrlButton isNotEqualTo controlNull}) then
 {
-	_ctrlButton ctrlSetText "MRP_Telephones\Data\Menu_Principal\Icone_Appel_Rec.paa";
+	_ctrlButton ctrlSetText "MRP_icone_tel\Data\Menu_Principal\Icone_Appel_Rec.paa";
 	_ctrlButton ctrlSetPosition [0.053,1.188,0.133,0.133];
 	_ctrlButton ctrlCommit 0;
 

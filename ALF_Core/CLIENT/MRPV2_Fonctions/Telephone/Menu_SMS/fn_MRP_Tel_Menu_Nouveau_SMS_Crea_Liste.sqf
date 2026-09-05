@@ -8,7 +8,7 @@ private _texte = ctrltext (_Telephone_Base displayctrl 645);
 {ctrlDelete _x} foreach allControls _tv;
 
 private _Telephone_Fond = uiNamespace getVariable ["MRP_Telephone_Fond",controlNull];
-if (ctrltext _Telephone_Fond isnotequalto "MRP_Telephones\Data\Menu_SMS\Menu_SMS_ecrire_dxt5.paa") exitwith {};
+if (ctrltext _Telephone_Fond isnotequalto "MRP_icone_tel\Data\Menu_SMS\Menu_SMS_ecrire_dxt5.paa") exitwith {};
 
 if (_tv isEquaLTo controlnull) then
 {

@@ -6,7 +6,7 @@ private _Telephone_Base = uiNamespace getVariable ["MRP_Telephone_Base",displayN
 private _Telephone_Fond = uiNamespace getVariable ["MRP_Telephone_Fond",controlNull];
 private _telephone_Cadre_Base = uiNamespace getVariable ["MRP_Telephone_Cadre_Base",controlNull];
 
-_Telephone_Fond ctrlSetText "MRP_Telephones\Data\Menu_Bloc_Note\Menu_Note_Vide_dxt5.paa";
+_Telephone_Fond ctrlSetText "MRP_icone_tel\Data\Menu_Bloc_Note\Menu_Note_Vide_dxt5.paa";
 
 private _Telephone_Liste_Note = profileNamespace getvariable ["MRP_Telephone_Liste_Note",createhashmap];
 private _info_Note = _Telephone_Liste_Note getorDefault [_cle,""];
@@ -19,7 +19,7 @@ private _texte = _info_Note # 1;
 // Bouton retour Note en haut a gauche
 private _ctrlButton = _Telephone_Base ctrlCreate ["MRP_RscClickableText",-1,_telephone_Cadre_Base];
 _ctrlButton ctrlSetPosition [0.05,0.179,0.03,0.04];
-_ctrlButton ctrlSetText "MRP_Telephones\Data\Menu_Bloc_Note\Icone_Fleche_Retour_dxt5.paa";
+_ctrlButton ctrlSetText "MRP_icone_tel\Data\Menu_Bloc_Note\Icone_Fleche_Retour_dxt5.paa";
 _ctrlButton ctrlCommit 0;
 
 _ctrlButton ctrlAddEventHandler ["ButtonClick",
@@ -63,7 +63,7 @@ _edit ctrlCommit 0;
 private _ctrlButton = _Telephone_Base ctrlCreate ["MRP_RscClickableText",-1,_telephone_Cadre_Base];
 _ctrlButton ctrlSetPosition [0.47,0.17,0.03,0.04];
 _ctrlButton ctrlSetTextColor [0.8,0.8,0.8,1];
-_ctrlButton ctrlSetText "MRP_Telephones\Data\Menu_Bloc_Note\Icone_Supprimer_dxt5.paa";
+_ctrlButton ctrlSetText "MRP_icone_tel\Data\Menu_Bloc_Note\Icone_Supprimer_dxt5.paa";
 _ctrlButton ctrlCommit 0;
 _ctrlButton setvariable ["_cle",_cle];
 
@@ -84,7 +84,7 @@ _ctrlButton ctrlAddEventHandler ["ButtonClick",
 // Bouton Modifier note en bas a droite
 private _ctrlButton = _Telephone_Base ctrlCreate ["MRP_RscClickableText",-1,_telephone_Cadre_Base];
 _ctrlButton ctrlSetPosition [0.47,0.24,0.03,0.04];
-_ctrlButton ctrlSetText "MRP_Telephones\Data\Menu_Bloc_Note\Icone_Creer_Note_dxt5.paa";
+_ctrlButton ctrlSetText "MRP_icone_tel\Data\Menu_Bloc_Note\Icone_Creer_Note_dxt5.paa";
 _ctrlButton ctrlSetTextColor [0.9,0.9,0.9,1];
 _ctrlButton ctrlCommit 0;
 _ctrlButton setvariable ["_cle",_cle];

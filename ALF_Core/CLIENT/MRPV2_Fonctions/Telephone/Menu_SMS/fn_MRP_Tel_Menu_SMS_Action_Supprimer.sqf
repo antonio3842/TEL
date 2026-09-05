@@ -12,7 +12,7 @@ _Telephone_Cadre_Base_Tentative ctrlCommit 0;
 
 private _fond_Ecran = _Telephone_Base ctrlCreate ["RscPicture",-1,_Telephone_Cadre_Base_Tentative];
 _fond_Ecran ctrlSetPosition [0.03,1.08,0.5,0.09];
-_fond_Ecran ctrlSetText "MRP_Telephones\Data\Menu_Principal\Prompt_dxt5.paa";
+_fond_Ecran ctrlSetText "MRP_icone_tel\Data\Menu_Principal\Prompt_dxt5.paa";
 _fond_Ecran ctrlSetTextColor [0.9,0.9,0.9,1];
 _fond_Ecran ctrlCommit 0;
 
@@ -68,7 +68,7 @@ _ctrlButton ctrlAddEventHandler ["MouseExit",
 
 private _fond_Ecran = _Telephone_Base ctrlCreate ["RscPicture",-1,_Telephone_Cadre_Base_Tentative];
 _fond_Ecran ctrlSetPosition [0.03,1.18,0.5,0.09];
-_fond_Ecran ctrlSetText "MRP_Telephones\Data\Menu_Principal\Prompt_dxt5.paa";
+_fond_Ecran ctrlSetText "MRP_icone_tel\Data\Menu_Principal\Prompt_dxt5.paa";
 _fond_Ecran ctrlSetTextColor [0.9,0.9,0.9,1];
 _fond_Ecran ctrlCommit 0;
 

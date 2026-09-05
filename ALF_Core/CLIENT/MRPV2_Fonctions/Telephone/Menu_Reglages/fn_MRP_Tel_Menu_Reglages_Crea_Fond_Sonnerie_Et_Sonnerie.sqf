@@ -6,14 +6,14 @@ private _Telephone_Base = uiNamespace getVariable ["MRP_Telephone_Base",displayN
 private _Telephone_Fond = uiNamespace getVariable ["MRP_Telephone_Fond",controlNull];
 private _telephone_Cadre_Base = uiNamespace getVariable ["MRP_Telephone_Cadre_Base",controlNull];
 
-_Telephone_Fond ctrlSetText "MRP_Telephones\Data\Menu_Reglages\Menu_Reglages_dxt5.paa";
+_Telephone_Fond ctrlSetText "MRP_icone_tel\Data\Menu_Reglages\Menu_Reglages_dxt5.paa";
 
 // Bouton retour Reglage en haut a gauche
 private _ctrlButton = _Telephone_Base ctrlCreate ["MRP_RscClickableText",-1,_telephone_Cadre_Base];
 _ctrlButton ctrlSetPosition [0.005,0.125,0.12,0.04];
 _ctrlButton ctrlCommit 0;
 _ctrlButton ctrlSetTextColor [0.8,0.8,0.8,1];
-_ctrlButton ctrlSetText "MRP_Telephones\Data\Menu_SMS\Menu_SMS_Fleche_Retour_dxt5.paa";
+_ctrlButton ctrlSetText "MRP_icone_tel\Data\Menu_SMS\Menu_SMS_Fleche_Retour_dxt5.paa";
 
 _ctrlButton ctrlAddEventHandler ["ButtonClick",
 {params ["_control"];

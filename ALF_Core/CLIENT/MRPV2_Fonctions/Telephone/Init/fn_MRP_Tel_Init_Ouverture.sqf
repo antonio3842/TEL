@@ -5,65 +5,6 @@ if (attachedobjects player select {isplayer _x} isNotequalto []) exitwith {};
 
 _displayOrControl = createDialog ["MRP_Telephone",true];
 
-//desactivation des autres fréquence radio courte portée
-if !(isnil {(call TFAR_fnc_ActiveSwRadio)}) then
-{
-	private _radio_Enregistrer_Active = player getvariable ["MRP_Tel_Radio_Frequence_Active",0];
-	private _liste_Radio_Enregistrer = ((profileNamespace getvariable ["MRP_Telephone_Configuration",[]]) # 9);
-	_liste_Radio_Enregistrer = _liste_Radio_Enregistrer + [["Active",_radio_Enregistrer_Active]];
-	private _radio = tolower (call TFAR_fnc_activeSwRadio);
-
-	for "_i" from 0 to 9 do
-	{
-		//Desactivation de la radio enregistré sur le canal 1 et 2 si pas dans les canaux perso enregistré dans l'appli RADIO 
-		if (_i in [1,2]) then
-		{			
-			private _radio_Enregistrer = [_radio,_i] call TFAR_fnc_GetChannelFrequency;
-			private _radio_Non_Valide = _liste_Radio_Enregistrer select {_x # 1 isequalto _radio_Enregistrer} isequalto [];
-
-			// Fixe pour ne pas niquer les freq des service spéciaux
-			if (_radio_Non_Valide AND {parsenumber _radio_Enregistrer > parsenumber "512"}) then {_radio_Non_Valide = FALSE;};
-
-			if (_radio_Non_Valide) then 
-			{
-				[_radio,_i,""] call TFAR_fnc_SetChannelFrequency;
-				
-				if (_i isequalto 1) then
-				{
-					{
-						private _raccourcis = _x;
-
-						private _configuration_Raccourcis_TFAR = ["TFAR",_raccourcis] call CBA_fnc_getKeybind;
-						_configuration_Raccourcis_TFAR set [3,{[] call TFAR_fnc_hideHint;}];
-						_configuration_Raccourcis_TFAR set [4,{[] call TFAR_fnc_hideHint;}];
-						_configuration_Raccourcis_TFAR set [8,TRUE];
-
-						_configuration_Raccourcis_TFAR call CBA_fnc_addKeybind;
-					} foreach  ["SWTransmit"];
-				};
-
-				if (_i isequalto 2) then
-				{
-					{
-						private _raccourcis = _x;
-
-						private _configuration_Raccourcis_TFAR = ["TFAR",_raccourcis] call CBA_fnc_getKeybind;
-						_configuration_Raccourcis_TFAR set [3,{[] call TFAR_fnc_hideHint;}];
-						_configuration_Raccourcis_TFAR set [4,{[] call TFAR_fnc_hideHint;}];
-						_configuration_Raccourcis_TFAR set [8,TRUE];
-
-						_configuration_Raccourcis_TFAR call CBA_fnc_addKeybind;
-					} foreach  ["SWTransmitAdditional"];
-				};
-
-			};
-		} else
-		{
-			[_radio,_i,""] call TFAR_fnc_SetChannelFrequency;
-		};		
-	};
-};
-
 sleep 0.1;
 
 private _Telephone_Base = uiNamespace getVariable ["MRP_Telephone_Base",displayNull];
@@ -73,15 +14,28 @@ if (_Telephone_Base isEquaLTo displayNull) then
 	_Telephone_Base = _displayOrControl;
 };
 
+private _numTel = ALF_Phone_Number;
+if (_numTel isEqualTo "") then {
+	_numTel = player getVariable ["phoneNumber", ""];
+};
+if !(_numTel isEqualTo "") then {
+	player setVariable ["phoneNumber", _numTel, true];
+};
+
+// ===== Réglage de la position verticale du téléphone à l'écran =====
+private _decalage_Y_Iphone = -0.15;
+private _decalage_Y_Neogend = -0.05;
+// ====================================================================
+
 private _x = 0.378788;
-private _y = 0.0090909;
+private _y = 0.0090909 + _decalage_Y_Iphone;
 private _w = 1.10139;
 private _h = 1.39347;
 
 private _telephone_Est_Neogend = ("MRP_Item_Neogend" in str (assignedItems player));
 if (_telephone_Est_Neogend) then
 {
-	_y = -0.06;
+	_y = -0.06 + _decalage_Y_Neogend;
 	_h = 1.41;
 };
 
@@ -92,13 +46,13 @@ _fond_Ecran ctrlCommit 0;
 
 private _html = _Telephone_Base ctrlCreate ["RscHTML",-1];
 uiNamespace setVariable ["MRP_Telephone_Fond_HTML",_html];
-_html ctrlSetPosition [0.682, 0.0429,0.49,1.325];
+_html ctrlSetPosition [0.682, 0.0429 + _decalage_Y_Iphone,0.49,1.325];
 _html ctrlenable FALSE;
 _html ctrlCommit 0;
 
 if (_telephone_Est_Neogend) then
 {
-	_y = -0.13;
+	_y = -0.13 + _decalage_Y_Neogend;
 	_h = 1.54;
 };
 
@@ -109,14 +63,14 @@ _coque ctrlCommit 0;
 
 if (_telephone_Est_Neogend) then
 {
-	_coque ctrlSetText "MRP_Telephones\Data\Menu_Principal\Coque_Neogend.paa";
+	_coque ctrlSetText "MRP_icone_tel\Data\Menu_Principal\Coque_Neogend.paa";
 } else
 {
-	_coque ctrlSetText "MRP_Telephones\Data\Menu_Principal\Contour_Iphone_Menu.paa";
+	_coque ctrlSetText "MRP_icone_tel\Data\Menu_Principal\Contour_Iphone_Menu.paa";
 };
 
 _x = 0.65;
-_y = 0.005;
+_y = 0.005 + _decalage_Y_Iphone;
 _w = 0.56;
 _h = 1.4;
 
@@ -149,13 +103,13 @@ _telephone_Cadre_Base ctrlAddEventHandler ["MouseButtonUp",
 			sleep 0.2;
 
 			[] call MRPV2_fnc_MRP_Tel_Divers_Suppr_Ecran;
-
+/*
 			private _MRP_Tel_Menu_Taxi = uiNamespace getVariable ["MRP_Tel_Menu_Taxi",controlNull];
 			if ("Menu_Note_Vide_dxt5" in ctrltext _Telephone_Fond AND {!isNull _MRP_Tel_Menu_Taxi}) exitwith
 			{
 				[] call MRPV2_fnc_MRP_Tel_Menu_Principal_Crea;
 			};
-
+*/
 			private _MRP_Tel_Menu_Annuaire = uiNamespace getVariable ["MRP_Tel_Menu_Annuaire",controlNull];
 			if ("Menu_Note_Vide_dxt5" in ctrltext _Telephone_Fond AND {_MRP_Tel_Menu_Annuaire isequalto controlNull}) exitwith
 			{
@@ -198,7 +152,7 @@ _telephone_Cadre_Base ctrlAddEventHandler ["MouseButtonUp",
 	};
 }];
 
-if (_telephone_Est_Neogend) then {_y = -0.056;};
+if (_telephone_Est_Neogend) then {_y = -0.056 + _decalage_Y_Neogend;};
 
 _telephone_Cadre_Base ctrlSetPosition [_x,_y,_w,_h];
 _telephone_Cadre_Base ctrlSetMousePosition [0.9, 0.7];

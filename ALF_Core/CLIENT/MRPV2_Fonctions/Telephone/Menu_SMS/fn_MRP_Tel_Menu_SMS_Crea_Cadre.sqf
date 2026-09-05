@@ -27,12 +27,12 @@ private _couleur_Message = [0.912,0.912,0.92,1];
 // Bord haut gauche cadre SMS
 private _ctrl_Image_Gauche_Haut = _Telephone_Base ctrlCreate ["RscPicture",-1,_menu_SMS_Lecture_Conteneur_SMS];
 _ctrl_Image_Gauche_Haut ctrlSetPixelPrecision 2;
-_ctrl_Image_Gauche_Haut ctrlSetText "MRP_Telephones\Data\Menu_SMS\Morceau_Debut_SMS_Gris_dxt5.paa";
+_ctrl_Image_Gauche_Haut ctrlSetText "MRP_icone_tel\Data\Menu_SMS\Morceau_Debut_SMS_Gris_dxt5.paa";
 
 // Image Droite haut
 private _ctrl_Image_Droite_Haut = _Telephone_Base ctrlCreate ["RscPicture",-1,_menu_SMS_Lecture_Conteneur_SMS];
 _ctrl_Image_Droite_Haut ctrlSetPixelPrecision 2;
-_ctrl_Image_Droite_Haut ctrlSetText "MRP_Telephones\Data\Menu_SMS\Morceau_Fin_SMS_Gris_dxt5.paa";
+_ctrl_Image_Droite_Haut ctrlSetText "MRP_icone_tel\Data\Menu_SMS\Morceau_Fin_SMS_Gris_dxt5.paa";
 
 // Cadre SMS
 private _cadre_SMS = _Telephone_Base ctrlcreate ["MRP_Structured_Text",-1, _menu_SMS_Lecture_Conteneur_SMS];
@@ -131,9 +131,9 @@ if (_hauteur_Cadre > 1) then
 
 	if (_SMS_Placer_A_Gauche isEqualTo 0) then
 	{
-		_ctrl_Image_Gauche_Haut ctrlSetText "MRP_Telephones\Data\Menu_SMS\Morceau_Gauche_Rond_SMS_Gris_dxt5.paa";
-		_ctrl_Image_Gauche_Bas ctrlSetText "MRP_Telephones\Data\Menu_SMS\Morceau_Debut_SMS_Gris_dxt5.paa";
-		_ctrl_Image_Droite_Bas ctrlSetText "MRP_Telephones\Data\Menu_SMS\Morceau_Fin_SMS_Gris_dxt5.paa";
+		_ctrl_Image_Gauche_Haut ctrlSetText "MRP_icone_tel\Data\Menu_SMS\Morceau_Gauche_Rond_SMS_Gris_dxt5.paa";
+		_ctrl_Image_Gauche_Bas ctrlSetText "MRP_icone_tel\Data\Menu_SMS\Morceau_Debut_SMS_Gris_dxt5.paa";
+		_ctrl_Image_Droite_Bas ctrlSetText "MRP_icone_tel\Data\Menu_SMS\Morceau_Fin_SMS_Gris_dxt5.paa";
 
 		_position_Verticale_Sms_Milieu = MRP_Position_Hauteur_Cadre + 0.03;
 
@@ -153,8 +153,8 @@ if (_hauteur_Cadre > 1) then
 		_couleur_Message = [0,0.550,1,1];
 		_position_Horizontal_SMS_Bleu = 0.05;
 
-		_ctrl_Image_Gauche_Haut ctrlSetText "MRP_Telephones\Data\Menu_SMS\Morceau_Gauche_Rond_SMS_Bleu_dxt5.paa";
-		_ctrl_Image_Droite_Haut ctrlSetText "MRP_Telephones\Data\Menu_SMS\Morceau_Droite_Rond_SMS_Bleu_dxt5.paa";
+		_ctrl_Image_Gauche_Haut ctrlSetText "MRP_icone_tel\Data\Menu_SMS\Morceau_Gauche_Rond_SMS_Bleu_dxt5.paa";
+		_ctrl_Image_Droite_Haut ctrlSetText "MRP_icone_tel\Data\Menu_SMS\Morceau_Droite_Rond_SMS_Bleu_dxt5.paa";
 
 		_position_Horizontal_Image_Gauche_Haut = -0.0348 + _position_Horizontal_SMS_Bleu;
 		_position_Verticale_Image_Gauche_Haut = -0.0015;
@@ -169,8 +169,8 @@ if (_hauteur_Cadre > 1) then
 
 		_cadre_SMS_Milieu_Longueur_Cadre = 0.0408;
 
-		_ctrl_Image_Gauche_Bas ctrlSetText "MRP_Telephones\Data\Menu_SMS\Morceau_Gauche_Rond_SMS_Bleu_dxt5.paa";
-		_ctrl_Image_Droite_Bas ctrlSetText "MRP_Telephones\Data\Menu_SMS\Morceau_Droite_debut_SMS_Bleu_dxt5.paa";
+		_ctrl_Image_Gauche_Bas ctrlSetText "MRP_icone_tel\Data\Menu_SMS\Morceau_Gauche_Rond_SMS_Bleu_dxt5.paa";
+		_ctrl_Image_Droite_Bas ctrlSetText "MRP_icone_tel\Data\Menu_SMS\Morceau_Droite_debut_SMS_Bleu_dxt5.paa";
 
 		_position_Horizontal_SMS_Bleu =  0.4 - _longueur_Cadre;
 		_position_Horizontal_Image_Gauche_Bas = - 0.0345 + _position_Horizontal_SMS_Bleu;
@@ -228,8 +228,8 @@ if (_SMS_Placer_A_Gauche isEqualTo 0) then
 		{
 			_position_Horizontal_Image_Droite_Haut = (_longueur_Cadre - 0.011) + _position_Horizontal_SMS_Bleu;
 
-			_ctrl_Image_Gauche_Haut ctrlSetText "MRP_Telephones\Data\Menu_SMS\Morceau_Gauche_Rond_SMS_Bleu_dxt5.paa";
-			_ctrl_Image_Droite_Haut ctrlSetText "MRP_Telephones\Data\Menu_SMS\Morceau_Droite_debut_SMS_Bleu_dxt5.paa";
+			_ctrl_Image_Gauche_Haut ctrlSetText "MRP_icone_tel\Data\Menu_SMS\Morceau_Gauche_Rond_SMS_Bleu_dxt5.paa";
+			_ctrl_Image_Droite_Haut ctrlSetText "MRP_icone_tel\Data\Menu_SMS\Morceau_Droite_debut_SMS_Bleu_dxt5.paa";
 
 			_texte_SMS ctrlSetStructuredText parsetext format ["<t color='#FFFFFF' shadow='0' font='SFUIDisplay_20' size='1.2' align='center'>%1</t>",_message];
 		};

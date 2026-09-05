@@ -8,7 +8,7 @@ private _Telephone_Fond = uiNamespace getVariable ["MRP_Telephone_Fond",controlN
 private _fond = ctrltext _Telephone_Fond;
 uiNamespace setVariable ["MRP_Telephone_Fond_Menu_En_Attente",_fond];
 
-_Telephone_Fond ctrlSetText "MRP_Telephones\Data\Menu_Appel\Fond_Appel_dxt5.paa";
+_Telephone_Fond ctrlSetText "MRP_icone_tel\Data\Menu_Appel\Fond_Appel_dxt5.paa";
 
 private _liste_Enfants = allControls _telephone_Cadre_Base;
 {
@@ -44,7 +44,7 @@ _edit ctrlSetStructuredText parseText format ["<t font='SFUIDisplay_46' shadow='
 private _ctrlButton = _Telephone_Base ctrlCreate ["MRP_RscClickableText",-1,_Telephone_Cadre_Base_Tentative];
 uiNamespace setVariable ["MRP_Telephone_Appel_En_Cours_Bouton_Raccrocher",_ctrlButton];
 _ctrlButton ctrlSetPosition [0.08,1,0.18,0.18];
-_ctrlButton ctrlSetText "MRP_Telephones\Data\Menu_Appel\Icone_Appel_Raccrocher.paa";
+_ctrlButton ctrlSetText "MRP_icone_tel\Data\Menu_Appel\Icone_Appel_Raccrocher.paa";
 _ctrlButton ctrlSetTextColor [0.9,0.9,0.9,1];
 _ctrlButton ctrlCommit 0;
 
@@ -65,7 +65,7 @@ _ctrlButton ctrlAddEventHandler ["ButtonClick",
 private _ctrlButton = _Telephone_Base ctrlCreate ["MRP_RscClickableText",-1,_Telephone_Cadre_Base_Tentative];
 uiNamespace setVariable ["MRP_Telephone_Appel_En_Cours_Bouton_Accepter",_ctrlButton];
 _ctrlButton ctrlSetPosition [0.29,1,0.18,0.18];
-_ctrlButton ctrlSetText "MRP_Telephones\Data\Menu_Appel\Icone_appel.paa";
+_ctrlButton ctrlSetText "MRP_icone_tel\Data\Menu_Appel\Icone_appel.paa";
 _ctrlButton ctrlSetTextColor [0.9,0.9,0.9,1];
 _ctrlButton ctrlCommit 0;
 

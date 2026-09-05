@@ -84,10 +84,10 @@ private _SMS_Liste_Position_Verticale_Cumuler = 0;
 
 	if (_info_Contact isEqualTo "" OR {_nom isEqualTo "" AND {_prenom isEqualTo ""}}) then
 	{
-		_ctrl_Image ctrlSetText "MRP_Telephones\Data\Menu_SMS\Icone_Contact_dxt5.paa";
+		_ctrl_Image ctrlSetText "MRP_icone_tel\Data\Menu_SMS\Icone_Contact_dxt5.paa";
 	} else
 	{
-		_ctrl_Image ctrlSetText "MRP_Telephones\Data\Menu_SMS\Icone_Contact_Vide_dxt5.paa";
+		_ctrl_Image ctrlSetText "MRP_icone_tel\Data\Menu_SMS\Icone_Contact_Vide_dxt5.paa";
 
 		// Initiale Prénom Nom
 		private _edit = _Telephone_Base ctrlCreate ["MRP_Structured_Text",-1,_tv];
@@ -115,7 +115,7 @@ private _SMS_Liste_Position_Verticale_Cumuler = 0;
 		// Icone nouveau mess
 		private _fond_Ecran = _Telephone_Base ctrlCreate ["RscPicture",-1,_tv];
 		_fond_Ecran ctrlSetPosition [0.05,_SMS_Liste_Position_Verticale_Cumuler + 0.067,0.022,0.03];
-		_fond_Ecran ctrlSetText "MRP_Telephones\Data\Menu_Principal\Icone_Nombre_Message.paa";
+		_fond_Ecran ctrlSetText "MRP_icone_tel\Data\Menu_Principal\Icone_Nombre_Message.paa";
 		_fond_Ecran ctrlCommit 0;
 
 		// Nombre nouveau mess
@@ -137,7 +137,7 @@ private _SMS_Liste_Position_Verticale_Cumuler = 0;
 	// Cadre Icone vers SMS
 	private _ctrl_Image = _Telephone_Base ctrlCreate ["RscPicture",-1,_tv];
 	_ctrl_Image ctrlSetPosition [0.43,_SMS_Liste_Position_Verticale_Cumuler + 0.02,0.025,0.025];
-	_ctrl_Image ctrlSetText "MRP_Telephones\Data\Menu_SMS\Icone_Fleche_dxt5.paa";
+	_ctrl_Image ctrlSetText "MRP_icone_tel\Data\Menu_SMS\Icone_Fleche_dxt5.paa";
 	_ctrl_Image ctrlCommit 0;
 
 	// Cadre Dernier SMS

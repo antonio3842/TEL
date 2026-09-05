@@ -43,7 +43,7 @@ private _compteur_Nouveau_SMS = ["Menu principal",_numero_Expediteur] call MRPV2
 private _icone_SMS = uiNamespace getVariable ["MRP_Telephone_Menu_Principal_Creation_Bouton_SMS",controlNull];
 if (_icone_SMS isNotEquaLTo controlNull AND {_compteur_Nouveau_SMS > 0}) exitwith
 {
-	_icone_SMS ctrlSetText "MRP_Telephones\Data\Menu_Principal\Icone_SMS_Mess.paa";
+	_icone_SMS ctrlSetText "MRP_icone_tel\Data\Menu_Principal\Icone_SMS_Mess.paa";
 	_icone_SMS ctrlSetPosition [0.163,1.189,0.132,0.132];
 	_icone_SMS ctrlCommit 0;
 

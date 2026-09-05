@@ -81,7 +81,7 @@ _ctrlButton ctrlSetPosition [0,0.075,0.04,0.05];
 _ctrlButton ctrlSetBackgroundColor [0.2,0,0,0.5];
 _ctrlButton ctrlCommit 0;
 _ctrlButton ctrlsettooltip "Sauvegarder";
-_ctrlButton ctrlSetText "MRP_Telephones\Data\Menu_Radio\Icone_Radio_Sauvegarder.paa";
+_ctrlButton ctrlSetText "MRP_icone_tel\Data\Menu_Radio\Icone_Radio_Sauvegarder.paa";
 _ctrlButton setvariable ["_intitule",_Intitule];
 _ctrlButton setvariable ["_frequence",_Champ];
 _ctrlButton setvariable ["_id",_id];
@@ -110,7 +110,7 @@ _ctrlButton ctrlSetPosition [0.05,0.14,0.04,0.05];
 _ctrlButton ctrlSetBackgroundColor [0.2,0,0,0.5];
 _ctrlButton ctrlCommit 0;
 _ctrlButton ctrlsettooltip "Transfert fréq. sauv. vers fréq. princ.";
-_ctrlButton ctrlSetText "MRP_Telephones\Data\Menu_Radio\Icone_Radio_Fleche_Bas_dxt5.paa";
+_ctrlButton ctrlSetText "MRP_icone_tel\Data\Menu_Radio\Icone_Radio_Fleche_Bas_dxt5.paa";
 _ctrlButton setvariable ["_intitule",_Intitule];
 _ctrlButton setvariable ["_frequence",_Champ];
 
@@ -144,7 +144,7 @@ _ctrlButton ctrlAddEventHandler ["ButtonClick",
 		_configuration_Raccourcis_TFAR call CBA_fnc_addKeybind;
 
 		_Bouton_Connecter ctrlsettooltip "Se connecter";
-		_Bouton_Connecter ctrlSetText "MRP_Telephones\Data\Menu_Radio\Icone_Radio_Connexion_dxt5.paa";
+		_Bouton_Connecter ctrlSetText "MRP_icone_tel\Data\Menu_Radio\Icone_Radio_Connexion_dxt5.paa";
 
 
 		if  !(isnil {MRP_Telephone_Info_Dispatch}) then
@@ -167,7 +167,7 @@ _ctrlButton ctrlSetBackgroundColor [0.2,0,0,0.5];
 _ctrlButton ctrlSetAngle [180,0.5,0.5,TRUE];
 _ctrlButton ctrlCommit 0;
 _ctrlButton ctrlsettooltip "Transfert fréq. princ. vers fréq. sauv.";
-_ctrlButton ctrlSetText "MRP_Telephones\Data\Menu_Radio\Icone_Radio_Fleche_Bas_dxt5.paa";
+_ctrlButton ctrlSetText "MRP_icone_tel\Data\Menu_Radio\Icone_Radio_Fleche_Bas_dxt5.paa";
 _ctrlButton setvariable ["_intitule",_Intitule];
 _ctrlButton setvariable ["_frequence",_Champ];
 
@@ -192,7 +192,7 @@ _ctrlButton ctrlSetPosition [0.16,0.075,0.04,0.05];
 _ctrlButton ctrlSetBackgroundColor [0.2,0,0,0.5];
 _ctrlButton ctrlCommit 0;
 _ctrlButton ctrlsettooltip "Supprimer";
-_ctrlButton ctrlSetText "MRP_Telephones\Data\Menu_Radio\Icone_Radio_Supprimer.paa";
+_ctrlButton ctrlSetText "MRP_icone_tel\Data\Menu_Radio\Icone_Radio_Supprimer.paa";
 _ctrlButton setvariable ["_intitule",_Intitule];
 _ctrlButton setvariable ["_frequence",_Champ];
 _ctrlButton setvariable ["_id",_id];

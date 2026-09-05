@@ -3,12 +3,12 @@ private _Telephone_Base = uiNamespace getVariable ["MRP_Telephone_Base",displayN
 private _Telephone_Fond = uiNamespace getVariable ["MRP_Telephone_Fond",controlNull];
 private _telephone_Cadre_Base = uiNamespace getVariable ["MRP_Telephone_Cadre_Base",controlNull];
 
-_Telephone_Fond ctrlSetText "MRP_Telephones\Data\Menu_SMS\Menu_SMS_Liste_dxt5.paa";
+_Telephone_Fond ctrlSetText "MRP_icone_tel\Data\Menu_SMS\Menu_SMS_Liste_dxt5.paa";
 
 // Bouton ecrire SMS en haut a droite
 private _ctrlButton = _Telephone_Base ctrlCreate ["MRP_RscClickableText_Inverser",-1,_telephone_Cadre_Base];
 _ctrlButton ctrlSetPosition [0.45,0.12,0.05,0.05];
-_ctrlButton ctrlSetText "MRP_Telephones\Data\Menu_SMS\Menu_SMS_Bouton_Nouveau_SMSdxt5.paa";
+_ctrlButton ctrlSetText "MRP_icone_tel\Data\Menu_SMS\Menu_SMS_Bouton_Nouveau_SMSdxt5.paa";
 _ctrlButton ctrlCommit 0;
 
 private _Mode_Avion = player getvariable ["MRP_Telephone_Mode_Avion",FALSE];

@@ -30,7 +30,7 @@ if (_CG_Options isEqualTo controlNull) then
 	// Bouton Accepter
 	private _ctrlButton_Accepter = _Telephone_Base ctrlCreate ["MRP_RscClickableText",-1,_CG_Options];
 	_ctrlButton_Accepter ctrlSetPosition [0,0.02,0.08,0.1];
-	_ctrlButton_Accepter ctrlSetText "MRP_Telephones\Data\Menu_Appel\Icone_appel.paa";
+	_ctrlButton_Accepter ctrlSetText "MRP_icone_tel\Data\Menu_Appel\Icone_appel.paa";
 	_ctrlButton_Accepter ctrlSetTextColor [0.9,0.9,0.9,1];
 	_ctrlButton_Accepter ctrlCommit 0;
 	_ctrlButton_Accepter setvariable ["_Rscframe",_Rscframe];
@@ -40,7 +40,7 @@ if (_CG_Options isEqualTo controlNull) then
 	// Bouton En attente
 	private _ctrlButton_Pause = _Telephone_Base ctrlCreate ["MRP_RscClickableText",-1,_CG_Options];
 	_ctrlButton_Pause ctrlSetPosition [0.17,0.02,0.08,0.1];
-	_ctrlButton_Pause ctrlSetText "MRP_Telephones\Data\Icones_Applications\Icone_Appel_En_Pause.paa";
+	_ctrlButton_Pause ctrlSetText "MRP_icone_tel\Data\Icones_Applications\Icone_Appel_En_Pause.paa";
 	_ctrlButton_Pause ctrlSetTextColor [0.9,0.9,0.9,1];
 	_ctrlButton_Pause ctrlCommit 0;
 	_ctrlButton_Pause setvariable ["_Rscframe",_Rscframe];
@@ -50,7 +50,7 @@ if (_CG_Options isEqualTo controlNull) then
 	// Bouton Arret
 	private _ctrlButton_Arret = _Telephone_Base ctrlCreate ["MRP_RscClickableText",-1,_CG_Options];
 	_ctrlButton_Arret ctrlSetPosition [0.34,0.02,0.08,0.1];
-	_ctrlButton_Arret ctrlSetText "MRP_Telephones\Data\Menu_Appel\Icone_Appel_Raccrocher.paa";
+	_ctrlButton_Arret ctrlSetText "MRP_icone_tel\Data\Menu_Appel\Icone_Appel_Raccrocher.paa";
 	_ctrlButton_Arret ctrlSetTextColor [0.9,0.9,0.9,1];
 	_ctrlButton_Arret ctrlCommit 0;
 	_ctrlButton_Arret setvariable ["_Rscframe",_Rscframe];
@@ -284,10 +284,10 @@ if (_ctrlButton_Accepter_Icone isEquaLTo controlNull AND {_control_Actif OR {_nu
 
 	if (_etat_Appel isEquaLTo "Appel") then
 	{
-		_ctrlButton_Accepter_Icone ctrlSetText "MRP_Telephones\Data\Menu_Appel\Icone_appel.paa";
+		_ctrlButton_Accepter_Icone ctrlSetText "MRP_icone_tel\Data\Menu_Appel\Icone_appel.paa";
 	} else
 	{
-		_ctrlButton_Accepter_Icone ctrlSetText "MRP_Telephones\Data\Icones_Applications\Icone_Appel_En_Pause.paa";
+		_ctrlButton_Accepter_Icone ctrlSetText "MRP_icone_tel\Data\Icones_Applications\Icone_Appel_En_Pause.paa";
 	};
 
 	_ctrlButton_Accepter_Icone ctrlSetTextColor [0.9,0.9,0.9,1];

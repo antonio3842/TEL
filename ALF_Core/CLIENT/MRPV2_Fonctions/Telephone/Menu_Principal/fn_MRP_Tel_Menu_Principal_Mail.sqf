@@ -17,7 +17,7 @@ _pos_Icone set [2,0.03];
 _pos_Icone set [3,0.04];
 
 _RscPicture ctrlSetPosition _pos_Icone;
-_RscPicture ctrlSetText "MRP_Telephones\Data\Menu_Principal\Icone_Nombre_Message.paa";
+_RscPicture ctrlSetText "MRP_icone_tel\Data\Menu_Principal\Icone_Nombre_Message.paa";
 _RscPicture ctrlSetTextColor [0.7,0.7,0.7,1];
 _RscPicture ctrlCommit 0;
 

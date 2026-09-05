@@ -8,9 +8,9 @@ private _permission_Joueur = [] call MRPV2_fnc_MRP_NB_Service_Vers_TXT;
 
 [] call
 {
-	if (_permission_Joueur isequalto "GN") exitwith	{_Telephone_Fond ctrlSetText "MRP_Telephones\Data\Fond\Neogend_Fond_PC_Storm.paa";};
-	if (_permission_Joueur isequalto "SP") exitwith {_Telephone_Fond ctrlSetText "MRP_Telephones\Data\Fond\Neogend_Fond_SP_Vide.paa";};
-	if (_permission_Joueur isequalto "AP") then {_Telephone_Fond ctrlSetText "MRP_Telephones\Data\Fond\Neogend_Fond_AP_Vide.paa";};
+	if (_permission_Joueur isequalto "GN") exitwith	{_Telephone_Fond ctrlSetText "MRP_icone_tel\Data\Fond\Neogend_Fond_PC_Storm.paa";};
+	if (_permission_Joueur isequalto "SP") exitwith {_Telephone_Fond ctrlSetText "MRP_icone_tel\Data\Fond\Neogend_Fond_SP_Vide.paa";};
+	if (_permission_Joueur isequalto "AP") then {_Telephone_Fond ctrlSetText "MRP_icone_tel\Data\Fond\Neogend_Fond_AP_Vide.paa";};
 };
 
 _tv = _Telephone_Base ctrlCreate ["RscControlsGroupNoScrollbars",-1,_telephone_Cadre_Base];
@@ -25,8 +25,8 @@ _RscPicture ctrlCommit 0;
 
 [] call
 {
-	if (_permission_Joueur isequalto "SP") exitwith	{_RscPicture ctrlSetText "MRP_Telephones\Data\Icones_Applications\Icone_CODIS.paa";};
-	if (_permission_Joueur isequalto "AP") then {_RscPicture ctrlSetText "MRP_Telephones\Data\Icones_Applications\Icone_DSPOM.paa";};
+	if (_permission_Joueur isequalto "SP") exitwith	{_RscPicture ctrlSetText "MRP_icone_tel\Data\Icones_Applications\Icone_CODIS.paa";};
+	if (_permission_Joueur isequalto "AP") then {_RscPicture ctrlSetText "MRP_icone_tel\Data\Icones_Applications\Icone_DSPOM.paa";};
 };
 
 private _compteur_Verticale = 0;
@@ -264,6 +264,8 @@ private _frequence_Base = _gestion_Liste_Frequences # 1;
 				};
 				private _nombre_Joueur_Connecter = [_frequence] call MRPV2_fnc_MRP_Tel_Menu_Dispatch_Gestion_Nombre_Ope_Freq;
 
+				player setvariable ["radioUnite","",TRUE];
+
 				_RscFrame ctrlSetTextColor [1,1,1,1];
 				_ctrl_Texte ctrlSetTextColor [1,1,1,1];
 				_ctrl_Texte ctrlSetStructuredText parseText format ["<t font='SFUIDisplay_46' shadow='1.5' color='#ffffff' size='1' align='left'>%1</t>",_texte];
@@ -312,8 +314,6 @@ private _frequence_Base = _gestion_Liste_Frequences # 1;
 					if (!isnil {MRP_Dispatch_Liste_Suivis}) then {{deleteMarkerlocal _x;} foreach MRP_Dispatch_Liste_Suivis;MRP_Dispatch_Liste_Suivis = nil;};
 				};
 
-				if (isnil {MRP_Dispatch_Liste_Suivis}) then {if (toloweransi _texte in ["commandement","cta / codis"]) then {[] call MRPV2_fnc_MRP_Tel_Menu_Dispatch_Suivis_Unites;};};
-
 				MRP_Telephone_Info_Dispatch set ["Principal",_texte];
 
 				private _conf_Raccourcis_Transmission_Courte_Portee = ["TFAR","SWTransmit"] call CBA_fnc_getKeybind;
@@ -351,7 +351,9 @@ private _frequence_Base = _gestion_Liste_Frequences # 1;
 					[_texte,_frequence] remoteExec ["MRPV2_fnc_MRP_Tel_Menu_Dispatch_Gestion_Nombre_Connex_Collegue",_liste_Collegues];
 				};
 				private _nombre_Joueur_Connecter = [_frequence] call MRPV2_fnc_MRP_Tel_Menu_Dispatch_Gestion_Nombre_Ope_Freq;
-
+				
+				player setvariable ["radioUnite",_texte,TRUE];
+				
 				_RscFrame ctrlSetTextColor [0,1,0,1];
 				_ctrl_Texte ctrlSetTextColor [0,1,0,1];
 				_ctrl_Texte ctrlSetStructuredText parseText format ["<t font='SFUIDisplay_46' shadow='1.5' color='#3dff00' size='1' align='left'>%1</t>",_texte];

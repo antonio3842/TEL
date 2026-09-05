@@ -31,7 +31,7 @@ if (_fond isequalto "Perso") then
 	_Telephone_Fond_HTML htmlLoad "phone1080_11_637.html";
 } else
 {
-	_Telephone_Fond ctrlSetText "MRP_Telephones\Data\Fond\" + _fond + ".paa";
+	_Telephone_Fond ctrlSetText "MRP_icone_tel\Data\Fond\" + _fond + ".paa";
 };
 
 TRUE

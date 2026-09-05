@@ -3,7 +3,7 @@ private _Telephone_Base = uiNamespace getVariable ["MRP_Telephone_Base",displayN
 private _Telephone_Fond = uiNamespace getVariable ["MRP_Telephone_Fond",controlNull];
 private _telephone_Cadre_Base = uiNamespace getVariable ["MRP_Telephone_Cadre_Base",controlNull];
 
-_Telephone_Fond ctrlSetText "MRP_Telephones\Data\Menu_Radio\Fond_Radio_dxt5.paa";
+_Telephone_Fond ctrlSetText "MRP_icone_tel\Data\Menu_Radio\Fond_Radio_dxt5.paa";
 
 private _position_X = 0.25;
 for "_i" from 0 to 1 do {[_i,_position_X * _i] call MRPV2_fnc_MRP_Tel_Menu_Radio_Crea_Cadre_Sauvegarde_Freq;};
@@ -56,7 +56,7 @@ _edit ctrlAddEventHandler ["KeyUp",
 		_config_Raccourcis_TFAR call CBA_fnc_addKeybind;
 
 		_Bouton_Connecter ctrlsettooltip "Se connecter";
-		_Bouton_Connecter ctrlSetText "MRP_Telephones\Data\Menu_Radio\Icone_Radio_Connexion_dxt5.paa";
+		_Bouton_Connecter ctrlSetText "MRP_icone_tel\Data\Menu_Radio\Icone_Radio_Connexion_dxt5.paa";
 	};
 }];
 
@@ -108,11 +108,11 @@ _Bouton_Connecter ctrlCommit 0;
 if (_frequence_Radio in ["30-512",""]) then
 {
 	_Bouton_Connecter ctrlsettooltip "Se connecter";
-	_Bouton_Connecter ctrlSetText "MRP_Telephones\Data\Menu_Radio\Icone_Radio_Connexion_dxt5.paa";
+	_Bouton_Connecter ctrlSetText "MRP_icone_tel\Data\Menu_Radio\Icone_Radio_Connexion_dxt5.paa";
 } else
 {
 	_Bouton_Connecter ctrlsettooltip "Se déconnecter";
-	_Bouton_Connecter ctrlSetText "MRP_Telephones\Data\Menu_Radio\Icone_Radio_Deconnexion_dxt5.paa";
+	_Bouton_Connecter ctrlSetText "MRP_icone_tel\Data\Menu_Radio\Icone_Radio_Deconnexion_dxt5.paa";
 };
 
 _Bouton_Connecter ctrlAddEventHandler ["ButtonClick",
@@ -130,7 +130,7 @@ _Bouton_Connecter ctrlAddEventHandler ["ButtonClick",
 
 	if ("Deconnexion" in (ctrltext _control)) then
 	{
-		_control ctrlSetText "MRP_Telephones\Data\Menu_Radio\Icone_Radio_connexion_dxt5.paa";
+		_control ctrlSetText "MRP_icone_tel\Data\Menu_Radio\Icone_Radio_connexion_dxt5.paa";
 		_control ctrlsettooltip "Se connecter";
 
 		private _config_Raccourcis_TFAR = ["TFAR","SWTransmit"] call CBA_fnc_getKeybind;
@@ -160,7 +160,7 @@ _Bouton_Connecter ctrlAddEventHandler ["ButtonClick",
 		player setvariable ["MRP_Tel_Radio_Frequence_Active",nil];
 	} else
 	{
-		_control ctrlSetText "MRP_Telephones\Data\Menu_Radio\Icone_Radio_Deconnexion_dxt5.paa";
+		_control ctrlSetText "MRP_icone_tel\Data\Menu_Radio\Icone_Radio_Deconnexion_dxt5.paa";
 		_control ctrlsettooltip "Se déconnecter";
 		
 		player setVariable ["tf_unable_to_use_radio", false];
@@ -211,7 +211,7 @@ private _ctrlButton = _Telephone_Base ctrlCreate ["MRP_RscClickableText",-1,_tel
 _ctrlButton ctrlSetPosition [0.415,0.55,0.15,0.08];
 _ctrlButton ctrlCommit 0;
 _ctrlButton ctrlSetTextColor [0.8,0.8,0.8,1];
-_ctrlButton ctrlSetText "MRP_Telephones\Data\Menu_SMS\Icone_Supprimer_dxt5.paa";
+_ctrlButton ctrlSetText "MRP_icone_tel\Data\Menu_SMS\Icone_Supprimer_dxt5.paa";
 
 _ctrlButton ctrlAddEventHandler ["ButtonClick",
 {params ["_control"];
@@ -253,7 +253,7 @@ _ctrlButton ctrlAddEventHandler ["ButtonClick",
 	if (ctrltooltip _Bouton_Connecter isequalto "Se déconnecter") then
 	{
 		_Bouton_Connecter ctrlsettooltip "Se connecter";
-		_Bouton_Connecter ctrlSetText "MRP_Telephones\Data\Menu_Radio\Icone_Radio_Connexion_dxt5.paa";
+		_Bouton_Connecter ctrlSetText "MRP_icone_tel\Data\Menu_Radio\Icone_Radio_Connexion_dxt5.paa";
 	};
 }];
 
@@ -262,7 +262,7 @@ private _ctrlButton = _Telephone_Base ctrlCreate ["MRP_RscClickableText",-1,_tel
 _ctrlButton ctrlSetPosition [0.25,0.72,0.08,0.1];
 _ctrlButton ctrlCommit 0;
 _ctrlButton ctrlsettooltip "Volume +";
-_ctrlButton ctrlSetText "MRP_Telephones\Data\Menu_Radio\Icone_Radio_Volume_Augmenter_dxt5.paa";
+_ctrlButton ctrlSetText "MRP_icone_tel\Data\Menu_Radio\Icone_Radio_Volume_Augmenter_dxt5.paa";
 
 _ctrlButton ctrlAddEventHandler ["ButtonClick",
 {params ["_ctrl"];
@@ -284,7 +284,7 @@ private _ctrlButton = _Telephone_Base ctrlCreate ["MRP_RscClickableText",-1,_tel
 _ctrlButton ctrlSetPosition [0.4,0.72,0.08,0.1];
 _ctrlButton ctrlCommit 0;
 _ctrlButton ctrlsettooltip "Volume -";
-_ctrlButton ctrlSetText "MRP_Telephones\Data\Menu_Radio\Icone_Radio_Volume_Diminuer.paa";
+_ctrlButton ctrlSetText "MRP_icone_tel\Data\Menu_Radio\Icone_Radio_Volume_Diminuer.paa";
 
 _ctrlButton ctrlAddEventHandler ["ButtonClick",
 {params ["_ctrl"];
@@ -315,11 +315,11 @@ _ctrlButton ctrlAddEventHandler ["ButtonClick",
 	if ((call TFAR_fnc_ActiveSwRadio) call TFAR_fnc_getSwSpeakers) then
 	{
 		_control ctrlsettooltip "Ecouteurs";
-		_control ctrlSetText "MRP_Telephones\Data\Menu_Radio\Icone_Radio_Ecouteur_dxt5.paa";
+		_control ctrlSetText "MRP_icone_tel\Data\Menu_Radio\Icone_Radio_Ecouteur_dxt5.paa";
 	} else
 	{
 		_control ctrlsettooltip "Haut-Parleur";
-		_control ctrlSetText "MRP_Telephones\Data\Menu_Radio\Icone_Radio_Haut_Parleur_dxt5.paa";
+		_control ctrlSetText "MRP_icone_tel\Data\Menu_Radio\Icone_Radio_Haut_Parleur_dxt5.paa";
 	};
 
 	playSound "TFAR_rotatorPush";
@@ -330,17 +330,17 @@ _ctrlButton ctrlAddEventHandler ["ButtonClick",
 if ((call TFAR_fnc_ActiveSwRadio) call TFAR_fnc_getSwSpeakers) then
 {
 	_ctrlButton ctrlsettooltip "Ecouteurs";
-	_ctrlButton ctrlSetText "MRP_Telephones\Data\Menu_Radio\Icone_Radio_Ecouteur_dxt5.paa";
+	_ctrlButton ctrlSetText "MRP_icone_tel\Data\Menu_Radio\Icone_Radio_Ecouteur_dxt5.paa";
 } else
 {
 	_ctrlButton ctrlsettooltip "Haut-Parleur";
-	_ctrlButton ctrlSetText "MRP_Telephones\Data\Menu_Radio\Icone_Radio_Haut_Parleur_dxt5.paa";
+	_ctrlButton ctrlSetText "MRP_icone_tel\Data\Menu_Radio\Icone_Radio_Haut_Parleur_dxt5.paa";
 };
 
 // Bouton Son à gauche
 private _RscPicture = _Telephone_Base ctrlCreate ["RscPicture",-1,_telephone_Cadre_Base];
 _RscPicture ctrlSetPosition [0.2,0.88,0.1,0.11];
-_RscPicture ctrlSetText "MRP_Telephones\Data\Menu_Radio\Icone_Radio_Son_Gauche_dxt5.paa";
+_RscPicture ctrlSetText "MRP_icone_tel\Data\Menu_Radio\Icone_Radio_Son_Gauche_dxt5.paa";
 _RscPicture ctrlSetTextColor [0.7,0.7,0.7,1];
 _RscPicture ctrlCommit 0;
 
@@ -426,7 +426,7 @@ if (_position_Radio_Principal isEqualTo 1) then
 // Bouton Son au mileu
 private _RscPicture = _Telephone_Base ctrlCreate ["RscPicture",-1,_telephone_Cadre_Base];
 _RscPicture ctrlSetPosition [0.32,0.88,0.1,0.11];
-_RscPicture ctrlSetText "MRP_Telephones\Data\Menu_Radio\Icone_Radio_Son_Centre_dxt5.paa";
+_RscPicture ctrlSetText "MRP_icone_tel\Data\Menu_Radio\Icone_Radio_Son_Centre_dxt5.paa";
 _RscPicture ctrlSetTextColor [0.7,0.7,0.7,1];
 _RscPicture ctrlCommit 0;
 
@@ -512,7 +512,7 @@ if (_position_Radio_Principal isEqualTo 0) then
 // Bouton Son à droite
 private _RscPicture = _Telephone_Base ctrlCreate ["RscPicture",-1,_telephone_Cadre_Base];
 _RscPicture ctrlSetPosition [0.43,0.88,0.1,0.11];
-_RscPicture ctrlSetText "MRP_Telephones\Data\Menu_Radio\Icone_Radio_Son_Droite_dxt5.paa";
+_RscPicture ctrlSetText "MRP_icone_tel\Data\Menu_Radio\Icone_Radio_Son_Droite_dxt5.paa";
 _RscPicture ctrlSetTextColor [0.7,0.7,0.7,1];
 _RscPicture ctrlCommit 0;
 

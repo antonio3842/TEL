@@ -51,5 +51,9 @@ if (_numero_Masquer) then
 
 [_numero,format ["<t color='#ffffff' align='center'>Appel en attente dans l%1application : %2</t>",'''',_appli],"info"] spawn ALF_fnc_doMsg;
 
+if (mrp_ca_command) then {
+	playsoundUI ["ALF_Client2\sounds\bip.ogg",0.25];
+};
+
 TRUE
 // };

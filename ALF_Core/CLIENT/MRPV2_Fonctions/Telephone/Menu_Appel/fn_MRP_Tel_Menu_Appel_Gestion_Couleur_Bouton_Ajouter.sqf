@@ -21,10 +21,10 @@ private _numero_est_Service = (_liste_Entreprise select {(_x getOrDefault ["PHON
 
 if (_numero in ["",_numero_Expediteur] OR {_info_Contact isNotequalto [] OR {count _numero < 10 OR {_numero_est_Service}}}) then
 {
-	_ctrlButton ctrlSetText "MRP_Telephones\Data\Menu_Appel\Phrase_Ajout_Numero_Gris_dxt5.paa";
+	_ctrlButton ctrlSetText "MRP_icone_tel\Data\Menu_Appel\Phrase_Ajout_Numero_Gris_dxt5.paa";
 } else
 {
-	_ctrlButton ctrlSetText "MRP_Telephones\Data\Menu_Appel\Phrase_Ajout_Numero_dxt5.paa";
+	_ctrlButton ctrlSetText "MRP_icone_tel\Data\Menu_Appel\Phrase_Ajout_Numero_dxt5.paa";
 };
 
 TRUE

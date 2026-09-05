@@ -64,24 +64,17 @@ if (_numero_Masquer) then
 	_edit_Texte ctrlSetStructuredText parseText format ["<t font='SFUIDisplay_46' shadow='1.5' color='#ffffff' size='1' align='left'>%1</t>","Numéro inconnu"];
 } else
 {
-	private _est_Entreprise_Civil = ([] call MRPV2_fnc_MRP_NB_Service_Vers_TXT) isequalto "ENT";
 	private _intituler = _numero;
 
-	if (_est_Entreprise_Civil) then
+	if (_mode_Entreprise) then
 	{
-		_intituler = [_numero] call MRPV2_fnc_MRP_Tel_Divers_Gestion_Intituler;
-	} else
-	{
+		private _joueur_Destinataire = (allplayers select {_x getvariable ["phoneNumber",""] isEqualTo (_numero)}) # 0;
+		_intituler = _joueur_Destinataire getVariable ["entreprise",""];
+	} else {
 		_intituler = _numero insert [2," "];
 		_intituler = _intituler insert [5," "];
 		_intituler = _intituler insert [8," "];
 		_intituler = _intituler insert [11," "];
-		
-		if (_mode_Entreprise) then
-		{
-			private _joueur_Destinataire = (allplayers select {_x getvariable ["phoneNumber",""] isEqualTo (_numero)}) # 0;
-			_intituler = _joueur_Destinataire getVariable ["entreprise",""];
-		};
 	};
 
 	_edit_Texte ctrlSetStructuredText parseText format ["<t font='SFUIDisplay_46' shadow='1.5' color='#ffffff' size='1' align='left'>%1</t>",_intituler];

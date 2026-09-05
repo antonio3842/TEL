@@ -3,7 +3,7 @@ private _Telephone_Base = uiNamespace getVariable ["MRP_Telephone_Base",displayN
 private _Telephone_Fond = uiNamespace getVariable ["MRP_Telephone_Fond",controlNull];
 private _telephone_Cadre_Base = uiNamespace getVariable ["MRP_Telephone_Cadre_Base",controlNull];
 
-_Telephone_Fond ctrlSetText "MRP_Telephones\Data\Menu_Bloc_Note\Menu_Note_dxt5.paa";
+_Telephone_Fond ctrlSetText "MRP_icone_tel\Data\Menu_Bloc_Note\Menu_Note_dxt5.paa";
 
 // Champ recherche
 _edit = _Telephone_Base ctrlCreate ["RscEdit",645,_telephone_Cadre_Base];
@@ -30,7 +30,7 @@ _edit ctrlAddEventHandler ["KeyUp",
 // Bouton Créer note
 private _ctrlButton = _Telephone_Base ctrlCreate ["MRP_RscClickableText",-1,_telephone_Cadre_Base];
 _ctrlButton ctrlSetPosition [0.47,0.24,0.03,0.04];
-_ctrlButton ctrlSetText "MRP_Telephones\Data\Menu_Bloc_Note\Icone_Creer_Note_dxt5.paa";
+_ctrlButton ctrlSetText "MRP_icone_tel\Data\Menu_Bloc_Note\Icone_Creer_Note_dxt5.paa";
 _ctrlButton ctrlSetTextColor [0.9,0.9,0.9,1];
 _ctrlButton ctrlCommit 0;
 
